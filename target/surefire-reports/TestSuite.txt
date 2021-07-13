@@ -1,0 +1,171 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 193, Failures: 17, Errors: 0, Skipped: 0, Time elapsed: 1,126.081 sec <<< FAILURE! - in TestSuite
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.182 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.13 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.113 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.124 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.096 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.131 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1321, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Headerpage_positive_scenarios_runner)  Time elapsed: 1.131 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE0IDEwaDIxdjIxSDE0eiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiM0ODRBNTQiIGQ9Ik0zMy43NzcgMjMuNTNsLTUuMzYyIDUuMjVjLS40NzguNDY5LTEuMzA4LjE0LTEuMzA4LS41MzF2LTNoLTQuMzQxQS43NTYuNzU2IDAgMCAxIDIyIDI0LjV2LTNjMC0uNDE1LjM0Mi0uNzQ5Ljc2Ni0uNzQ5aDQuMzR2LTNjMC0uNjY4LjgyNy0xIDEuMzEtLjUzbDUuMzYxIDUuMjQ5YS43NDUuNzQ1IDAgMCAxIDAgMS4wNjJ6bS05LjYzNCA3LjU2di0xLjkwNGEuNTczLjU3MyAwIDAgMC0uNTcxLS41NzJoLTRhMS41MjIgMS41MjIgMCAwIDEtMS41MjQtMS41MjR2LTkuMTQzYzAtLjg0My42OC0xLjUyNCAxLjUyNC0xLjUyNGg0YS41NzMuNTczIDAgMCAwIC41NzEtLjU3MXYtMS45MDVhLjU3My41NzMgMCAwIDAtLjU3MS0uNTcyaC00QTQuNTczIDQuNTczIDAgMCAwIDE1IDE3Ljk0N3Y5LjE0M2E0LjU3MyA0LjU3MyAwIDAgMCA0LjU3MiA0LjU3Mmg0YS41NzMuNTczIDAgMCAwIC41NzEtLjU3MnoiLz4KICAgIDwvZz4KPC9zdmc+Cg==" class="jss39 jss37 jss43"> is not clickable at point (1193, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ab08ebc23121c309133b2d66f3d74fbe
+
+runScenario(Runner_Files.Help_positive_scenarios_runner)  Time elapsed: 0.206 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+
+runScenario(Runner_Files.Help_positive_scenarios_runner)  Time elapsed: 0.179 sec  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+
+runScenario(Runner_Files.Request_second_opinion_negative_scenarios_runner)  Time elapsed: 4.371 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61421}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 352a318dbe253e73b037198ecadac2b8
+
+runScenario(Runner_Files.Award_points_positive_scenarios_runner)  Time elapsed: 20.131 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//h3[contains(text(),'Redeem award points')]"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64013}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 33dd40a8ef97877684352fbc1ba64042
+*** Element info: {Using=xpath, value=//h3[contains(text(),'Redeem award points')]}
+
+runScenario(Runner_Files.Forgot_password_negative_scenarios_runner)  Time elapsed: 15.936 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="page-container"]/div[1]/div/input"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54621}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c6278ad7da5e5de68c6b0027cf6133d5
+*** Element info: {Using=xpath, value=//*[@id="page-container"]/div[1]/div/input}
+
+runScenario(Runner_Files.Forgot_password_negative_scenarios_runner)  Time elapsed: 0.021 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="page-container"]/div[1]/div/input"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54621}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c6278ad7da5e5de68c6b0027cf6133d5
+*** Element info: {Using=xpath, value=//*[@id="page-container"]/div[1]/div/input}
+
+runScenario(Runner_Files.Forgot_password_negative_scenarios_runner)  Time elapsed: 0.018 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="page-container"]/div[1]/div/input"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54621}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c6278ad7da5e5de68c6b0027cf6133d5
+*** Element info: {Using=xpath, value=//*[@id="page-container"]/div[1]/div/input}
+
+runScenario(Runner_Files.Forgot_password_negative_scenarios_runner)  Time elapsed: 0.038 sec  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step "Enter non registered phone number in the phone number field" is undefined. You can implement it using the snippet(s) below:
+
+@When("Enter non registered phone number in the phone number field")
+public void enter_non_registered_phone_number_in_the_phone_number_field() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runScenario(Runner_Files.Forgot_password_positive_scenarios_runner)  Time elapsed: 0.015 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="page-container"]/div[1]/div/input"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-496DOAJ', ip: '192.168.28.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53465}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e611ac9f59b2aa2cdb8d2668abeeef8e
+*** Element info: {Using=xpath, value=//*[@id="page-container"]/div[1]/div/input}
+
+runScenario(Runner_Files.Forgot_password_positive_scenarios_runner)  Time elapsed: 0.003 sec  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step "Click on Sign up link" is undefined. You can implement it using the snippet(s) below:
+
+@When("Click on Sign up link")
+public void click_on_sign_up_link() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
