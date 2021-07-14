@@ -25,7 +25,7 @@ public class Login_negative_scenarios extends Generic_function {
 	}
 
 	/*TC_001 - Validate that the user is not allowed to login when 'Phone number' and 'Password' fields are blank*/
-	@And("clicks on 'Login' button")
+	@When("clicks on 'Login' button")
 	public static void login_negative_tc_001() throws Exception {
 		try {
 		    browser_wait(10);

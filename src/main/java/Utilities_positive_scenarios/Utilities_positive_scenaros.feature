@@ -8,9 +8,8 @@ Feature: Validation on Utilities page negative test cases
 
   Scenario: Click options provided in left side navigator
     When Click on left side navigator options
-
-  Scenario: Verify that click on all the Tiles in the Utilities dashboard
-    When Click all tiles in utilities dashboard
+    Then Verify the navigator options
+    And Click all tiles in utilities dashboard
 
   Scenario: Add card details  in the Wallet dashboard
     When Enter card details in wallet dashboard

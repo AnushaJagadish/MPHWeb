@@ -4,7 +4,7 @@ Feature: Validation on Bills page
   Scenario: Validate navigation to bills page
      Given Launch the URL
     When Click on 'Bills'
-    Then Verify user navigated to bills page
+    Then Verify navigation to bills page
 
   Scenario: Verify the scenario to view Total bills due
     When 'Total bills due' visible on the page

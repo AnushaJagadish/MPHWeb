@@ -1,19 +1,19 @@
 Feature: Validate login negative functionality
 
   #User must click on the login and validate validation messages should be displayed
-  Scenario: User is not allowed to login when Phone number and Password fields are blank
+  Scenario: Login when Phone number and Password fields are blank
     Given launch the URL
-    And clicks on 'Login' button
+    When clicks on 'Login' button
 
-  Scenario: User enter invalid credentials in the Login Page
+  Scenario: Verify invalid credentials in the Login Page
     When enters invalid phone no and password
     Then validation message is displayed 
 
-  Scenario: User enter more than 10 digits in the 'Phone number' field
+  Scenario: Verify when enter more than 10 digits in the 'Phone number' field
     When enters phone no with more than ten digits
     Then validation message is displayed
 
-  Scenario: User enter invalid 'Phone number' and valid 'Password'
+  Scenario: Verify when enter invalid 'Phone number' and valid 'Password'
     When enters invalid phone no and valid password
     Then validation message is displayed
 

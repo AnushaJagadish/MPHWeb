@@ -1,6 +1,6 @@
 Feature: User can reset password by clicking on Forgot password link 
 
-Scenario: Validate that the user should get the validation message when phone number field is blank
+Scenario: Validate when phone number field is blank
 Given Launch the URL
   When Phone number field is blank
   Then Validate the error message when phone number is blank

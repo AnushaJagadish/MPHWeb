@@ -4,10 +4,12 @@ Feature: Validation on Your profile page positive test cases
 
   Scenario: Validate that the  Your Profile  title  should be present in  Your Profile screen
     Given Launch the URL
+    When Enter login data
     Then check Your Profile  title  should be present in  Your Profile screen
 
   Scenario: Verify the scenario when dialogue box will appear, when click on edit icon
-    When Click on edit icon a dialogue box will appear
+    When Click on edit icon
+    Then Verify the dialogue box
     
   Scenario: Verify the scenario when edit  the profile details
     Then Edit  the profile details

@@ -1,6 +1,6 @@
 Feature: Test Circle positive functionality
 
-  Scenario: Validate that a user is taken to the Circles page when they click on the Circles tab
+  Scenario: Validate the navigation to the Circles page
     Given Launch the URL
     When Click on the Circles tab
     Then Validate Circles page

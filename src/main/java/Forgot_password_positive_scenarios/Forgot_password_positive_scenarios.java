@@ -64,8 +64,8 @@ public class Forgot_password_positive_scenarios extends Generic_function {
 	}
 
 	/* TC_003 -Validate that the user is navigated to sign up page on clicking Sign up link*/
-	@When("Click on Sign up link ")
-	public void signup_link() throws IOException {
+	@When("Click on Sign up link")
+	public void click_signup() throws IOException {
 		browser_back();
 		driver.findElement(By.xpath(OR_reader("forgot_password_signup_link"))).click();
 	}

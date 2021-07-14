@@ -4,6 +4,8 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.List;
+
+import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -61,11 +63,14 @@ public class Utilities_positive_scenarios extends Generic_function{
 
 	/* TC_002-Click options provided in left side navigator*/
 	@When("Click on left side navigator options")
-	public static void utilities_positive_tc_002() throws Exception {
-		try {
+	public static void click_navigator_options() throws Exception {
 			browser_wait(30);
 			click("home");
-			Thread.sleep(1000);
+			browser_wait(10);
+	}
+@Then("Verify the navigator options")
+public void utilities_positive_tc_002() throws IOException {
+			try{
 			value = driver.findElement(By.xpath(OR_reader("home_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("services");
@@ -78,11 +83,10 @@ public class Utilities_positive_scenarios extends Generic_function{
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("utilities_positive_tc_002");
-		}	
+		}
 	}
-
 	/* TC_003 - Verify that click on all the Tiles in the Utilities dashboard*/
-	@When("Click all tiles in utilities dashboard")
+	@And("Click all tiles in utilities dashboard")
 	public static void utilities_positive_tc_003() throws Exception {
 		try {
 			click_javascript("utilities");
@@ -102,7 +106,7 @@ public class Utilities_positive_scenarios extends Generic_function{
 			browser_wait(10);
 			click_javascript("utilities");
 			click_javascript("wallet");
-			Thread.sleep(1000);
+			browser_wait(10);
 			click_javascript("utilities_add_card");
 			browser_wait(20);
 			driver.findElement(By.xpath(OR_reader("utilities_save_as"))).sendKeys(td_reader("utilities_save_as"));
@@ -110,7 +114,6 @@ public class Utilities_positive_scenarios extends Generic_function{
 			Robot robot = new Robot();
 			browser_wait(20);
 			robot.keyPress(KeyEvent.VK_TAB);
-			Thread.sleep(1000);
 			for (int i=0; i<5;i++) {
 				robot.keyPress(KeyEvent.VK_NUMPAD4);
 				robot.keyPress(KeyEvent.VK_NUMPAD2);
@@ -118,14 +121,14 @@ public class Utilities_positive_scenarios extends Generic_function{
 				robot.keyPress(KeyEvent.VK_NUMPAD2);
 			}
 			robot.keyPress(KeyEvent.VK_TAB);
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_BACK_SLASH);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD6);
 			robot.keyPress(KeyEvent.VK_TAB);
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD3);
@@ -172,7 +175,6 @@ public class Utilities_positive_scenarios extends Generic_function{
 			takeScreenShot("bank_details");
 			e.printStackTrace();
 		}
-
 	}
 
 	@Then("Verify bank details is saved")
@@ -192,15 +194,17 @@ public class Utilities_positive_scenarios extends Generic_function{
 
 	/* TC_006 -Redeem points  in the Award points dashboard*/
 	@When("Click redeem points")
-	public static void utilities_positive_tc_006() throws Exception{
-		try {
+	public static void click_redeem_points() throws Exception{
 			click_javascript("utilities");
 			browser_wait(30);
 			click_javascript("award_points");
 			browser_wait(20);
-			value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
+	}
+@Then("Verify the award points")
+	public void utilities_positive_tc_006()throws IOException {
+		try{value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			Thread.sleep(1000);
+			browser_wait(10);
 			click_javascript("awardpoints_redeem_button");
 			value1 = driver.findElement(By.xpath(OR_reader("utilities_redeem_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
@@ -210,8 +214,7 @@ public class Utilities_positive_scenarios extends Generic_function{
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("utilities_positive_tc_006");
-		}	
-	}
-
+		}
+		}
 
 }

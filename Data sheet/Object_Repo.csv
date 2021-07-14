@@ -129,7 +129,7 @@ utilities_account_type,xpath,//div[@id='standard-select']
 utilities_account_number,xpath,//div[@id='root']/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/input[1]
 utilities_check_box,xpath,//div[@id='root']/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[6]/label[1]/span[1]/span[1]/input[1]
 utilities_redeem_points_title,xpath,"//h3[contains(text(),'Redeem award points')]"
-awardpoints_redeem_button,xpath,"//span[contains(text(),'Redeem Points')]"
+awardpoints_redeem_button,xpath,.MuiButton-label
 redeem_points_giftcard,xpath,//input[@id='gift-card-dropdown']
 redeem_points_amount,xpath,//input[@id='amount-gift-card-text-field']
 redeem_points_email,xpath,//input[@id='email']
@@ -395,7 +395,7 @@ help_coverageabout,xpath,"//p[contains(text(),'What are the different relationsh
 your_award_point_history,xpath,"//h2[contains(text(),'Your award points history')]"
 available_award_point,xpath,"//p[contains(text(),'Available award points')]"
 award_points_reedem,xpath,"//p[contains(text(),'Award points to redeem')]"
-redeem_award_points_title,xpath,"//h3[contains(text(),'Redeem award points')]"
+redeem_award_points_title,xpath,/html/body/div[1]/div/div[3]/div[2]/div[1]/div[1]/h3
 redeemed_title,xpath,"//h3[contains(text(),'Redeemed')]"
 redeemed_points,xpath,"//h2[contains(text(),'You have redeemed 2000 points')]"
 availed_gift,xpath,"//h4[contains(text(),'You have availed this gift card')]"

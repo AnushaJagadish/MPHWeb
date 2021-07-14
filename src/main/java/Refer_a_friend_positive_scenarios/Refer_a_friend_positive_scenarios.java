@@ -1,6 +1,8 @@
 package Refer_a_friend_positive_scenarios;
 import java.io.IOException;
 
+import io.cucumber.java.en.And;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -25,16 +27,20 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 			e.printStackTrace();
 		}
 	}
-	
+
+	@When("Login with valid data")
+	public void loginWithValidData() throws IOException {
+		click("welcome_login");
+		browser_wait(12);
+		driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
+		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
+		click("login");
+	}
+
 	/*TC 001 - Validate that user must be able to view Refer a Friend under Home page*/
 	@Then("verify Tell your friends about Mpowered Health text and logo is displayed")
 	public static void login_positive_tc_001() throws Exception   {
 		try {
-			click("welcome_login");
-			browser_wait(12);
-			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
-			click("login");
 			browser_wait(20);
 			value = driver.findElement(By.xpath(OR_reader("refer_a_frnd_home_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -48,7 +54,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	
 	/*TC 002 - Validate that user must be able to click on Refer a Friend button displayed in the home page*/
 	@When("clicks on Refer a Friend")
-	public static void login_positive_tc_002() throws Exception   {
+	public static void click_refer_friend() throws Exception   {
 		try {
 			click("refer_a_frnd_home_button");
 			
@@ -58,19 +64,19 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	@Then("navigated to Refer a Friend landing page")
-	public void navigated_to_refer_a_friend_landing_page() throws Exception {
+	public void login_positive_tc_002() throws Exception {
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "refer_a_frnd_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_refresh();
 		} catch (IOException e) {
 			e.printStackTrace();
-			takeScreenShot("refer_a_frnd_positive_tc_002");
+			takeScreenShot("login_positive_tc_002");
 		}
-		
+
 	}
 	/*TC 003 - Validate that user must be able to view the referral code text*/
-	@Given("verify referal code text is displayed")
+	@And("verify referral code text is displayed")
 	public static void login_positive_tc_003() throws Exception   {
 		try {
 			browser_wait(10);
@@ -83,7 +89,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	}
 	
 	/*TC 004 - Validate that the user should able to see a Pop Up box when clicking on Share a link */
-	@ When("clicks on 'Share Link' button")
+	@When("clicks on 'Share Link' button")
 	public static void login_positive_tc_004() throws Exception{
 		try {
 			click("refer_a_frnd_share_link_button");	
@@ -93,9 +99,9 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 			takeScreenShot("refer_a_frnd_positive_tc_004");
 		}
 	}
-	
+
 	/*TC 005 - Validate that the user should able to copy the link */
-	@When("clicks on copy the link")
+	@Then("clicks on copy the link")
 	public static void login_positive_tc_005() throws Exception   {
 		try {
 			 //Thread.sleep(1000);
@@ -108,9 +114,9 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 			takeScreenShot("refer_a_frnd_positive_tc_005");
 		}
 	}
-	
+
 	/*TC 006 - Validate that user can view How its works*/
-	@Given("verify How it work text is displayed")
+	@And("verify How it work text is displayed")
 	public static void login_positive_tc_006() throws Exception   {
 		try {
 			value = driver.findElement(By.xpath(OR_reader("refer_a_frnd_howits_work"))).isDisplayed();
@@ -170,7 +176,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	}
 	
 	/*TC 010 - Validate that the user should able to view list of frequently asked questions inside Frequently asked questions page*/
-	@Given("verify list of Frequently asked questions is displayed")
+	@Then("verify list of Frequently asked questions")
 	public static void login_positive_tc_008() throws Exception   {
 		try {
 			value = driver.findElement(By.xpath(OR_reader("header_frequently_asked"))).isDisplayed();

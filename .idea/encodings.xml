@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/Circles_positive_scenarios/Circles_positive_scenarios.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Help_positive_scenarios/Help_positive_scenarios.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Request_second_opinion_negative_scenarios/Request_second_opinion_negative_scenarios.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Request_second_opinion_positive_scenarios/Request_second_opinion_positive_scenarios.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Second_opinion_dashboard_positive_scenarios/Second_opinion_dashboard_positive_scenarios.java" charset="windows-1252" />
+  </component>
+</project>

@@ -51,6 +51,7 @@ public class Services_positive_scenario extends Generic_function {
 	@When("clicks on the 'Services' tab")
 	public static void services_page_positive_tc_002() throws IOException{
 		try {
+			browser_wait(5);
 			click("services");
 		}
 		catch(Exception e)
@@ -63,6 +64,7 @@ public class Services_positive_scenario extends Generic_function {
 	@Then("Navigate to the Services pages")
 	public static void navigate_services() throws IOException{
 		try {
+			browser_wait(5);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}
@@ -77,7 +79,8 @@ public class Services_positive_scenario extends Generic_function {
 	@When("click on all the grid tiles")
 	public void services_page_positive_tc_003() throws IOException {
 		try {
-			grid_tile(OR_reader("grid_path")); 
+			grid_tile(OR_reader("grid_path"));
+			browser_wait(5);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}

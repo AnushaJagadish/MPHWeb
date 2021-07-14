@@ -46,9 +46,8 @@ public class Login_positive_scenarios extends Generic_function {
 			takeScreenShot("login_positive_tc_001");
 		}
 	}
-
-	@When("clicks on 'Forgot password'")
 	/*TC 002 - Validate that the user is able to click on the 'Forgot password?' link*/
+	@When("clicks on 'Forgot password'")
 	public static void login_positive_tc_002() throws IOException  {
 		//		try {
 		//			click("forgot_password_link");
@@ -94,7 +93,7 @@ public class Login_positive_scenarios extends Generic_function {
 		//		}
 
 	}
-	@Then("enters  the Password")
+	@Then("enter the Password")
 	/*TC 004 -  Validate that the user is able to enter  the Password in the Password field*/
 	public static void login_positive_tc_004() throws IOException {
 		try {

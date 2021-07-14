@@ -157,7 +157,7 @@ public class Circles_negative_scenarios extends Generic_function{
 	}
 
 	/*TC 007 - Validate that the user is not allowed to login with invalid Usename and valid Password */
-	@When("login with invalid Usename and valid Password")
+	@When("login with invalid Username and valid Password")
 	public void login_invalid_username() throws IOException {
 		driver.findElement(By.xpath(OR_reader("mymed_username"))).sendKeys(td_reader("mymed_username",0));
 		driver.findElement(By.xpath(OR_reader("mymed_password"))).sendKeys(td_reader("mymed_password",1));

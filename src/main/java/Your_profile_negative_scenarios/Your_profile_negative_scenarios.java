@@ -13,6 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.io.File;
+import java.io.IOException;
 
 public class Your_profile_negative_scenarios extends Generic_function {
 	public static boolean value;
@@ -26,16 +27,18 @@ public class Your_profile_negative_scenarios extends Generic_function {
 		try {
 			Browser_Launch();
 			click("welcome_login");
-			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
-			click("login");
 		}catch (Exception e) {
 			e.printStackTrace();
 		}		
 	}
-
+	@When("Enter login details")
+	public void enter_login() throws IOException {
+		driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
+		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
+		click("login");
+	}
 	/*Verify clicking on profile will navigates to Your profile screen*/
-	@When("Click on your profile")
+	@Then("Click on your profile")
 	public static void click_profile() throws Exception{
 		try {
 			browser_wait(20);
@@ -47,11 +50,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 
 	/* TC_001- Validate that Send Code button is disabled when they do not check the phone number*/
-	@When("Verify Send Code button is disabled")
+	@When("Phone number check box is Unchecked")
+	public void phoneNumber_Unchecked() throws IOException {
+		click("profile_edit");
+		value= driver.findElement(By.xpath(OR_reader( "profile_edit_title"))).isDisplayed();
+	}
+	@Then("Verify Send Code button is disabled")
 	public static void your_profile_negative_tc_001() throws Exception{
-		try {	
-			click("profile_edit");
-			value= driver.findElement(By.xpath(OR_reader( "profile_edit_title"))).isDisplayed();
+		try {
 			Assert.assertEquals(true,value);
 			value= driver.findElement(By.xpath(OR_reader("profile_send_code"))).isEnabled();
 			Assert.assertEquals(false,value);
@@ -152,12 +158,17 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 	
 	/* TC_005- Verify the scenario when unable to  Edit the primary and deactivate email*/
-	@When("Not able to edit primary and deactivate email")
+
+	@When("Click on edit contact details")
+	public void clickOnEditContactDetails() throws IOException {
+		browser_refresh();
+		browser_wait(15);
+		click("profile_contact");
+	}
+	@Then("Not able to edit primary and deactivate email")
 	public static void your_profile_negative_tc_005() throws Exception{
 		try {
-			browser_refresh();
-			browser_wait(15);
-			click("profile_contact");
+
 			browser_wait(15);
 			value= driver.findElement(By.xpath(OR_reader("profile_email_id"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -220,7 +231,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 	
 	@Then("Verify the validation for invalid first name, last name or preferred name")
-	public static void ivalid_validation_msg() throws Exception{
+	public static void invalid_message() throws Exception{
 		try {
 			str= driver.findElement(By.xpath(OR_reader( "profile_firstname_valid_msg"))).getText();
 			Assert.assertEquals(td_reader("profile_firstname_invalid_msg"),str);
@@ -230,12 +241,22 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			Assert.assertEquals(td_reader("profile_preferred_invalid_msg"),str);
 		}catch(Exception e) {
 			e.printStackTrace();
-			takeScreenShot("ivalid_validation_msg");
+			takeScreenShot("invalid_message");
 		}
 	}
 
 	/* TC_008- Verify the scenario unable to  Edit the User ID*/
-	@When("verify 'User ID' is disabled for edit")
+	@When("Verify 'User ID' is displayed")
+	public void userID_IsDisplayed() throws IOException {
+		try {
+			value= driver.findElement(By.xpath(OR_reader( "profile_user_id"))).isDisplayed();
+			Assert.assertEquals(true,value);
+		} catch (Exception e) {
+			e.printStackTrace();
+			takeScreenShot("UserID_IsDisplayed");
+		}
+	}
+	@Then("verify 'User ID' is disabled for edit")
 	public static void your_profile_negative_tc_008() throws Exception{
 		try {
 			value= driver.findElement(By.xpath(OR_reader( "profile_user_id"))).isEnabled();
@@ -247,10 +268,13 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 
 	/* TC_009- Verify the scenario when Email ID fields are blank*/
-	@When("Leave email id field as blank")
+	@When("click on contact details")
+	public void clickOnContactDetails() throws IOException {
+		click("profile_contact");
+	}
+	@Then("Leave email id field as blank")
 	public static void your_profile_negative_tc_009() throws Exception{
 		try {
-			click("profile_contact");
 			click("profile_plus");
 			browser_wait(2);
 			value= driver.findElement(By.xpath(OR_reader("profile_add_email_title"))).isDisplayed();
@@ -295,11 +319,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 
 	/* TC_011- Verify the scenario when unable to  Edit the primary and deactivate phone number*/
-	@When("primary and deactivate phone number is disabled for edit")
+	@When ("Click on phone number")
+	public void click_phone_number() throws IOException{
+		browser_back();
+		click("profile_phno");
+	}
+	@Then("primary and deactivate phone number is disabled for edit")
 	public static void your_profile_negative_tc_011() throws Exception{
 		try {
-			browser_back();
-			click("profile_phno");
 			value= driver.findElement(By.xpath(OR_reader( "profile_phone_no_text"))).isEnabled();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -338,11 +365,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 	
 	/* TC_013- Verify the scenario when unable to  Edit the primary and deactivate address*/
-	@When("primary and deactivate address are disbled for edit")
+	@When("Click on Address")
+	public void click_address() throws IOException{
+		browser_back();
+		click("profile_address");
+	}
+	@Then("primary and deactivate address are disabled for edit")
 	public static void your_profile_negative_tc_013() throws Exception{
 		try {
-			browser_back();
-			click("profile_address");
 			value= driver.findElement(By.xpath(OR_reader("profile_add_address_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -352,10 +382,13 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	}
 
 	/* TC_014- Verify the scenario when leaving the fields blank in the Add new address Page*/
-	@When("Leaves fields blank")
+	@When("Click on add new address '+' symbol")
+	public void click_new_address() throws IOException{
+		click("profile_plus");
+	}
+	@Then("Leaves fields blank")
 	public static void your_profile_negative_tc_014() throws Exception{
 		try {
-			click("profile_plus");
 			value= driver.findElement(By.xpath(OR_reader("profile_add_address_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("profile_save");
@@ -377,10 +410,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 
 	/* TC_015- Verify the scenario when entering invalid Zip code in Add new address page*/
 	@When("Enters invalid zip code")
-	public static void your_profile_negative_tc_015() throws Exception{
-		try {
+	public static void invalid_zipcode() throws Exception{
 			driver.findElement(By.xpath(OR_reader( "profile_zip"))).sendKeys(td_reader("profile_zip"));
 			click("profile_save");
+
+	}
+	@Then("Verify the Invalid zip code message")
+	public void your_profile_negative_tc_015() throws Exception{
+		try{
 			str= driver.findElement(By.xpath(OR_reader( "profile_zip_invalid_msg"))).getText();
 			Assert.assertEquals(td_reader("profile_zip_invalid_msg"),str);
 		} catch (Exception e) {
@@ -388,14 +425,16 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			takeScreenShot("your_profile_negative_tc_015");
 		}
 	}
-
 	/* TC_016- Verify the scenario when leaving the fields blank in the Add plan Page*/
-	@When("Enter add plan page feilds blank")
+	@When("click on plan coverage")
+	public void click_plan_coverage() throws IOException {
+		browser_back();
+		browser_back();
+		click("profile_plan_coverage");
+	}
+	@Then("Enter add plan page fields blank")
 	public static void your_profile_negative_tc_016() throws Exception{
 		try {
-			browser_back();
-			browser_back();
-			click("profile_plan_coverage");
 			value= driver.findElement(By.xpath(OR_reader("profile_plan_coverage_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("profile_plan_plus");
@@ -421,11 +460,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 
 	/* TC_017-Verify the scenario when entering invalid First name of policy holder or Last name of policy holder  in Add plan page*/
 	@When("Enters invalid firstname and lastname fields in add plan page")
-	public static void your_profile_negative_tc_017() throws Exception{
-		try {
+	public static void invalid_first_last_name() throws Exception{
 			driver.findElement(By.xpath(OR_reader( "profile_plan_firstname"))).sendKeys(td_reader("profile_plan_firstname"));
 			driver.findElement(By.xpath(OR_reader( "profile_plan_lastname"))).sendKeys(td_reader("profile_plan_lastname"));
 			click("profile_plan_group");
+	}
+@Then("Verify the error message on invalid firstname and lastname")
+public void your_profile_negative_tc_017() throws IOException {
+		try{
 			str= driver.findElement(By.xpath(OR_reader( "profile_plan_first_invalidmsg"))).getText();
 			Assert.assertEquals(td_reader("profile_plan_first_invalidmsg"),str);
 			str= driver.findElement(By.xpath(OR_reader( "profile_plan_last_invalidmsg"))).getText();
@@ -434,14 +476,17 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			e.printStackTrace();
 			takeScreenShot("your_profile_negative_tc_017");
 		}
-	}
-
+}
 	/* TC_018-Verify the scenario when leaving the fields blank in the Change password page*/
 	@When("Enter blank fields in Change password page")
-	public static void your_profile_negative_tc_018() throws Exception{
-		try {
+	public static void blank_password() throws Exception{
 			browser_back();
 			click("profile_password_button");
+
+	}
+	@Then("Verify the blank field message")
+	public void your_profile_negative_tc_018() throws IOException {
+		try{
 			value= driver.findElement(By.xpath(OR_reader( "profile_password_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("profile_save");
@@ -452,15 +497,19 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			takeScreenShot("your_profile_negative_tc_018");
 		}
 	}
-
 	/* TC_019-Verify the scenario when entering wrong Old password in Change password page*/
 	@When("Enter wrong passwords")
-	public static void your_profile_negative_tc_019() throws Exception{
-		try {
+	public static void wrong_password() throws Exception{
+
 			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_old_password",0));
 			driver.findElement(By.xpath(OR_reader("profile_new_password"))).sendKeys(td_reader("profile_new_password",0));
 			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("profile_new_password",0));
 			click("profile_save");
+
+	}
+	@Then("Verify wrong password message")
+	public void your_profile_negative_tc_019() throws IOException {
+		try {
 			browser_wait(10);
 			str= driver.findElement(By.xpath(OR_reader( "profile_password_invalid_msg"))).getText();
 			Assert.assertEquals(td_reader("profile_password_invalid_msg"),str);
@@ -469,16 +518,19 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			takeScreenShot("your_profile_negative_tc_019");
 		}
 	}
-
 	/* TC_020-Verify the scenario when invalid New password in Change password page*/
 	@When("Enter invalid new password")
-	public static void your_profile_negative_tc_020() throws Exception{
-		try {
+	public static void invalid_new_password() throws Exception{
 			backspace("profile_new_password");
 			backspace("profile_confirm_password");
 			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_old_password",1));
 			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("profile_new_password",1));
 			click("profile_confirm_password");
+
+	}
+	@Then("Verify invalid password message")
+	public void your_profile_negative_tc_020() throws IOException {
+		try {
 			browser_wait(10);
 			str= driver.findElement(By.xpath(OR_reader( "profile_new_password_valid_msg"))).getText();
 			Assert.assertEquals(td_reader("profile_new_password_valid_msg"),str);
@@ -487,46 +539,51 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			takeScreenShot("your_profile_negative_tc_020");
 		}
 	}
-
 	/* TC_021-Verify the scenario when entering same data in Old password and New password fields in Change password page*/
 	@When("Enter same data in Old password and New password fields")
-	public static void your_profile_negative_tc_021() throws Exception{
-		try {
+	public static void old_new_password() throws Exception{
 			backspace("profile_new_password");
 			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("profile_old_password",1));
 			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("profile_old_password",1));
 			click("profile_save");
-			browser_wait(10);
-			str= driver.findElement(By.xpath(OR_reader( "profile_same_password"))).getText();
-			Assert.assertEquals(td_reader("profile_same_password"),str);
-		} catch (Exception e) {
-			e.printStackTrace();
-			takeScreenShot("your_profile_negative_tc_021");
-		}
+
 	}
+	@Then("verify the validation message")
+	public void your_profile_negative_tc_021() throws IOException {
+try{
+	browser_wait(10);
+	str= driver.findElement(By.xpath(OR_reader( "profile_same_password"))).getText();
+	Assert.assertEquals(td_reader("profile_same_password"),str);
+} catch (Exception e) {
+	e.printStackTrace();
+	takeScreenShot("your_profile_negative_tc_021");
+}
+}
 
 	/* TC_022-Verify the scenario when entering different data in New password and Confirm new password fields*/
 	@When("Enter different data in New password and Confirm new password fields")
-	public static void your_profile_negative_tc_022() throws Exception{
-		try {
+	public static void diff_password_confirm_password() throws Exception{
 			backspace("profile_new_password");
 			backspace("profile_confirm_password");
 			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("profile_new_password",0));
 			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("profile_new_password",2));
 			click("profile_save");
-			browser_wait(10);
-			str= driver.findElement(By.xpath(OR_reader( "profile_password_match"))).getText();
-			Assert.assertEquals(td_reader("profile_password_match"),str);
-		} catch (Exception e) {
-			e.printStackTrace();
-			takeScreenShot("your_profile_negative_tc_022");
-		}
+	}
+	@Then("Verify the different password message")
+	public void your_profile_negative_tc_022() throws IOException {
+	try{
+		browser_wait(10);
+		str= driver.findElement(By.xpath(OR_reader( "profile_password_match"))).getText();
+		Assert.assertEquals(td_reader("profile_password_match"),str);
+	} catch (Exception e) {
+		e.printStackTrace();
+		takeScreenShot("your_profile_negative_tc_022");
+	}
 	}
 
 	/* TC_023-Verify the scenario when a dialogue box appears dur to the failure of profile picture */
 	@When("Not able to upload profile picture")
-	public static void your_profile_negative_tc_023() throws Exception{
-		try {
+	public static void upload_profile_picture() throws Exception{
 			click("header_menu");
 			click("header_profile");
 			click("profile_picture");
@@ -552,15 +609,20 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			Thread.sleep(10000);
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(OR_reader( "profile_pic_valid_msg"))));
-			value= driver.findElement(By.xpath(OR_reader( "profile_pic_valid_msg"))).isDisplayed();
-			Assert.assertEquals(true,value);
-			click("tab_ok");
-			System.out.println("Your profile negative");
-			browser_close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			takeScreenShot("your_profile_negative_tc_023");
-		}
 	}
 
+	@Then("Verify the message on unsuccessful upload")
+	public void your_profile_negative_tc_023() throws IOException {
+try{
+	value= driver.findElement(By.xpath(OR_reader( "profile_pic_valid_msg"))).isDisplayed();
+	Assert.assertEquals(true,value);
+	click("tab_ok");
+	System.out.println("Your profile negative");
+	browser_close();
+} catch (Exception e) {
+	e.printStackTrace();
+	takeScreenShot("your_profile_negative_tc_023");
 }
+}
+	}
+

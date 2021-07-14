@@ -115,7 +115,7 @@ public class Signup_negative_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader("signup_confirm_password"))).sendKeys(td_reader("signup_confirm_password",1));
 			click("signup_terms_and_conditions");
 			click("signup");
-			browser_wait(80);
+			browser_wait(10);
 			str= driver.findElement(By.xpath(OR_reader("phonenumber_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("signup_exist_no_msg"));
 		} catch (Exception e) {

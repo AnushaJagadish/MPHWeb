@@ -21,10 +21,10 @@ Feature: Test Circle negative functionality
 			When Enter the password as blank
 			Then Validate message when Password field is blank
 			
-		Scenario: Validate the login with valid Usename and invalid Password
+		Scenario: Validate the login with valid Username and invalid Password
 			When  login with valid Username and invalid Password
 			Then Validation message invalid password
 			
-		Scenario: Validate that the user is not allowed to login with invalid Usename and valid Password
-			When login with invalid Usename and valid Password
+		Scenario: Validate that the user is not allowed to login with invalid Username and valid Password
+			When login with invalid Username and valid Password
 			Then Validation message invalid username

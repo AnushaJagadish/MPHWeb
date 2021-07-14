@@ -18,9 +18,10 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static File file;
 
 	@Given("launch the URL")
-	public static void browser_is_open() {
+	public void browser_launching() {
 		try {
 			Browser_Launch();
+			browser_wait(12);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -82,7 +83,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 
 	//TC_001 Validate that the user is not allowed to leave  check box "self"  unchecked and "Proceed" button is disabled when user unchecked  the check box - 'I agree to DocPanel's terms and condition'
 	@When("unchecked  the check box 'self and I agree to DocPanels terms and condition'")
-	public static void clickcheckbox() throws IOException, InterruptedException {
+	public static void click_checkbox() throws IOException, InterruptedException {
 		try {
 			click("so_self_checkbox");
 
@@ -188,7 +189,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed without clicking on 'upload my reports'")
-	public static void reportsmsg() throws InterruptedException, IOException {
+	public static void reports_message() throws InterruptedException, IOException {
 		try {
 			//			str= driver.findElement(By.xpath(OR_reader("Object_Locator","upload_scan_validation_msg"))).getText();
 			//			Assert.assertEquals(str,td_reader("upload_scan_validation_msg")); 
@@ -225,7 +226,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed under 'First name' and 'Last name' fields")
-	public static void blankmsg() throws IOException, InterruptedException {
+	public static void blank_message() throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
@@ -254,7 +255,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed under 'First name' field")
-	public static void firstnameblank() throws InterruptedException, IOException {	
+	public static void firstname_blank() throws InterruptedException, IOException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
@@ -284,7 +285,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed under 'Last name' field")
-	public static void lastnameblank() throws IOException, InterruptedException {	
+	public static void lastname_blank() throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_last_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_last_name_validation_msg")); 
@@ -314,7 +315,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is display")
-	public static void invalidmsg() throws IOException, InterruptedException {		
+	public static void invalid_message() throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_first_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
@@ -347,7 +348,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed under 'First name'")
-	public static void notproceed()  throws IOException, InterruptedException {	
+	public static void not_proceed()  throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_first_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
@@ -379,7 +380,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("validation message is displayed under 'Last name'")
-	public static void invalidlastname()  throws IOException, InterruptedException {
+	public static void invalid_lastname()  throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_last_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_last_name"));
@@ -402,7 +403,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		}
 	}
 	@Then("not allowed to Proceed")
-	public static void checkboxproceed()  throws IOException {
+	public static void checkbox_proceed()  throws IOException {
 		try {
 
 			value = driver.findElement(By.xpath(OR_reader("so_proceed_button"))).isEnabled();
@@ -424,12 +425,10 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_013");
 		}
-		browser_close();
 	}
 	@Then("unable to clicks on 'Proceed' button")
-	public static void uncheckproceed()  throws IOException {
+	public static void uncheck_proceed()  throws IOException {
 		try {
-
 			value = driver.findElement(By.xpath(OR_reader("so_proceed_button"))).isEnabled();
 			Assert.assertEquals(true,value); 
 			browser_wait(10);

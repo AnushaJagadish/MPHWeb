@@ -4,15 +4,15 @@ Feature: Test  Request a Second Opinion negative functionality
     Given launch the URL
     And clicks on the 'Welcome login' button
 
-  Scenario: Validate that the user is able to Login with valid data
+  Scenario: Validate Login with valid data
     When enters valid phonenumber and password
     Then clicks on 'login' button
 
-  Scenario: Validate that the user is able to click on 'Request for a Second opinion' button
+  Scenario: Validate 'Request for a Second opinion' button
     When clicks on the 'Request for second opinion' button
     Then navigated to the Second opinion page
 
-  Scenario: Validate that the 'Proceed' button is disabled when unchecked the check box self and I agree to DocPanels terms and condition
+  Scenario: Validate 'Proceed' button is disabled when unchecked the check box self and I agree to DocPanels terms and condition
     When unchecked  the check box 'self and I agree to DocPanels terms and condition'
     Then 'Proceed' button is disabled
 
@@ -32,7 +32,7 @@ Feature: Test  Request a Second Opinion negative functionality
   Scenario: Validate  not allowed to leave  check box 'other'  unchecked
     When not allowed to uncheck the other check box
 
-  Scenario: Validate that the user is not allowed to proceed when 'First name' and 'Last name' fields are blank
+  Scenario: Validate  when 'First name' and 'Last name' fields are blank
     When 'First name' and 'Last name' fields are blank
     Then validation message is displayed under 'First name' and 'Last name' fields
 
@@ -44,15 +44,15 @@ Feature: Test  Request a Second Opinion negative functionality
     When 'Last name' field are blank
     Then validation message is displayed under 'Last name' field
 
-  Scenario: Validate that the user should get a validation message on entering invalid 'First name'  and 'Last name'
+  Scenario: Validate message on entering invalid 'First name'  and 'Last name'
     When 'First name' and 'Last name' fields are invalid
     Then validation message is display
 
-  Scenario: Validate that the user is not allowed to Proceed with invalid 'First name' and valid 'Last name'
+  Scenario: Validate when entered invalid 'First name' and valid 'Last name'
     When invalid 'First name' and valid 'Last name'
     Then validation message is displayed under 'First name'
 
-  Scenario: Validate that the user is not allowed to Proceed with valid 'First name' and invalid 'Last name'
+  Scenario: Validate when entered with valid 'First name' and invalid 'Last name'
     When valid 'First name' and invalid 'Last name'
     Then validation message is displayed under 'Last name'
 

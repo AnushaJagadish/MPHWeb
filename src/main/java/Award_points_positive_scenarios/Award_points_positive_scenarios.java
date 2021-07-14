@@ -33,8 +33,9 @@ public class Award_points_positive_scenarios extends Generic_function{
 			click("welcome_login");
 			value = driver.findElement(By.xpath(OR_reader( "login_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number", 10));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password", 10));
+			// changed index to 9 from 10 in phone num and index changed 10 to 5 in password
+			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number", 9));
+			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password", 5));
 			click("login");
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -82,12 +83,14 @@ public class Award_points_positive_scenarios extends Generic_function{
 		}catch (Exception e) {
 			takeScreenShot("Award_point_positive_tc_002()");
 		}	
-		Thread.sleep(2000);
+
 	}
 	@When("Click on the Redeem Points button")
 	public void click_redeem_points_button() throws IOException {
 		try {
+			browser_wait(5);
 			click("awardpoints_redeem_button");
+			browser_wait(5);
 			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (IOException ioException) {
@@ -100,12 +103,16 @@ public class Award_points_positive_scenarios extends Generic_function{
 	/*TC 003 - Validate that user is able to redeem points  in the Award points dashboard.*/
 	@When("User should be able to click on the Redeem Points button and navigated to redeem award points page")
 	public static void Award_point_positive_tc_003() throws IOException {
-		try {
 //			click("awardpoints_redeem_button");
 //			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
 //			Assert.assertEquals(true,value);
 //			Thread.sleep(1000);
-//			value = driver.findElement(By.xpath(OR_reader( "available_award_point"))).isDisplayed();
+	}
+
+	@Then("Validate the redeem award points page")
+	public void validateTheRedeemAwardPointsPage() throws IOException {
+			try {
+			value = driver.findElement(By.xpath(OR_reader( "available_award_point"))).isDisplayed();
 //			Assert.assertEquals(true,value);
 //			click("redeem_points_giftcard");
 //			ele=driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
@@ -120,7 +127,6 @@ public class Award_points_positive_scenarios extends Generic_function{
 //			ele.sendKeys(td_reader("redeem_points_amount",0));
 //			Thread.sleep(6000);
 //			click("redeem_points_email");
-//			  			click("redeem_points");
 			Thread.sleep(6000);
 		}
 		catch (Exception e) {
@@ -130,7 +136,11 @@ public class Award_points_positive_scenarios extends Generic_function{
 	}
 
 	/*TC 004 - Validate that the user is able to navigate to the 'redeemed' page */
-	@When("User should be able to navigated to the redeemed page successfully")
+	@When("Navigate to the redeem page")
+	public void navigate_redeem_page() throws IOException {
+		//click("redeem_points");
+	}
+	@Then("Validate the redeem page")
 	public static void Award_point_positive_tc_004() throws IOException {
 		try {
 			//			value = driver.findElement(By.xpath(OR_reader( "redeemed_title"))).isDisplayed();
@@ -150,15 +160,5 @@ public class Award_points_positive_scenarios extends Generic_function{
 			e.printStackTrace();
 			takeScreenShot("Award_point_positive_tc_004()");
 		}
-	}
-
-	@When("Navigated to the redeemed page")
-	public void navigatedToTheRedeemedPage() {
-
-
-	}
-
-	@Then("Validate the redeem page")
-	public void validateTheRedeemPage() {
 	}
 }

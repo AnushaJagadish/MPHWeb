@@ -91,10 +91,10 @@ public class Signup_positive_scenarios extends Generic_function {
 		}
 	}
 
-	@Then("Orginal value should be displayed in the password fields")
+	@Then("Original value should be displayed in the password fields")
 	public static void display_value() throws IOException  {
 		try {
-			browser_wait(30);
+			browser_wait(10);
 			value1=driver.findElement(By.xpath(OR_reader( "show_password"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			browser_refresh();  
@@ -132,14 +132,22 @@ public class Signup_positive_scenarios extends Generic_function {
 			driver.findElement(By.xpath(OR_reader("signup_password"))).sendKeys(td_reader("signup_password",1));
 			driver.findElement(By.xpath(OR_reader( "signup_confirm_password"))).sendKeys(td_reader("signup_confirm_password",2));
 			click("signup_terms_and_conditions");
-			click("signup");	
-			//			value1=driver.findElement(By.xpath(OR_reader( "otp"))).isDisplayed();
-			//			Assert.assertEquals(true,value1);
+			click("signup");
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("signup_positive_tc_005");
 		}
-		Thread.sleep(1000);
+		browser_wait(10);
+	}
+	@Then("Verify navigation to OTP page")
+	public void verify_OTP_page() throws IOException {
+		try {
+			value1 = driver.findElement(By.xpath(OR_reader("otp"))).isDisplayed();
+			Assert.assertEquals(true, value1);
+		}
+		catch (Exception e){
+			takeScreenShot("verify_OTP_page");
+		}
 	}
 
 	/*TC_007 Verify user should be navigated to the otp Login page*/
@@ -153,7 +161,7 @@ public class Signup_positive_scenarios extends Generic_function {
 		}  
 	}
 
-	@And("Clicks on 'verify' button")
+	@Then("Clicks on 'verify' button")
 	public void click_verify() throws IOException, InterruptedException {
 		try {
 			//click("verify");

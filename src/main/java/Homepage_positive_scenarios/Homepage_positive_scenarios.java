@@ -23,10 +23,13 @@ public class Homepage_positive_scenarios extends Generic_function {
 		}
 	}
 	/*Validate that the user is navigated to Welcome page*/
-	@And("clicks on 'Welcome Login' button")
+	@When("Click on 'Welcome Login' button")
 	public static void home_positive_tc_001() throws IOException {
+		click("welcome_login");
+	}
+	@Then("Verify the Welcome page")
+	public void verifyTheWelcomePage() throws IOException {
 		try {
-			click("welcome_login");
 			value = driver.findElement(By.xpath(OR_reader( "login_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -36,28 +39,22 @@ public class Homepage_positive_scenarios extends Generic_function {
 	}
 	/*Validate that the user is able to Login with valid credentials*/
 	@When("enters valid phonenumber and password")
-	public static void home_positive_tc_002() throws InterruptedException, IOException {
+	public static void enter_login_details() throws InterruptedException, IOException {
 		try {
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",7));
 			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",8));
-			click("login");
+
 			browser_wait(12);
 		} catch (IOException e) {
 			e.printStackTrace();
-			takeScreenShot("home_positive_tc_002");
+			takeScreenShot("enter_login_details");
 		}
-
 	}
-	@Then("click on 'login' button")
-	public static void login() throws InterruptedException, IOException {
-		try {
 
-			click("login");
-			browser_wait(12);
-		} catch (IOException e) {
-			e.printStackTrace();
-			takeScreenShot("home_positive_tc_002");
-		}
+	@Then("click on 'login' button")
+	public static void home_positive_tc_002() throws InterruptedException, IOException {
+		click("login");
+		browser_wait(12);
 
 	}
 
@@ -98,7 +95,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 			value1=driver.findElement(By.xpath(OR_reader( "request_second_opinion_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			//Thread.sleep(2000);
-			browser_wait(40);
+			browser_wait(30);
 			browser_back();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -124,7 +121,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 		try {
 			value1=driver.findElement(By.xpath(OR_reader("refer_a_friend_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			browser_wait(15);
+			browser_wait(20);
 			browser_back();
 			System.out.println("home positive");
 			browser_close();

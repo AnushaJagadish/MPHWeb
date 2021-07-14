@@ -1,4 +1,4 @@
-Feature: Test header in home page positive functionality
+Feature: Verify header in home page positive functionality
 
 Scenario: Validate that the mpowered health logo in the header
 Given Launch the browser
@@ -8,7 +8,6 @@ Then  Check the mpowered health logo in the header
 Scenario: Validate the navigation to the help page on clicking Help icon
 When Click on Help icon
 Then Verify navigation to the help page
-
 
 Scenario: Validate the navigation to the alerts page on clicking Your alerts icon
 When Click on Your alerts icon

@@ -27,7 +27,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
 			click("login");
-			browser_wait(40);
+			browser_wait(10);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -40,7 +40,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	public static void utilities_negative_tc_001() throws Exception {
 		try {
 			click("utilities");
-			browser_wait(20);
+			browser_wait(10);
 			value = driver.findElement(By.xpath(OR_reader("wallet"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -54,11 +54,11 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	public void utilities_negative_tc_002() throws IOException {
 		try{
 			click("wallet");
-			browser_wait(30);
+			browser_wait(10);
 			click_javascript("utilities_add_card");
 			browser_wait(10);
 			click("utilities_save_button");
-			browser_wait(30);
+			browser_wait(10);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -99,33 +99,32 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			browser_wait(2);
 			click_javascript("utilities");
 			click_javascript("wallet");
-			browser_wait(30);
+			browser_wait(10);
 			click_javascript("utilities_add_card");
-			Thread.sleep(1000);
 			driver.findElement(By.xpath(OR_reader("utilities_save_as"))).sendKeys(td_reader("utilities_save_as"));
 			driver.findElement(By.xpath(OR_reader("utilities_name_on_card"))).sendKeys(td_reader("utilities_name_on_card"));
-			Thread.sleep(1000);
+			browser_wait(10);
 			Robot robot = new Robot();
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_TAB);
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_NUMPAD4);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD4);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_TAB);
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_BACK_SLASH);
 			robot.keyPress(KeyEvent.VK_TAB); 
-			Thread.sleep(1000);
+			browser_wait(10);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			driver.findElement(By.xpath(OR_reader("utilities_zip_code"))).sendKeys(td_reader("utilities_zip_code",1));
 			driver.findElement(By.xpath(OR_reader("utilities_phone_number"))).sendKeys(td_reader("utilities_phone_number",1));
 			driver.findElement(By.xpath(OR_reader("utilities_address"))).sendKeys(td_reader("utilities_address")); 			
-			browser_wait(30);
+			browser_wait(20);
 			click_javascript("utilities_save_button");
 		}catch (Exception e) {
 			takeScreenShot("utilities_negative_tc_003");
@@ -148,7 +147,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			browser_wait(20);	
 			click_javascript("utilities");
 			click_javascript("wallet");
-			browser_wait(30);
+			browser_wait(10);
 			click_javascript("utilities_add_bank");
 			click("utilities_bank_saveas");
 			click("utilities_account_name");
@@ -184,7 +183,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	@When("Enter invalid bank details")
 	public static void utilities_negative_tc_005() throws Exception {
 		try {
-			browser_wait(20);	
+			browser_wait(10);
 			click_javascript("utilities");
 			click_javascript("wallet");
 			click_javascript("utilities_add_bank");
@@ -232,7 +231,6 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			browser_wait(20);
 			value=driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))).isEnabled();
 			if(value==true) {
-				Thread.sleep(1000);
 				click("awardpoints_redeem_button");				
 			}
 			else

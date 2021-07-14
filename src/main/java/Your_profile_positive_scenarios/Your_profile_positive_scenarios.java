@@ -23,16 +23,19 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			e.printStackTrace();
 		}
 	}
-
+	@When("Enter login data")
+	public void login_data() throws IOException {
+		click("welcome_login");
+		browser_wait(5);
+		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
+		driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",5));
+		click("login");
+	}
 	/*TC 001 - Validate that the  Your Profile  title  should be present in  Your Profile screen*/
 	@Then("check Your Profile  title  should be present in  Your Profile screen")
 	public void yourprofile_positive_tc_001() throws Exception  {
 		try {
-			click("welcome_login");
-			browser_wait(5);
-			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",5));
-			click("login");
+
 			browser_wait(5); 
 			value = driver.findElement(By.xpath(OR_reader( "header_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -50,11 +53,15 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	}
 
 	/*TC 002 - Verify the scenario when dialogue box will appear, when click on edit icon  */
-	@When("Click on edit icon a dialogue box will appear")
-	public void yourprofile_positive_tc_002() throws Exception {
-		try {
+	@When("Click on edit icon")
+	public void click_edit_icon() throws Exception {
 			browser_wait(5);
 			click("profile_edit");
+
+	}
+	@Then("Verify the dialogue box")
+	public void your_profile_positive_tc_002() throws IOException {
+		try {
 			browser_wait(5);
 			click("profile_checkbox");
 			browser_wait(5);
@@ -71,7 +78,6 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			takeScreenShot("yourprofile_positive_tc_002");
 		}
 	}
-
 	/*TC 003 - Verify the scenario when edit  the profile details*/
 	@Then("Edit  the profile details")
 	public void yourprofile_positive_tc_003() throws Exception {
@@ -360,12 +366,11 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_passwordsave");
 			click("tab_ok");
 			System.out.println("Your profile positive");
-			driverquit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_013");
 		}
-
+		driverquit();
 	}
 
 }

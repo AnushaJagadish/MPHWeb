@@ -46,8 +46,8 @@ public class Bills_positive_scenarios extends Generic_function{
 		}
 	}
     
-	@Then("Verify user navigated to bills page")
-	public void navigate_to_bills() throws Exception {
+	@Then("Verify navigation to bills page")
+	public void navigate_bills_page() throws Exception {
 		try {
 			browser_wait(20);
 			value = driver.findElement(By.xpath(OR_reader("bills_page_title"))).isDisplayed();
@@ -175,7 +175,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	}
 	
 	@Then("Validate navigation to bill due section")
-	public void validation_bills_due_section() throws Exception {
+	public void bills_due_section() throws Exception {
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "bills_due_message"))).isDisplayed();
 			Assert.assertEquals(true,value);

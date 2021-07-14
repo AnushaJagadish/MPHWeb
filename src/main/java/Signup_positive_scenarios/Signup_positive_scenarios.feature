@@ -14,14 +14,15 @@ Feature: Validation on Sign Up Positive test cases
 
   Scenario: Verify that the password should be displayed on an eye click for Password fields
     When Clicks on the Eye
-    Then Orginal value should be displayed in the password fields
+    Then Original value should be displayed in the password fields
 
   Scenario: Verify that the Confirm password field by comparing data entered in the Password field
     When Enter same values of 'Password' in the 'Confirmed Password' field
 
   Scenario: Verify click on Sign Up with valid credentials
     When Enters valid credentials
+    Then Verify navigation to OTP page
 
   Scenario: verify the scenario when navigate to the otp Login page
     When Enters otp
-    And Clicks on 'verify' button
+    Then Clicks on 'verify' button
