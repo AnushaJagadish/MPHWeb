@@ -29,7 +29,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
 			click("login");
-			browser_wait(20);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -41,7 +41,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 	public static void request_second_opinion_positive_tc_001() throws Exception {
 		try {
 			click("request_second_opinion_button");
-			browser_wait(20);
+			browser_wait(1000);
 			click("create_new_case");
 			
 		}catch (Exception e) {
@@ -63,10 +63,10 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 		try {
 			value = driver.findElement(By.xpath(OR_reader("so_your_price_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(2);
+			browser_explicit_wait("so_who_is_this_text");
 			value = driver.findElement(By.xpath(OR_reader("so_who_is_this_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(10);
+			browser_explicit_wait("so_you_are_about_to_text");
 			value = driver.findElement(By.xpath(OR_reader("so_you_are_about_to_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -80,13 +80,13 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "so_if_you_need_help_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(2);
+			browser_explicit_wait("so_mail_id_text");
 			value = driver.findElement(By.xpath(OR_reader( "so_mail_id_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(2);
+			browser_explicit_wait("so_phone_number_text");
 			value = driver.findElement(By.xpath(OR_reader("so_phone_number_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(2);
+			browser_explicit_wait("so_for_more_info_text");
 			value = driver.findElement(By.xpath(OR_reader("so_for_more_info_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -246,7 +246,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 			driver.navigate().to(getsourl());
 			click("create_new_case");
 			click("so_other_checkbox");
-			browser_wait(2);
+			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader("so_patient_first_name"))).sendKeys(td_reader("patient_first_name"));
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("patient_last_name"));
 			click("so_patient_dob");
@@ -271,7 +271,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 			click("so_patient_gender");
 			text = td_reader("patient_gender");
 			drop_down(OR_reader( "so_patient_relationship_list"),text);
-			browser_wait(5);
+			browser_wait(1000);
 			click("so_other_agree_to_docpanel_checkbox");
 			click("so_iam_legal_guardian_checkbox");
 //			click("so_proceed_button");

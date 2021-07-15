@@ -7,6 +7,8 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
 import io.cucumber.java.en.And;
@@ -47,9 +49,9 @@ public class Award_points_negative_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
 			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",5));
 			click("login");
-			browser_wait(20);
+			browser_wait(1000);
 			click("utilities");
-			browser_wait(20);
+			browser_wait(1000);
 		} catch (Exception e) {
 			takeScreenShot("click_on_utilities_tab");
 			e.printStackTrace();
@@ -67,13 +69,26 @@ public class Award_points_negative_scenarios extends Generic_function{
 			}
 		}
 // TC 001 - Verify the validation message on entering amount more than the available amount in "Redeem Award Points" page
-	@When("Enter the amount more than available amount")
+
+	@When("Click on 'redeem' points")
+	public void click_redeem_points() throws IOException {
+		try {
+			value = driver.findElement(By.xpath(OR_reader( "awardpoints_redeem_button"))).isEnabled();
+			Assert.assertEquals(true,value);
+			browser_explicit_wait("awardpoints_redeem_button");
+			Actions builder=new Actions(driver);
+			builder.moveToElement(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+			builder.click(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+			Action action= builder.build();
+			action.perform();
+		} catch (IOException ioException) {
+			takeScreenShot("click_redeem_points_button");
+			ioException.printStackTrace();
+		}
+	}
+	@Then("Enter the amount more than available amount")
 	public void greater_amount() throws IOException, InterruptedException {
-		    Thread.sleep(1000);
-			//click("awardpoints_redeem_button");
-		driver.findElement(By.cssSelector(OR_reader("awardpoints_redeem_button"))).click();
-			//browser_wait(20);
-			browser_refresh();
+			browser_wait(4000);
 			click("redeem_points_giftcard");
 			ele = driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
 			ele.sendKeys(td_reader("redeem_points_giftcard"));
@@ -81,11 +96,11 @@ public class Award_points_negative_scenarios extends Generic_function{
 			ele.sendKeys(Keys.ENTER);
 	}
 
-	@Then("Validate the message on award points page")
+	@And("Validate the message on award points page")
 	public void Award_point_negative_tc_001() throws IOException {
 		try{
-		value = driver.findElement(By.xpath(OR_reader( "award_points_reedem"))).isDisplayed();
-		Assert.assertEquals(true,value);
+			value = driver.findElement(By.xpath(OR_reader( "award_points_reedem"))).isDisplayed();
+			Assert.assertEquals(true,value);
 		click("redeem_points_amount");
 		ele=driver.findElement(By.xpath(OR_reader("redeem_points_amount")));
 		ele.sendKeys(Keys.BACK_SPACE);
@@ -93,7 +108,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 		click("redeem_points_email");
 		str= driver.findElement(By.xpath(OR_reader("redeem_points_amount_valid_msg"))).getText();
 		Assert.assertEquals(str,td_reader("amount_exceed_valid_msg"));
-		browser_wait(30);
+		browser_wait(1500);
 	}catch (Exception e) {
 		e.printStackTrace();
 		takeScreenShot("Award_point_negative_tc_001");
@@ -103,6 +118,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 	@When("Enter the amount less than the available amount")
 	public void lesser_Amount() throws IOException {
 		//browser_refresh();
+		browser_wait(1000);
 		click("redeem_points_giftcard");
 		ele=driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
 		ele.sendKeys(td_reader("redeem_points_giftcard"));
@@ -123,7 +139,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 			click("redeem_points_email");
 			str= driver.findElement(By.xpath(OR_reader("redeem_points_amount_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("redeem_points_amount_valid_msg"));
-			browser_wait(10);
+			browser_wait(1000);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -148,7 +164,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 		try {
 			value=driver.findElement(By.xpath(OR_reader( "redeem_points"))).isEnabled();
 			Assert.assertEquals(value,false);
-			browser_wait(20);
+			browser_wait(1000);
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Award_point_negative_tc_003");
@@ -177,7 +193,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 		click("redeem_points_email");
 		str= driver.findElement(By.xpath(OR_reader("redeem_points_amount_valid_msg"))).getText();
 		Assert.assertEquals(str,td_reader("redeem_points_amount_valid_msg"));
-		browser_wait(20);
+		browser_wait(1000);
 		System.out.println("Award points negative");
 		}
 		catch (Exception e) {

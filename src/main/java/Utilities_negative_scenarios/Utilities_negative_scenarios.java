@@ -27,7 +27,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
 			click("login");
-			browser_wait(10);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -40,7 +40,7 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	public static void utilities_negative_tc_001() throws Exception {
 		try {
 			click("utilities");
-			browser_wait(10);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("wallet"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -54,11 +54,11 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	public void utilities_negative_tc_002() throws IOException {
 		try{
 			click("wallet");
-			browser_wait(10);
+			browser_explicit_wait("utilities_add_card");
 			click_javascript("utilities_add_card");
-			browser_wait(10);
+			browser_explicit_wait("utilities_save_button");
 			click("utilities_save_button");
-			browser_wait(10);
+			browser_wait(1000);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -96,35 +96,35 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	@When("Enter invalid card details")
 	public static void utilities_negative_tc_003() throws Exception {
 		try {
-			browser_wait(2);
+			browser_wait(1000);
 			click_javascript("utilities");
 			click_javascript("wallet");
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("utilities_add_card");
 			driver.findElement(By.xpath(OR_reader("utilities_save_as"))).sendKeys(td_reader("utilities_save_as"));
 			driver.findElement(By.xpath(OR_reader("utilities_name_on_card"))).sendKeys(td_reader("utilities_name_on_card"));
-			browser_wait(10);
+			browser_wait(1000);
 			Robot robot = new Robot();
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_TAB);
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_NUMPAD4);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD4);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_TAB);
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_BACK_SLASH);
 			robot.keyPress(KeyEvent.VK_TAB); 
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			driver.findElement(By.xpath(OR_reader("utilities_zip_code"))).sendKeys(td_reader("utilities_zip_code",1));
 			driver.findElement(By.xpath(OR_reader("utilities_phone_number"))).sendKeys(td_reader("utilities_phone_number",1));
 			driver.findElement(By.xpath(OR_reader("utilities_address"))).sendKeys(td_reader("utilities_address")); 			
-			browser_wait(20);
+			browser_wait(1000);
 			click_javascript("utilities_save_button");
 		}catch (Exception e) {
 			takeScreenShot("utilities_negative_tc_003");
@@ -144,10 +144,10 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	@When("Leave Add Bank field as blank")
 	public static void utilities_negative_tc_004() throws Exception {
 		try {
-			browser_wait(20);	
+			browser_wait(1000);
 			click_javascript("utilities");
 			click_javascript("wallet");
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("utilities_add_bank");
 			click("utilities_bank_saveas");
 			click("utilities_account_name");
@@ -183,13 +183,13 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	@When("Enter invalid bank details")
 	public static void utilities_negative_tc_005() throws Exception {
 		try {
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("utilities");
 			click_javascript("wallet");
 			click_javascript("utilities_add_bank");
 			driver.findElement(By.xpath(OR_reader("utilities_bank_saveas"))).sendKeys(td_reader("utilities_bank_saveas"));
 			driver.findElement(By.xpath(OR_reader("utilities_account_name"))).sendKeys(td_reader("utilities_account_name",1));
-			browser_wait(10);
+			browser_wait(1000);
 			click("utilities_routing_no");
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -202,16 +202,16 @@ public class Utilities_negative_scenarios  extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("utilities_bank_account_holder_name_invalid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("utilities_bank_account_holder_name_invalid_msg"));  
-			browser_wait(5);
+			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader("utilities_routing_no"))).sendKeys(td_reader("utilities_routing_no",1));
 			click("utilities_account_type");
 			str= driver.findElement(By.xpath(OR_reader("utilities_bank_routing_no_invalid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("utilities_bank_routing_no_invalid_msg"));  
 			text = td_reader("utilities_account_type");
 			drop_down(OR_reader( "utilities_account_type_list"),text);  
-			browser_wait(2);
+			browser_wait(2000);
 			driver.findElement(By.xpath(OR_reader("utilities_account_number"))).sendKeys(td_reader("utilities_account_number",1));
-			browser_wait(2);
+			browser_wait(2000);
 			click("utilities_routing_no");
 			str= driver.findElement(By.xpath(OR_reader("utilities_bank_account_no_invalid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("utilities_bank_account_no_invalid_msg"));  
@@ -226,9 +226,9 @@ public class Utilities_negative_scenarios  extends Generic_function{
 	public static void utilities_positive_tc_006() throws Exception{
 		try {
 			click_javascript("utilities");
-			browser_wait(20);
+			browser_wait(2000);
 			click_javascript("award_points");
-			browser_wait(20);
+			browser_explicit_wait("awardpoints_redeem_button");
 			value=driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))).isEnabled();
 			if(value==true) {
 				click("awardpoints_redeem_button");				

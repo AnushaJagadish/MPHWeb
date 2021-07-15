@@ -27,11 +27,11 @@ public class Circles_positive_scenarios extends Generic_function  {
 	@When("Click on the Circles tab")
 	public void click_circles() throws IOException {
 		click("welcome_login");
-		browser_wait(12);
+		browser_wait(1200);
 		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
 		click("login");
-		browser_wait(20);
+		browser_wait(1200);
 		click("circle_click");
 	}
 
@@ -39,7 +39,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 	@Then("Validate Circles page")
 	public void circle_positive_tc_001() throws IOException {
 		try {
-			browser_wait(12);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("circle_header_assert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -51,14 +51,14 @@ public class Circles_positive_scenarios extends Generic_function  {
 	/*TC 002 - Validate that a user is able to click on Add a Partner and options pop up*/
 	@When("Click on Add a Partner")
 	public void click_add_partner() throws IOException {
-		browser_wait(12);
+		browser_wait(1000);
 		click("circle_add_partner");
 	}
 
 	@Then("Validate options pop up")
 	public void circle_positive_tc_002() throws IOException {
 		try {
-			browser_wait(12);
+			browser_wait(1200);
 			value = driver.findElement(By.xpath(OR_reader("circle_add_assert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -70,7 +70,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 	/*TC 003 - Validate that when a user clicks on Add a Provider option under Add a Partner drop-down, they are directed to the provider screen*/
 	@When ("Click on Add a Partner link")
 	public void add_partner() throws IOException {
-		browser_wait(20);
+		browser_wait(1500);
 		click("circle_select_partner");
 	}
 
@@ -90,7 +90,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 	public void circle_positive_tc_003() throws IOException {
 		try {
 
-			browser_wait(20);
+			browser_wait(1000);
 			click("circle_proceed");
 			value = driver.findElement(By.xpath(OR_reader("circle_continue"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -127,7 +127,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 	/*TC 005 - Validate that the user is able to click on the 'Forgot password?' link*/
 	@When ("Click on the Forgot password link")
 	public void forgot_password() throws IOException {
-		browser_wait(12);
+		browser_wait(1200);
 		click("circle_forgotpasswordlink");
 	}
 
@@ -200,11 +200,11 @@ public class Circles_positive_scenarios extends Generic_function  {
 	public void circles() throws IOException {
 		Browser_Launch();
 		click("welcome_login");
-		browser_wait(12);
+		browser_wait(1200);
 		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
 		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
 		click("login");
-		browser_wait(20);
+		browser_wait(1000);
 		click("circle_click");
 	}
 
@@ -212,7 +212,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 	public void medicare_logo() throws IOException {
 		value = driver.findElement(By.xpath(OR_reader("circle_mymedicareassert"))).isDisplayed();
 		Assert.assertEquals(true,value);
-		browser_wait(12);
+		browser_wait(1200);
 		click("circle_mymedicareassert");
 	}
 
@@ -223,11 +223,11 @@ public class Circles_positive_scenarios extends Generic_function  {
 			Assert.assertEquals(true,value);
 			click("logout");
 			System.out.println("circles positive");
-			driverquit();
+
 		} catch (Exception e) {
 			e.getMessage();
 			takeScreenShot("circle_positive_tc_012");
 		}
-
+		driverquit();
 	}
 }

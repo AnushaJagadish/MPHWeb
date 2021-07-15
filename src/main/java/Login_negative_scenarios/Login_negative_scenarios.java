@@ -28,9 +28,9 @@ public class Login_negative_scenarios extends Generic_function {
 	@When("clicks on 'Login' button")
 	public static void login_negative_tc_001() throws Exception {
 		try {
-		    browser_wait(10);
+		    browser_wait(1000);
 			click("login");
-			browser_wait(20);
+			browser_wait(1000);
 			str1= driver.findElement(By.xpath(OR_reader("login_validate_msg"))).getAttribute("oninvalid");
 			valid_msg=str1.substring(24,49);
 			Assert.assertEquals(valid_msg,Generic_function.td_reader("login_validate_msg",0));

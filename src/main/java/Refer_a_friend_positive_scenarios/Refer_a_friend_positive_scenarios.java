@@ -31,7 +31,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	@When("Login with valid data")
 	public void loginWithValidData() throws IOException {
 		click("welcome_login");
-		browser_wait(12);
+		browser_wait(1000);
 		driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
 		click("login");
@@ -41,7 +41,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	@Then("verify Tell your friends about Mpowered Health text and logo is displayed")
 	public static void login_positive_tc_001() throws Exception   {
 		try {
-			browser_wait(20);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("refer_a_frnd_home_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			value = driver.findElement(By.xpath(OR_reader( "refer_a_frnd_home_text"))).isDisplayed();
@@ -79,7 +79,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	@And("verify referral code text is displayed")
 	public static void login_positive_tc_003() throws Exception   {
 		try {
-			browser_wait(10);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("refer_a_frnd_referral_code"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -93,7 +93,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	public static void login_positive_tc_004() throws Exception{
 		try {
 			click("refer_a_frnd_share_link_button");	
-			browser_wait(20);
+			browser_wait(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("refer_a_frnd_positive_tc_004");

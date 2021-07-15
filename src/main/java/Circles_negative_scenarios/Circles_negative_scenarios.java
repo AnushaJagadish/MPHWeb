@@ -28,22 +28,22 @@ public class Circles_negative_scenarios extends Generic_function{
 	@When("Drop down list is clicked and No selection is made")
 	public void click_dropdown() throws IOException {
 		click("welcome_login");
-		browser_wait(12);
+		browser_wait(1200);
 		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
 		click("login");
-		browser_wait(20);
+		browser_wait(1000);
 		click("circles");
-		browser_wait(12);
+		browser_wait(1200);
 	}
 	@Then("Proceed to next page")
 	public void circle_positive_tc_001() throws Exception {
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "circles_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_wait(12);
+			browser_wait(1200);
 			click("circles_add_patner_button");
-			browser_wait(12);
+			browser_wait(1200);
 			value = driver.findElement(By.xpath(OR_reader("add_patner_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			Assert.assertEquals(driver.findElement(By.xpath(OR_reader("add_patner_proceed_button"))).isEnabled(),true);

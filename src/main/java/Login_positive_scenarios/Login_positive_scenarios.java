@@ -26,7 +26,7 @@ public class Login_positive_scenarios extends Generic_function {
 	public void login() throws Exception {
 		try {
 			click("welcome_login");
-			browser_wait(12);
+			browser_wait(1000);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -123,7 +123,7 @@ public class Login_positive_scenarios extends Generic_function {
 	public void loginhome() throws Exception {
 		try {
 			click("login");
-			browser_wait(12);		
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -149,16 +149,16 @@ public class Login_positive_scenarios extends Generic_function {
 	public static void landingpage() throws IOException {
 		try {
 			
-			browser_wait(12);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			System.out.println("login positive");
 			//reportMemoryUsage();
-			browser_close();
 
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("login_positive_tc_006");	
 		}
+		browser_close();
 	}
 }

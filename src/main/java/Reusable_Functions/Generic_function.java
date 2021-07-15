@@ -48,7 +48,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Generic_function {
@@ -296,10 +298,15 @@ public class Generic_function {
 	}
 
 	/* To wait the browser till the time passed to this function */
+	//Changed to milliseconds
 	public static void browser_wait(int time) {
-		driver.manage().timeouts().implicitlyWait(time,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(time,TimeUnit.MILLISECONDS);
 	}
-
+	/*Function for explicit wait */
+	public static void browser_explicit_wait(String fieldname) throws IOException {
+		WebDriverWait wait=new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(OR_reader(fieldname))));
+	}
 	/*Function to clear the value in a particular field*/
 	public static void field_clear(String fieldname) throws IOException {
 		val = driver.findElement(By.xpath(OR_reader( fieldname)));

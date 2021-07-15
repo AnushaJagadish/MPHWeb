@@ -22,10 +22,6 @@ Feature: Validation on Your profile page negative test cases
     When Enter 'security code or Re-enter password' as blank
     Then Verify the validation blank message
 
-  Scenario: Verify the scenario when unable to  Edit the primary and deactivate email
-    When Click on edit contact details
-    Then Not able to edit primary and deactivate email
-
   Scenario: Verify the scenario when blank Your profile Page fields
     When Enter firstname and lastname fields as blank
     Then Verify the validation message for blank fields
@@ -49,7 +45,7 @@ Feature: Validation on Your profile page negative test cases
   Scenario: Verify the scenario when unable to  Edit the primary and deactivate phone number
     When Click on phone number
     Then primary and deactivate phone number is disabled for edit
-    
+
   Scenario: Verify the scenario when entering invalid Phone number  or  Phone number fields are blank
     When Enter invalid Phone number  or  Phone number fields
     Then Verify the validation message for Phone number  or  Phone number fields

@@ -38,7 +38,7 @@ public class Forgot_password_positive_scenarios extends Generic_function {
 			driver.findElement(By.xpath(OR_reader("forgot_password_phone_no"))).sendKeys(td_reader("forgot_password_phone_no",3));
 			str= driver.findElement(By.xpath(OR_reader("forgot_password_page_title"))).getText();
 			Assert.assertEquals(str,td_reader("forgot_password_page_title"));
-			browser_wait(12);
+			browser_wait(1000);
 			browser_refresh();
 		} catch (Exception e) {
 			e.printStackTrace();

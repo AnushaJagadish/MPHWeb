@@ -38,7 +38,7 @@ public class Services_positive_scenario extends Generic_function {
 	@Then("Navigate to the login page")
 	public void navigate_login() throws IOException {
 		try {
-			browser_wait(5);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -51,7 +51,7 @@ public class Services_positive_scenario extends Generic_function {
 	@When("clicks on the 'Services' tab")
 	public static void services_page_positive_tc_002() throws IOException{
 		try {
-			browser_wait(5);
+			browser_wait(1000);
 			click("services");
 		}
 		catch(Exception e)
@@ -64,7 +64,7 @@ public class Services_positive_scenario extends Generic_function {
 	@Then("Navigate to the Services pages")
 	public static void navigate_services() throws IOException{
 		try {
-			browser_wait(5);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}
@@ -80,16 +80,17 @@ public class Services_positive_scenario extends Generic_function {
 	public void services_page_positive_tc_003() throws IOException {
 		try {
 			grid_tile(OR_reader("grid_path"));
-			browser_wait(5);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
+			System.out.println("services positive");
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 			takeScreenShot("servicepage_positive_tc_003");
 		}
-		System.out.println("services positive");
+
 		browser_close();
 	}
 }

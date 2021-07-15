@@ -94,7 +94,7 @@ public class Signup_positive_scenarios extends Generic_function {
 	@Then("Original value should be displayed in the password fields")
 	public static void display_value() throws IOException  {
 		try {
-			browser_wait(10);
+			browser_wait(1000);
 			value1=driver.findElement(By.xpath(OR_reader( "show_password"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			browser_refresh();  
@@ -137,7 +137,7 @@ public class Signup_positive_scenarios extends Generic_function {
 			e.printStackTrace();
 			takeScreenShot("signup_positive_tc_005");
 		}
-		browser_wait(10);
+		browser_wait(1000);
 	}
 	@Then("Verify navigation to OTP page")
 	public void verify_OTP_page() throws IOException {
@@ -166,10 +166,10 @@ public class Signup_positive_scenarios extends Generic_function {
 		try {
 			//click("verify");
 			System.out.println("signup positive");
-			browser_close();
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("click_verify");
-		}  
+		}
+		browser_close();
 	}
 }

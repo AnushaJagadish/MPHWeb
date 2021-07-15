@@ -31,7 +31,7 @@ public class Forgot_password_negative_scenarios extends Generic_function {
 	public void forgot_password_negative_tc_001() throws IOException  {
 		try {
 			Assert.assertEquals(str,td_reader("forgot_password_phone_msg"));
-			browser_wait(12);
+			browser_wait(1200);
 			browser_refresh();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -50,7 +50,7 @@ public class Forgot_password_negative_scenarios extends Generic_function {
 	@Then("Validate the error message for less than ten digits")
 	public void forgot_password_negative_tc_002() throws IOException {
 		try {
-			browser_wait(12);	
+			browser_wait(1200);
 			browser_refresh();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -69,7 +69,7 @@ public class Forgot_password_negative_scenarios extends Generic_function {
 	@Then("Validate the error message for more than ten digits")
 	public void forgot_password_negative_tc_003() throws IOException {
 		try {
-			browser_wait(12);
+			browser_wait(1200);
 			browser_refresh();
 		} catch (Exception e) {
 			e.printStackTrace();

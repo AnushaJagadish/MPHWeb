@@ -1,4 +1,4 @@
-Feature: User must click on the Award Point and navigated to the Reddemed award points page
+Feature: User must click on the Award Point and navigated to the Redeemed award points page
 
   Scenario: Validate navigation to utility page
     Given Launch the URL

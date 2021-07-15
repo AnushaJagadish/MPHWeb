@@ -3,6 +3,7 @@ package Headerpage_positive_scenarios;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
 import io.cucumber.java.en.Given;
@@ -26,7 +27,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	@When("Navigated to welcome screen")
 	public void welcome_screen() throws IOException {
 		click("welcome_login");
-		browser_wait(10);
+		browser_wait(1000);
 	}
 	@Then("Check the mpowered health logo in the header")
 	public static void header_positive_tc_001() throws IOException {
@@ -35,7 +36,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",7));
 			click("login");
-			 browser_wait(5);
+			 browser_explicit_wait("header_logo");
 			value = driver.findElement(By.xpath(OR_reader("header_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			} catch (Exception e) {
@@ -50,7 +51,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	@When("Click on Help icon")
 	public void click_help_icon() throws IOException {
 		click("help");
-		browser_wait(5);
+		browser_wait(1000);
 	}
 	@Then("Verify navigation to the help page")
 	public static void header_positive_tc_002() throws IOException {
@@ -67,19 +68,20 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	/*TC 003 -Validate that the user is navigated to the Landing page on clicking 'Log out' icon*/
 	@When("Click on Log out icon")
 	public void click_logout_icon() throws IOException {
-		browser_wait(5);
+		browser_wait(1000);
 		click("logout");
-		browser_wait(5);
 	}
 	@Then("Verify navigation to the Landing  page")
 	public static void header_positive_tc_003() throws IOException {
 		try {
+			browser_explicit_wait("welcome_login");
 			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
 			e.getMessage();
 			takeScreenShot("header_positive_tc_003");
-		}		
+		}
+		driverquit();
 	}
 	
 	/*TC 004 -Validate that the user is navigated to the alerts page on clicking 'Your alerts' icon*/
@@ -87,13 +89,13 @@ public class Headerpage_positive_scenarios extends Generic_function {
 
 	@When("Click on Your alerts icon")
 	public void click_alerts_icon() throws IOException {
-		browser_wait(5);
+		browser_wait(1000);
 		click("header_alerts");
-		browser_wait(5);
 	}
 	@Then("Verify navigation to the alerts page")
 	public static void header_positive_tc_004() throws IOException {
 		try {
+			browser_explicit_wait("alerts_header");
 			value = driver.findElement(By.xpath(OR_reader("alerts_header"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -106,13 +108,14 @@ public class Headerpage_positive_scenarios extends Generic_function {
 
 	@When("Click on Drop down tab")
 	public void click_dropDown() throws IOException {
+		browser_explicit_wait("header_menu");
 		click("header_menu");
-		browser_wait(5);
 	}
 	@Then("Verify the drop down options")
 	public static void header_positive_tc_005() throws IOException {
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "header_profile"))).isDisplayed();
+			click("header_profile");
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
 			e.getMessage();
@@ -125,7 +128,8 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	@When("Click on  Your profile")
 	public void click_your_profile() throws IOException {
 		click("header_profile");
-		browser_wait(5);
+		browser_explicit_wait("your_profile_title");
+
 	}
 	@Then("Verify navigation to the profile page.")
 	public static void header_positive_tc_006() throws IOException {
@@ -141,10 +145,9 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	/*TC 007 -Validate that the user is navigated to the ratings dashboard page on clicking 'Your ratings' tab*/
 	@Then("Click on  Your ratings")
 	public void clickOnYourRatings() throws IOException {
-		click("header_menu");
-		browser_wait(5);
+//		click("header_menu");
 		click("header_ratings");
-		browser_wait(5);
+		browser_wait(1000);
 	}
 	@Then("Verify navigation to the ratings dashboard page.")
 	public static void header_positive_tc_007() throws IOException {
@@ -160,10 +163,10 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	/*TC 008 -Validate that the user is navigated to the 'Feedback Port'   page  on clicking 'Feedback'*/
 	@Then("Click on  Feedback")
 	public void click_feedback() throws IOException {
-		click("header_menu");
-		browser_wait(5);
+		//click("header_menu");
+		browser_wait(1000);
 		click("header_feedback");
-		browser_wait(5);
+		browser_wait(1000);
 	}
 	@Then("Verify the navigation to the Feedback Port.")
 	 public static void header_positive_tc_008() throws IOException {
@@ -183,10 +186,10 @@ public class Headerpage_positive_scenarios extends Generic_function {
 
 	@Then("Click on  Contact Us")
 	public void click_contactUs() throws IOException {
-		click("header_menu");
-		browser_wait(5);
+	//	click("header_menu");
+		browser_wait(1000);
 		click("header_contact");
-		browser_wait(5);
+		browser_wait(1000);
 	}
 	@Then("Verify the navigation to the Contact Us.")
 	public static void header_positive_tc_009() throws IOException {
@@ -205,10 +208,10 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	/*TC 010 -Validate that the user is able to see Privacy Policy dialogue box on clicking on the 'Privacy Policy' */
 	@When("Click on  Privacy Policy")
 	public void click_privacy_policy() throws IOException {
-		click("header_menu");
-		browser_wait(5);
+		//click("header_menu");
+		browser_wait(1000);
 		click("header_privacy");
-		browser_wait(5);
+		browser_wait(1000);
 	}
 	@Then("Verify the dialogue box on privacy page")
 	public static void header_positive_tc_010() throws IOException {
@@ -226,24 +229,21 @@ public class Headerpage_positive_scenarios extends Generic_function {
 
 	@When("click on  Terms & Conditions")
 	public void click_terms_conditions() throws IOException {
-		click("header_menu");
-		browser_wait(5);
+		//click("header_menu");
+		browser_wait(1000);
 		click("header_terms");
-		browser_wait(5);
 	}
 	@Then("Verify the dialogue box on Terms and condition page")
 	public static void header_positive_tc_011() throws IOException {
-		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+		browser_explicit_wait("terms_ok");
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "terms_ok"))).isDisplayed();
 	    	Assert.assertEquals(true,value);
 	    	click("terms_ok");
 	    	System.out.println("header positive");
-	    	driverquit();
 		} catch (Exception e) {
 			e.getMessage();
 			takeScreenShot("header_positive_tc_011");
 		}   
 	}
-
 }

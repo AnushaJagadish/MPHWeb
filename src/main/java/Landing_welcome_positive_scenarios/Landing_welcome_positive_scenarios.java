@@ -69,16 +69,16 @@ public class Landing_welcome_positive_scenarios extends Generic_function {
 	@Then("navigate to Sign up page")
 	public void landing_welcome_positive_tc_003() throws Exception {
 		try {
-			browser_wait(12);
+			browser_wait(1500);
 			value = driver.findElement(By.xpath(OR_reader( "signup_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			System.out.println("landing positive");
-			browser_close();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Landing_welcome_positive_tc_003");
 		}
-		
+		browser_close();
 	}
 
 }

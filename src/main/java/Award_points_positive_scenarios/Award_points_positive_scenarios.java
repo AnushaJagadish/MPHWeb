@@ -46,9 +46,9 @@ public class Award_points_positive_scenarios extends Generic_function{
 	@Then("Click on 'Utilities'")
 	public static void click_utilities() throws IOException {
 		try {
-			browser_wait(12);
+			browser_wait(1000);
 			click("utilities");
-			browser_wait(20);
+			browser_wait(1500);
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("click_utilities");
@@ -58,7 +58,7 @@ public class Award_points_positive_scenarios extends Generic_function{
 	@When("Click on Award points tile")
 	public void click_awardpoints() throws IOException {
 		click("award_points");
-		browser_wait(20);
+		browser_wait(1500);
 	}
 
 	@Then("Validate Award points page")
@@ -72,7 +72,6 @@ public class Award_points_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 002 - Validate that user can click the Tile "Award Points"in the Utilities dashboard*/
 	@Then("User should be able to click on Award point tile and to Award points page successfully")
 	public static void Award_point_positive_tc_002()throws InterruptedException, IOException {
 		try {
@@ -82,52 +81,30 @@ public class Award_points_positive_scenarios extends Generic_function{
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
 			takeScreenShot("Award_point_positive_tc_002()");
-		}	
-
-	}
-	@When("Click on the Redeem Points button")
-	public void click_redeem_points_button() throws IOException {
-		try {
-			browser_wait(5);
-			click("awardpoints_redeem_button");
-			browser_wait(5);
-			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
-			Assert.assertEquals(true,value);
-		} catch (IOException ioException) {
-			takeScreenShot("click_redeempoints_button");
-			ioException.printStackTrace();
 		}
 
 	}
-	
-	/*TC 003 - Validate that user is able to redeem points  in the Award points dashboard.*/
-	@When("User should be able to click on the Redeem Points button and navigated to redeem award points page")
-	public static void Award_point_positive_tc_003() throws IOException {
-//			click("awardpoints_redeem_button");
-//			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
-//			Assert.assertEquals(true,value);
-//			Thread.sleep(1000);
+	/*TC 002 - Validate that user can click the Tile "Award Points"in the Utilities dashboard*/
+	@When("Click on the Redeem Points button")
+	public void click_redeem_points_button() throws IOException {
+		try {
+			value = driver.findElement(By.xpath(OR_reader( "awardpoints_redeem_button"))).isEnabled();
+			Assert.assertEquals(true,value);
+			browser_explicit_wait("awardpoints_redeem_button");
+			click_javascript("awardpoints_redeem_button");
+		} catch (IOException ioException) {
+			takeScreenShot("click_redeem_points_button");
+			ioException.printStackTrace();
+		}
 	}
 
 	@Then("Validate the redeem award points page")
 	public void validateTheRedeemAwardPointsPage() throws IOException {
-			try {
+		try {
+			browser_wait(2000);
+			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
+			Assert.assertEquals(true,value);
 			value = driver.findElement(By.xpath(OR_reader( "available_award_point"))).isDisplayed();
-//			Assert.assertEquals(true,value);
-//			click("redeem_points_giftcard");
-//			ele=driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
-//			ele.sendKeys(td_reader("redeem_points_giftcard"));
-//			ele.sendKeys(Keys.ARROW_DOWN);
-//			ele.sendKeys(Keys.ENTER);
-//			value = driver.findElement(By.xpath( "award_points_reedem")).isDisplayed();
-//			Assert.assertEquals(true,value);
-//			click("redeem_points_amount");
-//			ele=driver.findElement(By.xpath(OR_reader("redeem_points_amount")));
-//			ele.sendKeys(Keys.BACK_SPACE);
-//			ele.sendKeys(td_reader("redeem_points_amount",0));
-//			Thread.sleep(6000);
-//			click("redeem_points_email");
-			Thread.sleep(6000);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -135,10 +112,11 @@ public class Award_points_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 004 - Validate that the user is able to navigate to the 'redeemed' page */
+
+	/*TC 003 - Validate that the user is able to navigate to the 'redeemed' page */
 	@When("Navigate to the redeem page")
 	public void navigate_redeem_page() throws IOException {
-		//click("redeem_points");
+		browser_back();
 	}
 	@Then("Validate the redeem page")
 	public static void Award_point_positive_tc_004() throws IOException {
@@ -155,10 +133,10 @@ public class Award_points_positive_scenarios extends Generic_function{
 			//			Assert.assertEquals(true,value);
 			//			Thread.sleep(5000);
 			System.out.println("Award points positive");
-			browser_close();
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Award_point_positive_tc_004()");
 		}
+		browser_close();
 	}
 }

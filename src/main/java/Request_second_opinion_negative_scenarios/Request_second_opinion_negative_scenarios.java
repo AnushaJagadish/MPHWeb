@@ -21,7 +21,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public void browser_launching() {
 		try {
 			Browser_Launch();
-			browser_wait(12);
+			browser_wait(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -56,7 +56,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 
 			click("login");
-			browser_wait(12);
+			browser_wait(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -230,7 +230,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(4);
+			browser_wait(1000);
 			browser_refresh();
 			click("create_new_case");
 		}catch(Exception e) {
@@ -243,7 +243,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static void Request_second_opinion_negative_tc_007() throws InterruptedException, IOException {	
 		try {
 			click("so_other_checkbox");
-			browser_wait(2);
+			browser_wait(2000);
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
 			click("so_other_agree_to_docpanel_checkbox");
 			click("so_iam_legal_guardian_checkbox");
@@ -259,7 +259,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(4);
+			browser_wait(1000);
 			browser_refresh();
 			click("create_new_case");
 		}catch(Exception e) {
@@ -273,7 +273,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static void Request_second_opinion_negative_tc_008() throws IOException, InterruptedException {	
 		try {
 			click("so_other_checkbox");
-			browser_wait(2);
+			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader("so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",2));
 			click("so_other_agree_to_docpanel_checkbox");
 			click("so_iam_legal_guardian_checkbox");
@@ -289,7 +289,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_last_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_last_name_validation_msg")); 
-			browser_wait(4);
+			browser_wait(1000);
 			browser_refresh();
 			click("create_new_case");
 		}catch(Exception e) {
@@ -321,7 +321,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_last_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_last_name")); 
-			browser_wait(4);
+			browser_wait(1000);
 			browser_refresh();
 			click("create_new_case");
 		}
@@ -352,7 +352,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_first_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
-			browser_wait(4);
+			browser_wait(1000);
 			browser_refresh();
 			click("create_new_case");
 		}
@@ -408,7 +408,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 
 			value = driver.findElement(By.xpath(OR_reader("so_proceed_button"))).isEnabled();
 			Assert.assertEquals(true,value); 
-			browser_wait(10);
+			browser_wait(1000);
 		} catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_012");
@@ -431,7 +431,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			value = driver.findElement(By.xpath(OR_reader("so_proceed_button"))).isEnabled();
 			Assert.assertEquals(true,value); 
-			browser_wait(10);
+			browser_wait(1000);
 			System.out.println("Request second opinion negative");
 		} catch(Exception e) {
 			e.printStackTrace();

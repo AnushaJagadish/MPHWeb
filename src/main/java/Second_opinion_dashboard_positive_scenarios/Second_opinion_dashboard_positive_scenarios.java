@@ -44,7 +44,7 @@ public class Second_opinion_dashboard_positive_scenarios extends Generic_functio
 	@And("navigated to the login page")
 	public void loginpage() throws Exception {
 		try {
-			browser_wait(10);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -59,7 +59,7 @@ public class Second_opinion_dashboard_positive_scenarios extends Generic_functio
 	@When("clicks on the second opinion tab")
 	public void second_opinion_positive_dashboard_tc_001() throws IOException {
 		try {
-			browser_wait(5);
+			browser_wait(1000);
 			click("services");
 			click("second_opinion");
 			
@@ -74,7 +74,7 @@ public class Second_opinion_dashboard_positive_scenarios extends Generic_functio
 	@Then("navigated to second opinion page")
 	public void second_opinion_page() throws Exception {
 		try {
-			browser_wait(5);
+			browser_explicit_wait("second_opinion_title");
 			value = driver.findElement(By.xpath(OR_reader("second_opinion_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (IOException e) {
@@ -246,7 +246,7 @@ public class Second_opinion_dashboard_positive_scenarios extends Generic_functio
 	{
 		try {
 			driver.navigate().to(geturl());
-			Thread.sleep(10000);
+			browser_explicit_wait("second_opinion_requested");
 			click_javascript("second_opinion_requested");
 			
 		}catch (Exception e) {
@@ -284,11 +284,11 @@ public class Second_opinion_dashboard_positive_scenarios extends Generic_functio
 			value = driver.findElement(By.xpath(OR_reader("second_opinion_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			System.out.println("Second opinion dashboard positive");
-			browser_close();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("second_opinion_positive_dashboard_tc_008");
 		}
-		
+		browser_close();
 	}
 }

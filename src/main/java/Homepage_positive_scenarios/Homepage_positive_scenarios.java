@@ -44,7 +44,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",7));
 			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",8));
 
-			browser_wait(12);
+			browser_wait(1000);
 		} catch (IOException e) {
 			e.printStackTrace();
 			takeScreenShot("enter_login_details");
@@ -54,24 +54,20 @@ public class Homepage_positive_scenarios extends Generic_function {
 	@Then("click on 'login' button")
 	public static void home_positive_tc_002() throws InterruptedException, IOException {
 		click("login");
-		browser_wait(12);
+		browser_wait(1000);
 
 	}
 
 	/*Validate that the user is navigated to  the Home page and User should be able to click on all the grid tiles */
 	@When("clicks on all the grid tiles")
 	public static void home_positive_tc_003() throws IOException, InterruptedException {
-
 		try {
 			grid_tiles(OR_reader("grid_path"));
-			browser_wait(12);
+			browser_wait(1000);
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_003");
 		}
-		Thread.sleep(1000);
-
-
 	}
 	/*TC_004 -Validate that the user is navigated to the Second Opinion page on clicking 'Request for second opinion' button*/
 	@When("clicks on the 'Request for second opinion' button")
@@ -79,7 +75,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 		try {
 			click("request_second_opinion_button");
 			click("create_new_case");
-			browser_wait(12);
+			browser_wait(1000);
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_004");
@@ -95,7 +91,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 			value1=driver.findElement(By.xpath(OR_reader( "request_second_opinion_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			//Thread.sleep(2000);
-			browser_wait(30);
+			browser_wait(1500);
 			browser_back();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -109,7 +105,7 @@ public class Homepage_positive_scenarios extends Generic_function {
 	public static void home_positive_tc_005() throws InterruptedException, IOException {
 		try {
 			click("refer_a_friend_button");
-			browser_wait(15);
+			browser_wait(1500);
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_005");
@@ -121,15 +117,14 @@ public class Homepage_positive_scenarios extends Generic_function {
 		try {
 			value1=driver.findElement(By.xpath(OR_reader("refer_a_friend_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			browser_wait(20);
+			browser_wait(1000);
 			browser_back();
 			System.out.println("home positive");
-			browser_close();
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_005");
 		}
-
+		browser_close();
 	}
 
 }

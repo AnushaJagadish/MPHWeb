@@ -8,8 +8,9 @@ Feature: Validation on Award Points Page
     And Click on Award Points
 
   Scenario: Verify the validation message on entering amount more than the available amount in "Redeem Award Points" page
-    When Enter the amount more than available amount
-    Then Validate the message on award points page
+    When Click on 'redeem' points
+    Then Enter the amount more than available amount
+    And Validate the message on award points page
 
   Scenario: Validate the validation message on entering amount less than the available amount in "Redeem Award Points" page
     When Enter the amount less than the available amount

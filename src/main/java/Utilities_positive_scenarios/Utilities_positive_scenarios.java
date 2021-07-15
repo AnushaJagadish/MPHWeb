@@ -30,7 +30,7 @@ public class Utilities_positive_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
 			click("login");
-			browser_wait(40);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -43,7 +43,7 @@ public class Utilities_positive_scenarios extends Generic_function{
 	public static void click_utilities() throws Exception {
 		try {
 			click("utilities");
-			browser_wait(20);
+			browser_wait(1000);
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("click_utilities");
@@ -64,9 +64,9 @@ public class Utilities_positive_scenarios extends Generic_function{
 	/* TC_002-Click options provided in left side navigator*/
 	@When("Click on left side navigator options")
 	public static void click_navigator_options() throws Exception {
-			browser_wait(30);
+			browser_wait(1000);
 			click("home");
-			browser_wait(10);
+			browser_wait(1000);
 	}
 @Then("Verify the navigator options")
 public void utilities_positive_tc_002() throws IOException {
@@ -77,7 +77,7 @@ public void utilities_positive_tc_002() throws IOException {
 			value = driver.findElement(By.xpath(OR_reader("services_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("circles");
-			browser_wait(20);
+			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("circles_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -90,9 +90,9 @@ public void utilities_positive_tc_002() throws IOException {
 	public static void utilities_positive_tc_003() throws Exception {
 		try {
 			click_javascript("utilities");
-			browser_wait(40);
+			browser_wait(1000);
 			utilities_grid_tile(OR_reader( "utilities_gridpath"));
-			browser_wait(10);
+			browser_wait(1000);
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("utilities_positive_tc_003");
@@ -103,16 +103,16 @@ public void utilities_positive_tc_002() throws IOException {
 	@When("Enter card details in wallet dashboard")
 	public static void utilities_positive_tc_004() throws Exception {
 		try {
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("utilities");
 			click_javascript("wallet");
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("utilities_add_card");
-			browser_wait(20);
+			browser_wait(2000);
 			driver.findElement(By.xpath(OR_reader("utilities_save_as"))).sendKeys(td_reader("utilities_save_as"));
 			driver.findElement(By.xpath(OR_reader("utilities_name_on_card"))).sendKeys(td_reader("utilities_name_on_card"));
 			Robot robot = new Robot();
-			browser_wait(20);
+			browser_wait(2000);
 			robot.keyPress(KeyEvent.VK_TAB);
 			for (int i=0; i<5;i++) {
 				robot.keyPress(KeyEvent.VK_NUMPAD4);
@@ -121,18 +121,18 @@ public void utilities_positive_tc_002() throws IOException {
 				robot.keyPress(KeyEvent.VK_NUMPAD2);
 			}
 			robot.keyPress(KeyEvent.VK_TAB);
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_BACK_SLASH);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD6);
 			robot.keyPress(KeyEvent.VK_TAB);
-			browser_wait(10);
+			browser_wait(1000);
 			robot.keyPress(KeyEvent.VK_NUMPAD1);
 			robot.keyPress(KeyEvent.VK_NUMPAD2);
 			robot.keyPress(KeyEvent.VK_NUMPAD3);
-			browser_wait(30);
+			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader("utilities_zip_code"))).sendKeys(td_reader("utilities_zip_code",0));
 			driver.findElement(By.xpath(OR_reader("utilities_phone_number"))).sendKeys(td_reader("utilities_phone_number",0));
 			driver.findElement(By.xpath(OR_reader("utilities_address"))).sendKeys(td_reader("utilities_address"));
@@ -150,7 +150,7 @@ public void utilities_positive_tc_002() throws IOException {
 		try {
 			click_javascript("utilities_save_button");
 			//click_javascript("card_ok");
-			browser_wait(30);
+			browser_wait(1000);
 			browser_back();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -162,7 +162,7 @@ public void utilities_positive_tc_002() throws IOException {
 	/* TC_005 - Add bank details  in the Wallet dashboard*/
 	@When("Enter bank details in wallet dashboard")
 	public void bank_details() throws Exception {
-		browser_wait(20);	
+		browser_wait(1000);
 		try {
 			click_javascript("utilities");
 			click_javascript("wallet");
@@ -196,15 +196,15 @@ public void utilities_positive_tc_002() throws IOException {
 	@When("Click redeem points")
 	public static void click_redeem_points() throws Exception{
 			click_javascript("utilities");
-			browser_wait(30);
+			browser_wait(1000);
 			click_javascript("award_points");
-			browser_wait(20);
+			browser_wait(1000);
 	}
 @Then("Verify the award points")
 	public void utilities_positive_tc_006()throws IOException {
 		try{value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			browser_wait(10);
+			browser_wait(1000);
 			click_javascript("awardpoints_redeem_button");
 			value1 = driver.findElement(By.xpath(OR_reader("utilities_redeem_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);

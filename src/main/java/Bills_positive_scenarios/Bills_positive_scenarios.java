@@ -21,9 +21,9 @@ public class Bills_positive_scenarios extends Generic_function{
 	public void browser_launching() throws Exception {
 		try {
 			Browser_Launch();
-			browser_wait(12);
+			browser_wait(1000);
 			click("welcome_login");
-			browser_wait(12);
+			browser_wait(1200);
 			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",6));
 			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",7));
 			click("login");
@@ -37,7 +37,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@When("Click on 'Bills'")
 	public void bills_positive_tc_001() throws Exception {
 		try {
-			browser_wait(20);
+			browser_wait(2000);
 			click("services");
 			click("bills_title_services");
 		} catch (IOException e) {
@@ -49,7 +49,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@Then("Verify navigation to bills page")
 	public void navigate_bills_page() throws Exception {
 		try {
-			browser_wait(20);
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader("bills_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (IOException e) {
@@ -154,7 +154,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@Then("Validate  'Your expenses' grid is visible")
 	public void your_expense_grid() throws Exception {
 		try {
-			browser_wait(30);
+			browser_wait(3000);
 			value = driver.findElement(By.xpath(OR_reader( "bills_carousel_to"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {

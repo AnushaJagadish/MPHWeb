@@ -46,8 +46,8 @@ header_frequently_asked,xpath,"//h3[contains(text(),'Frequently asked questions'
 logout,xpath,//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[1]/img[1]
 your_alerts_title,xpath,"//h3[contains(text(),'Your alerts')]"
 header_alerts,xpath,//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/div[1]
-header_menu,xpath,//body/div[@id='root']/div[1]/div[2]/div[1]/div[4]/div[1]/img[1]
-header_profile,xpath,//li[@id='header-list-item-0']
+header_menu,xpath,//div[@id='header-icon-3']/div/img
+header_profile,xpath,//p[@id='item-name']
 your_profile_title,xpath,"//h3[contains(text(),'Your profile')]"
 header_ratings,xpath,"//p[contains(text(),'Your ratings')]"
 your_ratings_title,xpath,"//h3[contains(text(),'Your ratings')]"
@@ -129,7 +129,7 @@ utilities_account_type,xpath,//div[@id='standard-select']
 utilities_account_number,xpath,//div[@id='root']/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]/input[1]
 utilities_check_box,xpath,//div[@id='root']/div[1]/div[3]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[6]/label[1]/span[1]/span[1]/input[1]
 utilities_redeem_points_title,xpath,"//h3[contains(text(),'Redeem award points')]"
-awardpoints_redeem_button,xpath,.MuiButton-label
+awardpoints_redeem_button,xpath,"//span[contains(.,'Redeem Points')]"
 redeem_points_giftcard,xpath,//input[@id='gift-card-dropdown']
 redeem_points_amount,xpath,//input[@id='amount-gift-card-text-field']
 redeem_points_email,xpath,//input[@id='email']
