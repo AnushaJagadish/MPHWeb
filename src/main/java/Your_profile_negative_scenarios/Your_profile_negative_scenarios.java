@@ -114,11 +114,11 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			browser_wait(1000);
 			str= driver.findElement(By.xpath(OR_reader("security_code_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("security_code_match_valid_msg"));
-			browser_wait(1000);
+			browser_wait(3000);
 			driver.findElement(By.xpath(OR_reader("profile_enter_code"))).sendKeys(td_reader("profile_enter_code",1));
 			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_password",1));
 			click("profile_verify");
-			browser_wait(1000);
+			browser_wait(3000);
 		}catch(Exception e) {
 			takeScreenShot("invalid_validation_msg");
 		}
@@ -128,12 +128,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	@When("Enter 'security code or Re-enter password' as blank")
 	public static void your_profile_negative_tc_004() throws Exception{
 		try {
-			browser_refresh();
-			browser_wait(1000);
+			browser_explicit_wait("profile_edit");
 			click("profile_edit");
 			click("profile_checkbox");
+			browser_wait(4000);
 			click("profile_send_code");
+			browser_wait(4000);
 			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_password",0));
+			browser_wait(4000);
 			click("profile_verify");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -144,7 +146,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	@Then("Verify the validation blank message")
 	public static void blank_validation_msg() throws Exception{
 		try {
-			browser_wait(1000);
+			browser_wait(8000);
 			str= driver.findElement(By.xpath(OR_reader("security_code_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("security_code_valid_msg"));
 			browser_wait(1000);
@@ -189,6 +191,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			browser_back();
 			browser_wait(1000);
 			click_profile();
+			browser_explicit_wait("profile_edit");
 			click("profile_edit");
 			click("profile_checkbox");
 			click("profile_send_code");
@@ -617,6 +620,7 @@ try{
 	@Then("Verify the message on unsuccessful upload")
 	public void your_profile_negative_tc_023() throws IOException {
 try{
+	//browser_wait(1000);
 	value= driver.findElement(By.xpath(OR_reader( "profile_pic_valid_msg"))).isDisplayed();
 	Assert.assertEquals(true,value);
 	click("tab_ok");

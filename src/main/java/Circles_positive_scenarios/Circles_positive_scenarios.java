@@ -210,6 +210,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 
 	@When("My Medicare logo should be present")
 	public void medicare_logo() throws IOException {
+		browser_wait(1000);
 		value = driver.findElement(By.xpath(OR_reader("circle_mymedicareassert"))).isDisplayed();
 		Assert.assertEquals(true,value);
 		browser_wait(1200);

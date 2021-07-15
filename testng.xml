@@ -6,7 +6,7 @@
   <classes>
   <class name="Runner_Files.Landing_welcome_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
  
 <test name="Test2">
   <classes>
@@ -31,7 +31,6 @@
   <class name="Runner_Files.Login_positive_scenarios_runner"></class>
   </classes>
   </test> <!-- Test -->
-
  <test name="Test6">
   <classes>
   <class name="Runner_Files.Headerpage_positive_scenarios_runner"></class>
@@ -84,25 +83,25 @@
    <classes>
   <class name="Runner_Files.Services_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test15">
    <classes>
   <class name="Runner_Files.Second_opinion_dashboard_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test16">
    <classes>
   <class name="Runner_Files.Bills_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test17">
    <classes>
   <class name="Runner_Files.Circles_negative_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test18">
    <classes>
@@ -132,18 +131,18 @@
    <classes>
   <class name="Runner_Files.Award_points_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test23">
    <classes>
   <class name="Runner_Files.Forgot_password_negative_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
 <test name="Test24">
    <classes>
   <class name="Runner_Files.Forgot_password_positive_scenarios_runner"></class>
   </classes>
-  </test> <!-- Test --> 
+  </test> <!-- Test -->
 
    </suite><!-- suite -->

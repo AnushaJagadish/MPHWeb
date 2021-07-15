@@ -68,7 +68,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	/*TC 003 -Validate that the user is navigated to the Landing page on clicking 'Log out' icon*/
 	@When("Click on Log out icon")
 	public void click_logout_icon() throws IOException {
-		browser_wait(1000);
+		browser_wait(4000);
 		click("logout");
 	}
 	@Then("Verify navigation to the Landing  page")
@@ -116,6 +116,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "header_profile"))).isDisplayed();
 			click("header_profile");
+			browser_wait(1000);
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
 			e.getMessage();
@@ -147,7 +148,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	public void clickOnYourRatings() throws IOException {
 //		click("header_menu");
 		click("header_ratings");
-		browser_wait(1000);
+		browser_wait(4000);
 	}
 	@Then("Verify navigation to the ratings dashboard page.")
 	public static void header_positive_tc_007() throws IOException {
@@ -209,9 +210,9 @@ public class Headerpage_positive_scenarios extends Generic_function {
 	@When("Click on  Privacy Policy")
 	public void click_privacy_policy() throws IOException {
 		//click("header_menu");
-		browser_wait(1000);
+		browser_wait(4000);
 		click("header_privacy");
-		browser_wait(1000);
+		browser_wait(4000);
 	}
 	@Then("Verify the dialogue box on privacy page")
 	public static void header_positive_tc_010() throws IOException {
@@ -229,8 +230,8 @@ public class Headerpage_positive_scenarios extends Generic_function {
 
 	@When("click on  Terms & Conditions")
 	public void click_terms_conditions() throws IOException {
-		//click("header_menu");
-		browser_wait(1000);
+		//click_dropDown();
+		browser_wait(3000);
 		click("header_terms");
 	}
 	@Then("Verify the dialogue box on Terms and condition page")

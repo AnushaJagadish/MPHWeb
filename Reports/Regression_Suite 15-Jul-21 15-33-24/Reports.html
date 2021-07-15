@@ -1,0 +1,2115 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 15, 2021 03:33:24 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify header in home page positive functionality</p>
+            <p class="text-sm">
+              <span>15:33:24 PM</span> / <span>30:39:513</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify header in home page positive functionality</h5>
+<span class='badge badge-success'>07.15.2021 15:33:24</span>
+<span class='badge badge-danger'>07.15.2021 15:34:04</span>
+<span class='badge badge-default'>30:39:513</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate that the mpowered health logo in the header</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.browser_launching()">
+                <span>Given Launch the browser</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.welcome_screen()">
+                <span>When Navigated to welcome screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_001()">
+                <span>Then Check the mpowered health logo in the header</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Validate the navigation to the help page on clicking Help icon</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_help_icon()">
+                <span>When Click on Help icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_002()">
+                <span>Then Verify navigation to the help page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Validate the navigation to the alerts page on clicking Your alerts icon</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_alerts_icon()">
+                <span>When Click on Your alerts icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_004()">
+                <span>Then Verify navigation to the alerts page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Validate the Drop down tab</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_005()">
+                <span>Then Verify the drop down options</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Validate the navigation to the  profile page on clicking  Your profile tab</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_your_profile()">
+                <span>Then Click on  Your profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_006()">
+                <span>And Verify navigation to the profile page.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Validate  the  navigation to the ratings dashboard page on clicking Your ratings tab</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.clickOnYourRatings()">
+                <span>Then Click on  Your ratings</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_007()">
+                <span>Then Verify navigation to the ratings dashboard page.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Validate the navigation to the Feedback Port   page  on clicking Feedback</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_feedback()">
+                <span>Then Click on  Feedback</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_008()">
+                <span>Then Verify the navigation to the Feedback Port.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Validate  the navigation to the Contact Us page  on clicking  Contact us</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_contactUs()">
+                <span>Then Click on  Contact Us</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_009()">
+                <span>And Verify the navigation to the Contact Us.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="31"><span class="badge log pass-bg mr-2">Pass</span>Validate the  Privacy Policy dialogue box on clicking on the Privacy Policy</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_privacy_policy()">
+                <span>Then Click on  Privacy Policy</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_010()">
+                <span>Then Verify the dialogue box on privacy page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log fail-bg mr-2">Fail</span>Validate  the  Terms & Conditions dialogue box on clicking on the Terms & Conditions</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown()">
+                <span>When Click on Drop down tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_terms_conditions()">
+                <span>Then click on  Terms & Conditions</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyMXYyMUgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik05LjY4MyAxNi4xNTZMMi40NyA4Ljk0NGEuODkuODkgMCAwIDEgMC0xLjI2bC44NC0uODRhLjg5Ljg5IDAgMCAxIDEuMjU5LS4wMDJsNS43NDMgNS43MTYgNS43NDItNS43MTZhLjg5Ljg5IDAgMCAxIDEuMjU4LjAwMmwuODQxLjg0YS44OS44OSAwIDAgMSAwIDEuMjZsLTcuMjEyIDcuMjEyYS44OS44OSAwIDAgMS0xLjI2IDB6IiBvcGFjaXR5PSIuNjk5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=" class="jss38 jss37 jss43"> is not clickable at point (1491, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-SC898AR', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\ANUSHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61173}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b3a89eb5cd2b7e75e2fb51cecb61a6bd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Reusable_Functions.Generic_function.click(Generic_function.java:292)
+	at Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_dropDown(Headerpage_positive_scenarios.java:112)
+	at Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_terms_conditions(Headerpage_positive_scenarios.java:233)
+	at ✽.click on  Terms & Conditions(file:///D:/automation/mph-web-qa-automation-1/mph-web-qa-automation/src/main/java/Headerpage_positive_scenarios/Headerpage_positive_scenarios.feature:47)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_011()">
+                <span>And Verify the dialogue box on Terms and condition page</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>Validate the navigation to the Landing page on clicking Log out icon</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_logout_icon()">
+                <span>When Click on Log out icon</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img id="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE0IDEwaDIxdjIxSDE0eiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiM0ODRBNTQiIGQ9Ik0zMy43NzcgMjMuNTNsLTUuMzYyIDUuMjVjLS40NzguNDY5LTEuMzA4LjE0LTEuMzA4LS41MzF2LTNoLTQuMzQxQS43NTYuNzU2IDAgMCAxIDIyIDI0LjV2LTNjMC0uNDE1LjM0Mi0uNzQ5Ljc2Ni0uNzQ5aDQuMzR2LTNjMC0uNjY4LjgyNy0xIDEuMzEtLjUzbDUuMzYxIDUuMjQ5YS43NDUuNzQ1IDAgMCAxIDAgMS4wNjJ6bS05LjYzNCA3LjU2di0xLjkwNGEuNTczLjU3MyAwIDAgMC0uNTcxLS41NzJoLTRhMS41MjIgMS41MjIgMCAwIDEtMS41MjQtMS41MjR2LTkuMTQzYzAtLjg0My42OC0xLjUyNCAxLjUyNC0xLjUyNGg0YS41NzMuNTczIDAgMCAwIC41NzEtLjU3MXYtMS45MDVhLjU3My41NzMgMCAwIDAtLjU3MS0uNTcyaC00QTQuNTczIDQuNTczIDAgMCAwIDE1IDE3Ljk0N3Y5LjE0M2E0LjU3MyA0LjU3MyAwIDAgMCA0LjU3MiA0LjU3Mmg0YS41NzMuNTczIDAgMCAwIC41NzEtLjU3MnoiLz4KICAgIDwvZz4KPC9zdmc+Cg==" class="jss39 jss37 jss43"> is not clickable at point (1363, 39). Other element would receive the click: <div aria-hidden="true" style="z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;"></div>
+  (Session info: chrome=91.0.4472.124)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-SC898AR', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\ANUSHA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61173}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b3a89eb5cd2b7e75e2fb51cecb61a6bd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at Reusable_Functions.Generic_function.click(Generic_function.java:292)
+	at Headerpage_positive_scenarios.Headerpage_positive_scenarios.click_logout_icon(Headerpage_positive_scenarios.java:72)
+	at ✽.Click on Log out icon(file:///D:/automation/mph-web-qa-automation-1/mph-web-qa-automation/src/main/java/Headerpage_positive_scenarios/Headerpage_positive_scenarios.feature:51)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="Headerpage_positive_scenarios.Headerpage_positive_scenarios.header_positive_tc_003()">
+                <span>Then Verify navigation to the Landing  page</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation on Help Page</p>
+            <p class="text-sm">
+              <span>15:34:07 PM</span> / <span>30:17:701</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validation on Help Page</h5>
+<span class='badge badge-success'>07.15.2021 15:34:07</span>
+<span class='badge badge-danger'>07.15.2021 15:34:24</span>
+<span class='badge badge-default'>30:17:701</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Frequently asked questions title  should be present in  Help page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.browser_launching()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_help()">
+                <span>When Click on 'Help' tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_001()">
+                <span>Then verify the  Frequently asked questions title</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Second Opinions title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_second_opinion()">
+                <span>When Click on Second Opinions title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_002()">
+                <span>Then Verify the Second Opinions description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Award Points title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_award_points()">
+                <span>When Click on Award Points title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_003()">
+                <span>Then Verify the Award Points description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Referral title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_referral_title()">
+                <span>When Click on Referral title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_004()">
+                <span>Then Verify the Referral description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Profile title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_profile_title()">
+                <span>When Click on Profile title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_005()">
+                <span>Then Verify the Profile description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>Validate that the Payments  title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_payments_title()">
+                <span>When Click on Payments title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_006()">
+                <span>Then Verify the Payments description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>Validate that the  Add coverage  title  should be present  and able to see description</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.click_addcoverage_title()">
+                <span>When Click on Add coverage  title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Help_positive_scenarios.Help_positive_scenarios.help_positive_tc_007()">
+                <span>Then Verify the Add coverage description is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="65"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation on Your profile page negative test cases</p>
+            <p class="text-sm">
+              <span>15:34:26 PM</span> / <span>30:49:866</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Validation on Your profile page negative test cases</h5>
+<span class='badge badge-success'>07.15.2021 15:34:26</span>
+<span class='badge badge-danger'>07.15.2021 15:35:16</span>
+<span class='badge badge-default'>30:49:866</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=65</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>Verify clicking on profile will navigates to Your profile screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.launch_url()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.enter_login()">
+                <span>When Enter login details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.click_profile()">
+                <span>Then Click on your profile</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="70"><span class="badge log pass-bg mr-2">Pass</span>Validate that Send Code button is disabled when they do not check the phone number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.phoneNumber_Unchecked()">
+                <span>When Phone number check box is Unchecked</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_001()">
+                <span>Then Verify Send Code button is disabled</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="73"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when blank 'security code and Re-enter password' fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_002()">
+                <span>When Enter 'security code and Re-enter password' as blank</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.validation_msg()">
+                <span>Then Verify the validation message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid Security code  and Re-enter password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_003()">
+                <span>When Enter invalid 'security code and Re-enter password'</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_validation_msg()">
+                <span>Then Verify the validation message for invalid data</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="79"><span class="badge log fail-bg mr-2">Fail</span>Verify the scenario when blank 'security code or Re-enter password' fields</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_004()">
+                <span>When Enter 'security code or Re-enter password' as blank</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.blank_validation_msg()">
+                <span>Then Verify the validation blank message</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [Security code required] but found [code doesn't match]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at Your_profile_negative_scenarios.Your_profile_negative_scenarios.blank_validation_msg(Your_profile_negative_scenarios.java:152)
+	at ✽.Verify the validation blank message(file:///D:/automation/mph-web-qa-automation-1/mph-web-qa-automation/src/main/java/Your_profile_negative_scenarios/Your_profile_negative_scenarios.feature:23)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when blank Your profile Page fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_006()">
+                <span>When Enter firstname and lastname fields as blank</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.blank_validation_msg_fields()">
+                <span>Then Verify the validation message for blank fields</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="85"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid First name, Last name  or  Preferred name</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_007()">
+                <span>When Enters invalid firstname,lastname and preferred name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_message()">
+                <span>Then Verify the validation for invalid first name, last name or preferred name</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="88"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario unable to  Edit the User ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.userID_IsDisplayed()">
+                <span>When Verify 'User ID' is displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_008()">
+                <span>Then verify 'User ID' is disabled for edit</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="91"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when Email ID fields are blank</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.clickOnContactDetails()">
+                <span>When click on contact details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_009()">
+                <span>Then Leave email id field as blank</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="94"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid Email ID  or  already exist Email ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_010()">
+                <span>When Enter invalid email id</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.validation_invalid_mail()">
+                <span>Then Verify the validation for invalid email id</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="97"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when unable to  Edit the primary and deactivate phone number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.click_phone_number()">
+                <span>When Click on phone number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_011()">
+                <span>Then primary and deactivate phone number is disabled for edit</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="100"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid Phone number  or  Phone number fields are blank</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_012()">
+                <span>When Enter invalid Phone number  or  Phone number fields</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_validation_message()">
+                <span>Then Verify the validation message for Phone number  or  Phone number fields</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="103"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when unable to  Edit the primary and deactivate address</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.click_address()">
+                <span>When Click on Address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_013()">
+                <span>Then primary and deactivate address are disabled for edit</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="106"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when leaving the fields blank in the Add new address Page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.click_new_address()">
+                <span>When Click on add new address '+' symbol</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_014()">
+                <span>Then Leaves fields blank</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid Zip code in Add new address page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_zipcode()">
+                <span>When Enters invalid zip code</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_015()">
+                <span>Then Verify the Invalid zip code message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="112"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when leaving the fields blank in the Add plan Page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.click_plan_coverage()">
+                <span>When click on plan coverage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_016()">
+                <span>Then Enter add plan page fields blank</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="115"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering invalid First name of policy holder or Last name of policy holder  in Add plan page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_first_last_name()">
+                <span>When Enters invalid firstname and lastname fields in add plan page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_017()">
+                <span>Then Verify the error message on invalid firstname and lastname</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="118"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when leaving the fields blank in the Change password page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.blank_password()">
+                <span>When Enter blank fields in Change password page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_018()">
+                <span>Then Verify the blank field message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="121"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering wrong Old password in Change password page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.wrong_password()">
+                <span>When Enter wrong passwords</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_019()">
+                <span>Then Verify wrong password message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="124"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when invalid New password in Change password page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.invalid_new_password()">
+                <span>When Enter invalid new password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_020()">
+                <span>Then Verify invalid password message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="127"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering same data in Old password and New password fields in Change password page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.old_new_password()">
+                <span>When Enter same data in Old password and New password fields</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_021()">
+                <span>Then verify the validation message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="130"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when entering different data in New password and Confirm new password fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.diff_password_confirm_password()">
+                <span>When Enter different data in New password and Confirm new password fields</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_022()">
+                <span>Then Verify the different password message</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="133"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when a dialogue box appears dur to the failure of profile picture</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.upload_profile_picture()">
+                <span>When Not able to upload profile picture</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_negative_scenarios.Your_profile_negative_scenarios.your_profile_negative_tc_023()">
+                <span>Then Verify the message on unsuccessful upload</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="136"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation on Your profile page positive test cases</p>
+            <p class="text-sm">
+              <span>15:35:19 PM</span> / <span>30:28:804</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validation on Your profile page positive test cases</h5>
+<span class='badge badge-success'>07.15.2021 15:35:19</span>
+<span class='badge badge-danger'>07.15.2021 15:35:47</span>
+<span class='badge badge-default'>30:28:804</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=136</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="137"><span class="badge log pass-bg mr-2">Pass</span>Validate that the  Your Profile  title  should be present in  Your Profile screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.launch_url()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.login_data()">
+                <span>When Enter login data</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_001()">
+                <span>Then check Your Profile  title  should be present in  Your Profile screen</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="141"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when dialogue box will appear, when click on edit icon</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.click_edit_icon()">
+                <span>When Click on edit icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.your_profile_positive_tc_002()">
+                <span>Then Verify the dialogue box</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="144"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when edit  the profile details</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_003()">
+                <span>Then Edit  the profile details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="146"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when adding Email ID in contact details</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_004()">
+                <span>Then Add Email ID in contact details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="148"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when Activate , Edit and  Deactivate the Email ID</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_001000()">
+                <span>When Activate , Edit and  Deactivate the Email ID</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="150"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when add Phone Number in contact details.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_006()">
+                <span>Then Add Phone Number in contact details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="152"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when Activate , Edit and  Deactivate the Phone Number</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_007()">
+                <span>Then Activate , Edit and  Deactivate the Phone Number</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="154"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when add Address in contact details.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_008()">
+                <span>Then Add Address in contact details.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="156"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when Activate , Edit , Primary and  Deactivate the Address</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_009()">
+                <span>Then Activate , Edit , Primary and  Deactivate the Address</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="158"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when add Plan coverage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_010()">
+                <span>Then Add Plan coverage</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="160"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when Activate , Edit , Make primary and  Deactivate the Plan coverage</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_011()">
+                <span>Then Activate , Edit , Make primary and  Deactivate the Plan coverage</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="162"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when change the password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_012()">
+                <span>Then Change the password</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="164"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when password should be displayed on clicking the eye and user can able to save the details</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Your_profile_positive_scenarios.Your_profile_positive_scenarios.yourprofile_positive_tc_013()">
+                <span>Then The password should be displayed on clicking the eye</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="166"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Circle positive functionality</p>
+            <p class="text-sm">
+              <span>15:35:49 PM</span> / <span>30:34:961</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Circle positive functionality</h5>
+<span class='badge badge-success'>07.15.2021 15:35:49</span>
+<span class='badge badge-danger'>07.15.2021 15:36:24</span>
+<span class='badge badge-default'>30:34:961</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=166</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="167"><span class="badge log pass-bg mr-2">Pass</span>Validate the navigation to the Circles page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.browserlaunching()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.click_circles()">
+                <span>When Click on the Circles tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_001()">
+                <span>Then Validate Circles page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="171"><span class="badge log pass-bg mr-2">Pass</span>Validate able to click on Add a Partner and options pop up</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.click_add_partner()">
+                <span>When Click on Add a Partner</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_002()">
+                <span>Then Validate options pop up</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="174"><span class="badge log pass-bg mr-2">Pass</span>Validate clicks on Add a Provider option under Add a Partner drop-down</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.add_partner()">
+                <span>When Click on Add a Partner link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.select_partner()">
+                <span>Then Click on Select a partner</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_003()">
+                <span>And select the My Medicare option finally click on Proceed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="178"><span class="badge log pass-bg mr-2">Pass</span>Validate Forgot username? link</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.forgot_username()">
+                <span>When click on the Forgot username? link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_004()">
+                <span>Then Validate forgot username</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="181"><span class="badge log pass-bg mr-2">Pass</span>Validate Forgot password? link</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.forgot_password()">
+                <span>When Click on the Forgot password link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_005()">
+                <span>Then Validate the forgot password</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="184"><span class="badge log pass-bg mr-2">Pass</span>Validate USERNAME and PASSWORD field</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.Login()">
+                <span>When Enter  the Username and Password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_006()">
+                <span>Then Validate the username and password</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="187"><span class="badge log pass-bg mr-2">Pass</span>Validate that the password displayed on clicking the eye</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.eye_symbol()">
+                <span>When Click on eye symbol</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_007()">
+                <span>Then View password on clicking the eye</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="190"><span class="badge log pass-bg mr-2">Pass</span>Validate Login with valid data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.username_password()">
+                <span>When Enter valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_008()">
+                <span>Then Validate Login with valid data</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="193"><span class="badge log pass-bg mr-2">Pass</span>My Medicare icon in the Circles page and also it should be clickable</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circles()">
+                <span>When Navigate to Circles page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.medicare_logo()">
+                <span>Then My Medicare logo should be present</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Circles_positive_scenarios.Circles_positive_scenarios.circle_positive_tc_012()">
+                <span>And Validate that its clickable</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="197"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation on Utilities page negative test cases</p>
+            <p class="text-sm">
+              <span>15:36:26 PM</span> / <span>30:51:433</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validation on Utilities page negative test cases</h5>
+<span class='badge badge-success'>07.15.2021 15:36:26</span>
+<span class='badge badge-danger'>07.15.2021 15:37:18</span>
+<span class='badge badge-default'>30:51:433</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=197</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="198"><span class="badge log pass-bg mr-2">Pass</span>Navigate to Utilities screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.launch_url()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_negative_tc_001()">
+                <span>When Clicks on Utilities tab</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="201"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when 'Add Card' fields is blank</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_negative_tc_002()">
+                <span>When Leave Add card field as blank</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.blank_field_validation()">
+                <span>Then Verify the message on leaving Add Card fields as blank</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="204"><span class="badge log pass-bg mr-2">Pass</span>Verify the message on entering invalid details in the Add Card page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_negative_tc_003()">
+                <span>When Enter invalid card details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.invalid_card_assertion()">
+                <span>Then Verify the message on entering invalid Card details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="207"><span class="badge log pass-bg mr-2">Pass</span>Verify the scenario when 'Add Bank' fields is blank</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_negative_tc_004()">
+                <span>When Leave Add Bank field as blank</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.blank_bank_details()">
+                <span>Then Verify the message on leaving Add Bank fields as blank</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="210"><span class="badge log pass-bg mr-2">Pass</span>Verify the message on entering invalid details in the 'Add Bank' page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_negative_tc_005()">
+                <span>When Enter invalid bank details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.invalid_bank_details()">
+                <span>Then Verify the message on entering invalid bank details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="213"><span class="badge log pass-bg mr-2">Pass</span>Verify the redeem button when the balance is less than 2000</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_negative_scenarios.Utilities_negative_scenarios.utilities_positive_tc_006()">
+                <span>When Verify the redeem button is disabled</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="215"><span class="badge log pass-bg mr-2">Pass</span>Navigate to Utilities screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.launch_url()">
+                <span>Given Launch the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.click_utilities()">
+                <span>When Clicks on Utilities tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.utilities_positive_tc_001()">
+                <span>Then Navigate to Utilities Dashboard</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="219"><span class="badge log pass-bg mr-2">Pass</span>Click options provided in left side navigator</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.click_navigator_options()">
+                <span>When Click on left side navigator options</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.utilities_positive_tc_002()">
+                <span>Then Verify the navigator options</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.utilities_positive_tc_003()">
+                <span>And Click all tiles in utilities dashboard</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="223"><span class="badge log pass-bg mr-2">Pass</span>Add card details  in the Wallet dashboard</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.utilities_positive_tc_004()">
+                <span>When Enter card details in wallet dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.card_details_save()">
+                <span>Then Verify card details is saved</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="226"><span class="badge log pass-bg mr-2">Pass</span>Add bank details  in the Wallet dashboard</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.bank_details()">
+                <span>When Enter bank details in wallet dashboard</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.utilities_positive_tc_005()">
+                <span>Then Verify bank details is saved</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="229"><span class="badge log pass-bg mr-2">Pass</span>Redeem points  in the Award points dashboard</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="Utilities_positive_scenarios.Utilities_positive_scenarios.click_redeem_points()">
+                <span>When Click redeem points</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:34:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='81'>Then Verify the validation blank message</a>
+<div class="">
+<span class="badge badge-default">Validation on Your profile page negative test cases.Verify the scenario when blank 'security code or Re-enter password' fields.Then Verify the validation blank message</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:34:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='37'>Then click on Terms & Conditions</a>
+<div class="">
+<span class="badge badge-default">Verify header in home page positive functionality.Validate the Terms & Conditions dialogue box on clicking on the Terms & Conditions.Then click on Terms & Conditions</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:34:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>When Click on Log out icon</a>
+<div class="">
+<span class="badge badge-default">Verify header in home page positive functionality.Validate the navigation to the Landing page on clicking Log out icon.When Click on Log out icon</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 15, 2021 03:33:24 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 15, 2021 03:37:18 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='33%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='95%'><b>71</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='4%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='96%'><b>145</b> steps passed</small></div>
+<div>
+<small data-tooltip='2%'><b>3</b> steps failed,
+<b>2</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Verify header in home page positive functionality":39.513,"Validation on Help Page":17.701,"Validation on Your profile page negative test cases":49.866,"Validation on Your profile page positive test cases":28.804,"Test Circle positive functionality":34.961,"Validation on Utilities page negative test cases":51.433
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 71,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 145,
+failGrandChild: 3,
+warningGrandChild: 0,
+skipGrandChild: 2,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

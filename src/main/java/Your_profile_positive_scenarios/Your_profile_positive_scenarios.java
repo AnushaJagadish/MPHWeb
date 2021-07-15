@@ -55,7 +55,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	/*TC 002 - Verify the scenario when dialogue box will appear, when click on edit icon  */
 	@When("Click on edit icon")
 	public void click_edit_icon() throws Exception {
-			browser_explicit_wait("profile_edit");
+			browser_wait(6000);
 			click("profile_edit");
 
 	}

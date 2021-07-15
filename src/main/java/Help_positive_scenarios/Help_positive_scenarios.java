@@ -54,7 +54,7 @@ public class Help_positive_scenarios extends Generic_function{
 		try {
 			browser_wait(1000);
 			click("help_secondassert");
-			browser_wait(1000);
+			browser_wait(3000);
 			value = driver.findElement(By.xpath(OR_reader( "help_secondabout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -78,9 +78,9 @@ public class Help_positive_scenarios extends Generic_function{
 	@When("Click on Award Points title")
 	public void click_award_points() throws Exception {
 		try {
-			browser_wait(1500);
+			browser_wait(2000);
 			click("help_awardpoints");
-			browser_wait(5500);
+			browser_wait(5000);
 			value = driver.findElement(By.xpath(OR_reader("help_awardpointsabout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -91,7 +91,7 @@ public class Help_positive_scenarios extends Generic_function{
 	@Then("Verify the Award Points description is displayed")
 	public void help_positive_tc_003() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(5000);
 			value = driver.findElement(By.xpath(OR_reader("help_awardpoints"))).isDisplayed();
 			Assert.assertEquals(true,value);
 
@@ -178,6 +178,7 @@ public class Help_positive_scenarios extends Generic_function{
 		try {
 			browser_wait(1000);
 			scrolldown();
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader("help_paymentassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 
@@ -205,7 +206,7 @@ public class Help_positive_scenarios extends Generic_function{
 	@Then("Verify the Add coverage description is displayed")
 	public void help_positive_tc_007() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader( "help_coverageassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {

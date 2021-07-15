@@ -167,6 +167,7 @@ public void utilities_positive_tc_002() throws IOException {
 			click_javascript("utilities");
 			click_javascript("wallet");
 			click_javascript("utilities_add_bank");
+			browser_wait(3000);
 			driver.findElement(By.xpath(OR_reader("utilities_bank_saveas"))).sendKeys(td_reader("utilities_bank_saveas"));
 			driver.findElement(By.xpath(OR_reader("utilities_account_name"))).sendKeys(td_reader("utilities_account_name",0));
 			driver.findElement(By.xpath(OR_reader("utilities_routing_no"))).sendKeys(td_reader("utilities_routing_no",0));
