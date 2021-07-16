@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
 import io.cucumber.java.en.And;
@@ -39,6 +40,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		try {
 			browser_wait(2000);
 			click("services");
+			browser_wait(2000);
 			click("bills_title_services");
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -49,8 +51,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@Then("Verify navigation to bills page")
 	public void navigate_bills_page() throws Exception {
 		try {
-			browser_wait(2000);
-			value = driver.findElement(By.xpath(OR_reader("bills_page_title"))).isDisplayed();
+			value = driver.findElement(By.xpath(OR_reader("bills_dropdown"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -73,6 +74,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@And("'Amount' visible on the page")
 	public void amount_visible() throws Exception {
 		try {
+			browser_wait(9000);
 			value = driver.findElement(By.xpath(OR_reader("bills_due_amount_dollar"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -85,6 +87,7 @@ public class Bills_positive_scenarios extends Generic_function{
 	@When("Click on dropdown")
 	public void bills_positive_tc_003() throws Exception {
 		try {
+			browser_explicit_wait("bills_dropdown");
 			click("bills_dropdown");
 		}catch (Exception e) {
 			e.printStackTrace();

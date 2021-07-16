@@ -128,13 +128,14 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	@When("Enter 'security code or Re-enter password' as blank")
 	public static void your_profile_negative_tc_004() throws Exception{
 		try {
+			browser_refresh();
 			browser_explicit_wait("profile_edit");
 			click("profile_edit");
 			click("profile_checkbox");
 			browser_wait(4000);
 			click("profile_send_code");
 			browser_wait(4000);
-			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_password",0));
+			driver.findElement(By.xpath(OR_reader( "profile_blank_password"))).sendKeys(td_reader("profile_blank_password",0));
 			browser_wait(4000);
 			click("profile_verify");
 		} catch (Exception e) {
@@ -149,10 +150,12 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			browser_wait(8000);
 			str= driver.findElement(By.xpath(OR_reader("security_code_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("security_code_valid_msg"));
-			browser_wait(1000);
-			backspace("profile_password");
-			browser_wait(1000);
+			browser_wait(3000);
+			driver.findElement(By.xpath(OR_reader("profile_password"))).clear();
+			//backspace("profile_password");
+			browser_wait(5000);
 			driver.findElement(By.xpath(OR_reader( "profile_enter_code"))).sendKeys(td_reader("profile_enter_code",1));
+			browser_wait(4000);
 			click("profile_verify");
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -165,7 +168,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	@When("Click on edit contact details")
 	public void clickOnEditContactDetails() throws IOException {
 		browser_refresh();
-		browser_wait(1500);
+		browser_wait(2000);
 		click("profile_contact");
 	}
 	@Then("Not able to edit primary and deactivate email")
@@ -328,7 +331,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 	/* TC_011- Verify the scenario when unable to  Edit the primary and deactivate phone number*/
 	@When ("Click on phone number")
 	public void click_phone_number() throws IOException{
-		browser_back();
+		browser_back(); browser_wait(2000);
 		click("profile_phno");
 	}
 	@Then("primary and deactivate phone number is disabled for edit")
@@ -582,7 +585,7 @@ try{
 	@Then("Verify the different password message")
 	public void your_profile_negative_tc_022() throws IOException {
 	try{
-		browser_wait(1000);
+		browser_wait(4000);
 		str= driver.findElement(By.xpath(OR_reader( "profile_password_match"))).getText();
 		Assert.assertEquals(td_reader("profile_password_match"),str);
 	} catch (Exception e) {
@@ -614,7 +617,7 @@ try{
 			robot.delay(400);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 			click("profile_pic_save");
-			browser_wait(6000);
+			browser_wait(9000);
 	}
 
 	@Then("Verify the message on unsuccessful upload")

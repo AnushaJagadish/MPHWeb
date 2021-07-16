@@ -201,8 +201,8 @@ public class Circles_positive_scenarios extends Generic_function  {
 		Browser_Launch();
 		click("welcome_login");
 		browser_wait(1200);
-		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
+		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+		driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",11));
 		click("login");
 		browser_wait(1000);
 		click("circle_click");
@@ -210,16 +210,17 @@ public class Circles_positive_scenarios extends Generic_function  {
 
 	@When("My Medicare logo should be present")
 	public void medicare_logo() throws IOException {
-		browser_wait(1000);
+		browser_wait(3000);
 		value = driver.findElement(By.xpath(OR_reader("circle_mymedicareassert"))).isDisplayed();
 		Assert.assertEquals(true,value);
-		browser_wait(1200);
+		browser_wait(1500);
 		click("circle_mymedicareassert");
 	}
 
 	@And("Validate that its clickable")
 	public void circle_positive_tc_012() throws IOException  {
 		try {
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader( "circle_mymedicareassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("logout");

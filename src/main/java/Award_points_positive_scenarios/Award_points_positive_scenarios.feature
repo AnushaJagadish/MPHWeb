@@ -13,6 +13,6 @@ Feature: User must click on the Award Point and navigated to the Redeemed award 
     When Click on the Redeem Points button
     Then Validate the redeem award points page
 
-  Scenario: Validate the navigation to the redeemed page
-    When Navigate to the redeem page
-    Then Validate the redeem page
+#  Scenario: Validate the navigation to the redeemed page
+#    When Navigate to the redeem page
+#    Then Validate the redeem page

@@ -39,9 +39,9 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 
 	/*TC 001 - Validate that user must be able to view Refer a Friend under Home page*/
 	@Then("verify Tell your friends about Mpowered Health text and logo is displayed")
-	public static void login_positive_tc_001() throws Exception   {
+	public static void  refer_a_friend_positive_tc_001() throws Exception   {
 		try {
-			browser_wait(1000);
+			browser_wait(6000);
 			value = driver.findElement(By.xpath(OR_reader("refer_a_frnd_home_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			value = driver.findElement(By.xpath(OR_reader( "refer_a_frnd_home_text"))).isDisplayed();
@@ -56,6 +56,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	@When("clicks on Refer a Friend")
 	public static void click_refer_friend() throws Exception   {
 		try {
+			browser_wait(1000);
 			click("refer_a_frnd_home_button");
 			
 		} catch (Exception e) {
@@ -66,6 +67,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 	@Then("navigated to Refer a Friend landing page")
 	public void login_positive_tc_002() throws Exception {
 		try {
+			browser_wait(3000);
 			value = driver.findElement(By.xpath(OR_reader( "refer_a_frnd_page_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_refresh();

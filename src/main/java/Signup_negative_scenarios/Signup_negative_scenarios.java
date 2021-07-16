@@ -80,7 +80,7 @@ public class Signup_negative_scenarios extends Generic_function{
 	public static void signup_negative_tc_004() throws Exception {
 		try {
 			driver.findElement(By.xpath(OR_reader("signup_phone_number"))).sendKeys(td_reader("signup_phone_number",0));
-			click("signup_password");
+			click("signup_password"); browser_wait(1000);
 			str= driver.findElement(By.xpath(OR_reader("phonenumber_valid_msg"))).getText();
 			Assert.assertEquals(str,"Phone number should be 10 digit number");
 		} catch (Exception e) {
@@ -94,7 +94,7 @@ public class Signup_negative_scenarios extends Generic_function{
 	public static void signup_negative_tc_005() throws Exception {
 		try {
 			driver.findElement(By.xpath(OR_reader("signup_phone_number"))).sendKeys(td_reader("signup_phone_number",1));
-			click("signup_password");
+			click("signup_password");browser_wait(1000);
 			str= driver.findElement(By.xpath(OR_reader("phonenumber_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("signup_less_ten_msg"));
 		} catch (Exception e) {
@@ -115,7 +115,7 @@ public class Signup_negative_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader("signup_confirm_password"))).sendKeys(td_reader("signup_confirm_password",1));
 			click("signup_terms_and_conditions");
 			click("signup");
-			browser_wait(1000);
+			browser_wait(3000);
 			str= driver.findElement(By.xpath(OR_reader("phonenumber_valid_msg"))).getText();
 			Assert.assertEquals(str,td_reader("signup_exist_no_msg"));
 		} catch (Exception e) {

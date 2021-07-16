@@ -24,8 +24,8 @@ public class Utilities_negative_scenarios  extends Generic_function{
 		try {
 			Browser_Launch();
 			click("welcome_login");
-			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
+			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",11));
 			click("login");
 			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();

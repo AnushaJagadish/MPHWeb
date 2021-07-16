@@ -10,7 +10,7 @@ Feature: Validation on Your profile page positive test cases
   Scenario: Verify the scenario when dialogue box will appear, when click on edit icon
     When Click on edit icon
     Then Verify the dialogue box
-    
+
   Scenario: Verify the scenario when edit  the profile details
     Then Edit  the profile details
 

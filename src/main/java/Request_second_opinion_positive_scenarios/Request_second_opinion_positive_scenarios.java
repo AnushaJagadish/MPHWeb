@@ -41,7 +41,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 	public static void request_second_opinion_positive_tc_001() throws Exception {
 		try {
 			click("request_second_opinion_button");
-			browser_wait(1000);
+			browser_wait(3000);
 			click("create_new_case");
 			
 		}catch (Exception e) {
@@ -61,12 +61,14 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 	@Then("able to view texts on the page")
 	public static void request_second_opinion_positive_tc_002() throws Exception {
 		try {
+			browser_wait(5000);
 			value = driver.findElement(By.xpath(OR_reader("so_your_price_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_explicit_wait("so_who_is_this_text");
 			value = driver.findElement(By.xpath(OR_reader("so_who_is_this_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_explicit_wait("so_you_are_about_to_text");
+			browser_wait(6000);
+			//browser_explicit_wait("so_you_are_about_to_text");
 			value = driver.findElement(By.xpath(OR_reader("so_you_are_about_to_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		}catch (Exception e) {
@@ -78,6 +80,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 	@Then("able to view the informations")
 	public static void request_second_opinion_positive_tc_003() throws Exception {
 		try {
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader( "so_if_you_need_help_text"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_explicit_wait("so_mail_id_text");
@@ -101,7 +104,6 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 //			click("so_agree_to_docpanel_checkbox");
 //			browser_wait(10);
 //			click("so_proceed_button");
-//			Thread.sleep(8000);
 //			fr= driver.findElement(By.xpath(OR_reader("outer_frame")));
 //			driver.switchTo().frame(fr);
 
@@ -244,6 +246,7 @@ public class Request_second_opinion_positive_scenarios extends Generic_function 
 	public static void request_second_opinion_positive_tc_009() throws Exception {
 		try {
 			driver.navigate().to(getsourl());
+			browser_wait(1000);
 			click("create_new_case");
 			click("so_other_checkbox");
 			browser_wait(1000);

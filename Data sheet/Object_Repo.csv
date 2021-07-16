@@ -403,3 +403,5 @@ award_points_title,xpath,"//h3[contains(text(),'Award points')]"
 amount_exceed_valid_msg,xpath,//p[@id='amount-gift-card-text-field-helper-text']
 bills_page_title,xpath,"//h3[contains(text(),'Bills')]"
 alerts_header,xpath,"//h3[contains(text(),'Your alerts')]"
+profile_blank_password,xpath,//input[@id='password']
+profile_click_outside,xpath,//div[6]/div

@@ -1,12 +1,18 @@
 package Award_points_positive_scenarios;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
 import io.cucumber.java.en.And;
@@ -25,6 +31,7 @@ public class Award_points_positive_scenarios extends Generic_function{
 	@Given("Launch the URL")
 	public static void launch_url() throws IOException {
 		Browser_Launch();
+		browser_wait(8000);
 	}
 
 	@When("Navigate to Welcome screen")
@@ -34,8 +41,8 @@ public class Award_points_positive_scenarios extends Generic_function{
 			value = driver.findElement(By.xpath(OR_reader( "login_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			// changed index to 9 from 10 in phone num and index changed 10 to 5 in password
-			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number", 9));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password", 5));
+			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number", 11));
+			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password", 11));
 			click("login");
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -58,7 +65,7 @@ public class Award_points_positive_scenarios extends Generic_function{
 	@When("Click on Award points tile")
 	public void click_awardpoints() throws IOException {
 		click("award_points");
-		browser_wait(1500);
+		browser_wait(5000);
 	}
 
 	@Then("Validate Award points page")
@@ -79,6 +86,11 @@ public class Award_points_positive_scenarios extends Generic_function{
 			Assert.assertEquals(true,value);
 			value = driver.findElement(By.xpath(OR_reader( "your_award_point_history"))).isDisplayed();
 			Assert.assertEquals(true,value);
+					/*Wait <WebDriver> wait=  new FluentWait<WebDriver>(driver).withTimeout(Duration.ofMillis(30000))
+					.pollingEvery(Duration.ofMillis(5000)).ignoring(NoSuchElementException.class);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(OR_reader("awardpoints_redeem_button"))));*/
+			WebDriverWait wait=new WebDriverWait(driver, 40);
+			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button")))));
 		}catch (Exception e) {
 			takeScreenShot("Award_point_positive_tc_002()");
 		}
@@ -87,21 +99,19 @@ public class Award_points_positive_scenarios extends Generic_function{
 	/*TC 002 - Validate that user can click the Tile "Award Points"in the Utilities dashboard*/
 	@When("Click on the Redeem Points button")
 	public void click_redeem_points_button() throws IOException {
-		try {
 			value = driver.findElement(By.xpath(OR_reader( "awardpoints_redeem_button"))).isEnabled();
 			Assert.assertEquals(true,value);
 			browser_explicit_wait("awardpoints_redeem_button");
 			click_javascript("awardpoints_redeem_button");
-		} catch (IOException ioException) {
-			takeScreenShot("click_redeem_points_button");
-			ioException.printStackTrace();
-		}
+	//	Actions builder=new Actions(driver);
+		//builder.moveToElement(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))),1399,198).click().build().perform();
+
 	}
 
 	@Then("Validate the redeem award points page")
 	public void validateTheRedeemAwardPointsPage() throws IOException {
 		try {
-			browser_wait(2000);
+			browser_wait(10000);
 			value = driver.findElement(By.xpath(OR_reader( "redeem_award_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			value = driver.findElement(By.xpath(OR_reader( "available_award_point"))).isDisplayed();

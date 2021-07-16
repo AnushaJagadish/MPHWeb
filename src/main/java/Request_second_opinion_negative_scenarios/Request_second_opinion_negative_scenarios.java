@@ -74,7 +74,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@Then("navigated to the Second opinion page")
 	public static void Request_second_opinion() throws IOException {
 		try {
-
+			browser_wait(2000);
 			click("create_new_case");
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -85,6 +85,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("unchecked  the check box 'self and I agree to DocPanels terms and condition'")
 	public static void click_checkbox() throws IOException, InterruptedException {
 		try {
+			browser_wait(1000);
 			click("so_self_checkbox");
 
 		}catch (Exception e) {
@@ -230,7 +231,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
 			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(1000);
+			browser_wait(2000);
 			browser_refresh();
 			click("create_new_case");
 		}catch(Exception e) {
@@ -242,6 +243,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("'First name' field are blank")
 	public static void Request_second_opinion_negative_tc_007() throws InterruptedException, IOException {	
 		try {
+			browser_wait(1000);
 			click("so_other_checkbox");
 			browser_wait(2000);
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
@@ -258,9 +260,8 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static void firstname_blank() throws InterruptedException, IOException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_first_name_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("so_first_name_validation_msg")); 
-			browser_wait(1000);
-			browser_refresh();
+			Assert.assertEquals(str,td_reader("so_first_name_validation_msg"));
+			browser_refresh();browser_wait(2000);
 			click("create_new_case");
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -272,6 +273,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("'Last name' field are blank")
 	public static void Request_second_opinion_negative_tc_008() throws IOException, InterruptedException {	
 		try {
+			browser_wait(3000);
 			click("so_other_checkbox");
 			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader("so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",2));
@@ -288,9 +290,9 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	public static void lastname_blank() throws IOException, InterruptedException {
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_last_name_validation_msg"))).getText();
-			Assert.assertEquals(str,td_reader("so_last_name_validation_msg")); 
-			browser_wait(1000);
+			Assert.assertEquals(str,td_reader("so_last_name_validation_msg"));
 			browser_refresh();
+			browser_wait(2000);
 			click("create_new_case");
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -301,6 +303,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("'First name' and 'Last name' fields are invalid")
 	public static void Request_second_opinion_negative_tc_009() throws IOException, InterruptedException {		
 		try {
+			browser_wait(2000);
 			click("so_other_checkbox");
 			driver.findElement(By.xpath(OR_reader( "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",0));
@@ -321,8 +324,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_last_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_last_name")); 
-			browser_wait(1000);
-			browser_refresh();
+			browser_wait(3000);
 			click("create_new_case");
 		}
 		catch(Exception e) {
@@ -334,10 +336,13 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("invalid 'First name' and valid 'Last name'")
 	public static void Request_second_opinion_negative_tc_010()  throws IOException, InterruptedException {	
 		try {
+			browser_wait(2000);
 			click("so_other_checkbox");
+			browser_wait(500);
 			driver.findElement(By.xpath(OR_reader( "so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",0));
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",2));
 			click("so_other_agree_to_docpanel_checkbox");
+			browser_wait(500);
 			click("so_iam_legal_guardian_checkbox");
 			click("so_proceed_button");
 
@@ -352,8 +357,8 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 		try {
 			str= driver.findElement(By.xpath(OR_reader("so_invalid_first_name"))).getText();
 			Assert.assertEquals(str,td_reader("so_invalid_first_name")); 
-			browser_wait(1000);
-			browser_refresh();
+			browser_wait(2000);
+			//browser_refresh();
 			click("create_new_case");
 		}
 		catch(Exception e) {
@@ -366,6 +371,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("valid 'First name' and invalid 'Last name'")
 	public static void Request_second_opinion_negative_tc_011()  throws IOException, InterruptedException {
 		try {
+			browser_wait(1000);
 			click_javascript("so_other_checkbox");
 			driver.findElement(By.xpath(OR_reader("so_patient_first_name"))).sendKeys(td_reader("so_patient_first_name",3));
 			driver.findElement(By.xpath(OR_reader("so_patient_last_name"))).sendKeys(td_reader("so_patient_last_name",3));
@@ -395,6 +401,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 	@When("unchecked the check box 'I agree to DocPanels terms and condition'")
 	public static void Request_second_opinion_negative_tc_012()  throws IOException {
 		try {
+			browser_wait(1000);
 			click("so_iam_legal_guardian_checkbox");
 
 		} catch(Exception e) {
@@ -408,7 +415,7 @@ public class Request_second_opinion_negative_scenarios extends Generic_function{
 
 			value = driver.findElement(By.xpath(OR_reader("so_proceed_button"))).isEnabled();
 			Assert.assertEquals(true,value); 
-			browser_wait(1000);
+			browser_wait(2000);
 		} catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Request_second_opinion_negative_tc_012");

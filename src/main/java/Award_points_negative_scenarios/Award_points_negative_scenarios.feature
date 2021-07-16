@@ -19,7 +19,7 @@ Feature: Validation on Award Points Page
   Scenario: Unable to click on the 'Redeem' button on leaving the field 'Select a gift card' blank"
     When Click the Redeem button on leaving the field Select a gift card blank
     Then Validate the error message displayed
-
-  Scenario: Unable to click on the 'Redeem' button on leaving the field 'Enter Amount' blank on "Redeem Award Points" page
-    When Click on the Redeem button on leaving the field Enter Amount blank
-    Then Validate the message displayed
+#
+#  Scenario: Unable to click on the 'Redeem' button on leaving the field 'Enter Amount' blank on "Redeem Award Points" page
+#    When Click on the Redeem button on leaving the field Enter Amount blank
+#    Then Validate the message displayed

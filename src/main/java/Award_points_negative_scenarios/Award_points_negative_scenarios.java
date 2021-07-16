@@ -46,8 +46,8 @@ public class Award_points_negative_scenarios extends Generic_function{
 	@When("Click on Utilities tab")
 		public static void click_utilities() throws IOException{
 		try {
-			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",5));
+			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",11));
 			click("login");
 			browser_wait(1000);
 			click("utilities");
@@ -63,6 +63,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 		try {
 			click("award_points");
 			//browser_refresh();
+			browser_wait(9000);
 		} catch (Exception e) {
 			takeScreenShot("click_award_points");
 				e.printStackTrace();
@@ -88,7 +89,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 	}
 	@Then("Enter the amount more than available amount")
 	public void greater_amount() throws IOException, InterruptedException {
-			browser_wait(4000);
+			browser_wait(7000);
 			click("redeem_points_giftcard");
 			ele = driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
 			ele.sendKeys(td_reader("redeem_points_giftcard"));
@@ -122,7 +123,8 @@ public class Award_points_negative_scenarios extends Generic_function{
 		click("redeem_points_giftcard");
 		ele=driver.findElement(By.xpath(OR_reader("redeem_points_giftcard")));
 		ele.sendKeys(td_reader("redeem_points_giftcard"));
-		ele.sendKeys(Keys.ARROW_DOWN);
+		browser_wait(3000);
+		ele.sendKeys(Keys.ARROW_DOWN); browser_wait(2000);
 		ele.sendKeys(Keys.ENTER);
 	}
 
@@ -131,7 +133,7 @@ public class Award_points_negative_scenarios extends Generic_function{
 		try {
 			value = driver.findElement(By.xpath(OR_reader( "award_points_reedem"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			browser_refresh();
+			browser_explicit_wait("redeem_points_amount");
 			click("redeem_points_amount");
 			ele=driver.findElement(By.xpath(OR_reader("redeem_points_amount")));
 			ele.sendKeys(Keys.BACK_SPACE);
@@ -186,11 +188,13 @@ public class Award_points_negative_scenarios extends Generic_function{
 	@Then("Validate the message displayed")
 	public void Award_point_negative_tc_004() throws IOException {
 		try{
+			browser_wait(2000);
 		value = driver.findElement(By.xpath(OR_reader( "award_points_reedem"))).isDisplayed();
 		Assert.assertEquals(true,value);
 		ele=driver.findElement(By.xpath(OR_reader("redeem_points_amount")));
 		ele.sendKeys(Keys.BACK_SPACE);
 		click("redeem_points_email");
+		browser_wait(5000);
 		str= driver.findElement(By.xpath(OR_reader("redeem_points_amount_valid_msg"))).getText();
 		Assert.assertEquals(str,td_reader("redeem_points_amount_valid_msg"));
 		browser_wait(1000);

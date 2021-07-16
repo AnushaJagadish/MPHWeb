@@ -302,9 +302,10 @@ public class Generic_function {
 	public static void browser_wait(int time) {
 		driver.manage().timeouts().implicitlyWait(time,TimeUnit.MILLISECONDS);
 	}
+
 	/*Function for explicit wait */
 	public static void browser_explicit_wait(String fieldname) throws IOException {
-		WebDriverWait wait=new WebDriverWait(driver, 5);
+		WebDriverWait wait=new WebDriverWait(driver, 7);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(OR_reader(fieldname))));
 	}
 	/*Function to clear the value in a particular field*/
@@ -412,14 +413,14 @@ public class Generic_function {
 					ele.click();
 					value1 = driver.findElement(By.xpath(OR_reader( "wallet_page_title"))).isDisplayed();
 					Assert.assertEquals(true,value1);	
-					Thread.sleep(2000);
+					browser_wait(3000);
 					browser_back();
 				}else if(ere.equalsIgnoreCase("Second Opinions"))
 				{
 					ele.click();
 					value1 = driver.findElement(By.xpath(OR_reader( "second_opinion_title"))).isDisplayed();
 					Assert.assertEquals(true,value1);	
-					Thread.sleep(2000);
+					browser_wait(3000);
 					browser_back();
 				}
 				else {
@@ -429,7 +430,7 @@ public class Generic_function {
 						value1 = driver.findElement(By.xpath(OR_reader( ere))).isDisplayed();
 						Assert.assertEquals(true,ere.equalsIgnoreCase(value));
 						Assert.assertEquals(true,value1);	
-						Thread.sleep(2000);
+						browser_wait(3000);
 						browser_back();
 					}catch(Exception e) {
 						click("tab_ok");
@@ -441,7 +442,7 @@ public class Generic_function {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		browser_wait(5);
+		browser_wait(1000);
 	}
 
 	/* To click multiple tabs inside services page*/
@@ -458,12 +459,12 @@ public class Generic_function {
 				ele.click();
 				value1 = driver.findElement(By.xpath(OR_reader("second_opinion_title"))).isDisplayed();
 				Assert.assertEquals(true,value1);	
-				browser_wait(10);
+				browser_wait(1000);
 				browser_back();
 			}else if(ere.equalsIgnoreCase("Bills"))
 			{
 				ele.click();
-				browser_wait(10);
+				browser_wait(1000);
 				browser_back();
 			}
 			else {
@@ -475,7 +476,7 @@ public class Generic_function {
 					}
 				}catch(Exception e) {
 					ele.click();
-					browser_wait(10);
+					browser_wait(1000);
 					takeScreenShot(ere);
 					click("tab_ok");			
 				}
@@ -495,15 +496,15 @@ public class Generic_function {
 			ere= ele.getText();
 			if(ere.equalsIgnoreCase("Wallet")) {
 				ele.click();
-				browser_wait(40);
+				browser_wait(1000);
 				value1 = driver.findElement(By.xpath(OR_reader( "utilities_add_card"))).isDisplayed();
 				Assert.assertEquals(true,value1);	
-				browser_wait(20);
+				browser_wait(2000);
 				click_javascript("utilities");
 			}else if(ere.equalsIgnoreCase("Award Points"))
 			{
 				ele.click();
-				browser_wait(30);
+				browser_wait(1000);
 				value1 = driver.findElement(By.xpath(OR_reader("award_points_title"))).isDisplayed();
 				Assert.assertEquals(true,value1);
 				browser_back();
@@ -516,7 +517,7 @@ public class Generic_function {
 					}
 				}catch(Exception e) {
 					ele.click();
-					Thread.sleep(2000);
+					browser_wait(2000);
 					takeScreenShot(ere);
 					click("tab_ok");
 				}

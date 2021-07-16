@@ -26,7 +26,7 @@ public class Login_positive_scenarios extends Generic_function {
 	public void login() throws Exception {
 		try {
 			click("welcome_login");
-			browser_wait(1000);
+			browser_wait(2000);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -123,7 +123,7 @@ public class Login_positive_scenarios extends Generic_function {
 	public void loginhome() throws Exception {
 		try {
 			click("login");
-			browser_wait(1000);
+			browser_wait(3000);
 			value = driver.findElement(By.xpath(OR_reader( "logout"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -137,6 +137,7 @@ public class Login_positive_scenarios extends Generic_function {
 	/*TC 006 - Validate that the user is navigated to 'Landing page' on clicking the 'Log out' option*/
 	public static void login_positive_tc_006() throws IOException {
 		try {
+			browser_wait(2000);
 			click("logout");
 			
 
@@ -149,7 +150,7 @@ public class Login_positive_scenarios extends Generic_function {
 	public static void landingpage() throws IOException {
 		try {
 			
-			browser_wait(1000);
+			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			System.out.println("login positive");

@@ -19,6 +19,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	public void launch_url() throws Exception {
 		try {
 			Browser_Launch();
+			browser_wait(3000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -27,22 +28,20 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	public void login_data() throws IOException {
 		click("welcome_login");
 		browser_wait(1000);
-		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-		driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",5));
+		driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+		driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("login_password",11));
 		click("login");
 	}
 	/*TC 001 - Validate that the  Your Profile  title  should be present in  Your Profile screen*/
 	@Then("check Your Profile  title  should be present in  Your Profile screen")
-	public void yourprofile_positive_tc_001() throws Exception  {
+	public void your_profile_positive_tc_001() throws Exception  {
 		try {
-
-			browser_wait(1000); 
+			browser_wait(5000);
+			click("header_menu");
+			click("header_profile");
+			browser_wait(20000);
 			value = driver.findElement(By.xpath(OR_reader( "header_logo"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			click("header_menu");
-			browser_wait(1000);
-			click("header_profile");
-			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader( "your_profile_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 		} catch (Exception e) {
@@ -57,21 +56,22 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	public void click_edit_icon() throws Exception {
 			browser_wait(6000);
 			click("profile_edit");
-
 	}
+
 	@Then("Verify the dialogue box")
 	public void your_profile_positive_tc_002() throws IOException {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_checkbox");
-			browser_wait(1000);
+			browser_wait(4000);
 			click("profile_send_code");
-			browser_wait(1000);
+			browser_wait(9000);
 			driver.findElement(By.xpath(OR_reader( "profile_enter_code"))).sendKeys(td_reader("otp"));
-			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("login_password",1000));
-			browser_wait(1000);
+			browser_wait(3000);
+			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("login_password",11));
+			browser_wait(9000);
 			click("profile_verify");
-			browser_wait(1000);
+			browser_wait(7000);
 			click("tab_ok");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +82,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Edit  the profile details")
 	public void yourprofile_positive_tc_003() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(4000);
 			backspace("profile_firstname");
 			backspace("profile_lastname");
 			backspace("profile_preferredname");
@@ -101,7 +101,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			browser_wait(1000);
 			click("profile_calender");
 			click("tab_ok");
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_save");
 			click("tab_ok");
 		} catch (Exception e) {
@@ -114,7 +114,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Add Email ID in contact details")
 	public void yourprofile_positive_tc_004() throws Exception  {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_contact");
 //			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_contact_assert"))).isDisplayed();
 //			Assert.assertEquals(true,value);
@@ -136,16 +136,18 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	public void yourprofile_positive_tc_001000() throws Exception {
 		try {
 //			browser_back(); //to change
-			browser_wait(1000);
+			browser_wait(6000);
 			value = driver.findElement(By.xpath(OR_reader("profile_activate"))).isDisplayed();
 			Assert.assertEquals(true,value);
+			browser_explicit_wait("profile_activate");
 			click("profile_activate");
 			click("profile_yes");
 			click("tab_ok");
+			browser_explicit_wait("profile_email_edit");
 			click("profile_email_edit");
 			click("profile_contact_assert");
 			click("profile_dot");
-			browser_wait(1000);
+			browser_wait(4000);
 			text = td_reader("profile_dot");
 			drop_down(OR_reader("profile_mail_list"),text); 
 			click("profile_yes");
@@ -161,6 +163,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	public void yourprofile_positive_tc_006() throws Exception {
 
 		try {
+			browser_explicit_wait("profile_phno");
 			click("profile_phno");
 			//click("profile_plus");
 			//value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_add_phone_title"))).isDisplayed();
@@ -179,7 +182,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Activate , Edit and  Deactivate the Phone Number")
 	public void yourprofile_positive_tc_007() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_phno_edit");
 			value = driver.findElement(By.xpath(OR_reader("profile_contact_assert"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -202,7 +205,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Add Address in contact details.")
 	public void yourprofile_positive_tc_008() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_address");
 			//click("profile_plus");
 			//value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_add_address_title"))).isDisplayed();
@@ -225,7 +228,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Activate , Edit , Primary and  Deactivate the Address")
 	public void yourprofile_positive_tc_009() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			value = driver.findElement(By.xpath(OR_reader( "profile_address_activate"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("profile_address_activate");
@@ -249,7 +252,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Add Plan coverage")
 	public void yourprofile_positive_tc_010() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_plancoverage");
 			value = driver.findElement(By.xpath(OR_reader( "profile_plan_coverage_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -278,7 +281,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Activate , Edit , Make primary and  Deactivate the Plan coverage")
 	public void yourprofile_positive_tc_011() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_plan_edit");
 			value = driver.findElement(By.xpath(OR_reader( "profile_plan_editassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -301,14 +304,15 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("Change the password")
 	public void yourprofile_positive_tc_012() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(7000);
 			click("profile_plancoverage_back");
+			browser_wait(2000);
 			click("profile_password_button");
 			value = driver.findElement(By.xpath(OR_reader("profile_passwordassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("login_password",1000));
-			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("profile_newpassword"));
-			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("profile_newpassword"));
+			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_blank_password",1000));
+			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("profile_newpassword",1));
+			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("profile_newpassword",1));
 			click("profile_passwordsave");
 			click("tab_ok");
 		} catch (Exception e) {
@@ -322,15 +326,15 @@ public class Your_profile_positive_scenarios extends Generic_function{
 	@Then("The password should be displayed on clicking the eye")
 	public void yourprofile_positive_tc_013() throws Exception {
 		try {
-			browser_wait(1000);
+			browser_wait(6000);
 			click("logout");
 			driverquit();
 			Browser_Launch();
 			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("welcome_login");
-			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("profile_newpassword"));
+			driver.findElement(By.xpath(OR_reader( "login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+			driver.findElement(By.xpath(OR_reader( "login_password"))).sendKeys(td_reader("profile_newpassword",1));
 			click("login");
 			browser_explicit_wait("header_logo");
 			value = driver.findElement(By.xpath(OR_reader( "header_logo"))).isDisplayed();
@@ -338,7 +342,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("header_menu");
 			browser_wait(1000);
 			click("header_profile");
-			browser_wait(1000);
+			browser_wait(5000);
 			value = driver.findElement(By.xpath(OR_reader( "your_profile_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_wait(1000);
@@ -349,7 +353,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_send_code");
 			browser_wait(1000);
 			driver.findElement(By.xpath(OR_reader( "profile_enter_code"))).sendKeys(td_reader("otp"));
-			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_newpassword"));
+			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_newpassword",1));
 			browser_wait(1000);
 			click("profile_verify");
 			browser_wait(1000);
@@ -357,7 +361,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_password_button");
 			value = driver.findElement(By.xpath(OR_reader( "profile_passwordassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_newpassword"));
+			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_newpassword",1));
 			click("profile_oldeye");
 			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("login_password",1000));
 			click("profile_neweye");

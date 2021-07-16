@@ -27,8 +27,8 @@ public class Utilities_positive_scenarios extends Generic_function{
 		try {
 			Browser_Launch();
 			click("welcome_login");
-			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",9));
-			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",5));
+			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number",11));
+			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password",11));
 			click("login");
 			browser_wait(1000);
 			value = driver.findElement(By.xpath(OR_reader("logout"))).isDisplayed();
@@ -66,7 +66,7 @@ public class Utilities_positive_scenarios extends Generic_function{
 	public static void click_navigator_options() throws Exception {
 			browser_wait(1000);
 			click("home");
-			browser_wait(1000);
+			browser_wait(5000);
 	}
 @Then("Verify the navigator options")
 public void utilities_positive_tc_002() throws IOException {
@@ -197,25 +197,24 @@ public void utilities_positive_tc_002() throws IOException {
 	@When("Click redeem points")
 	public static void click_redeem_points() throws Exception{
 			click_javascript("utilities");
-			browser_wait(1000);
+			browser_wait(4000);
 			click_javascript("award_points");
-			browser_wait(1000);
+			browser_wait(4000);
 	}
 @Then("Verify the award points")
 	public void utilities_positive_tc_006()throws IOException {
 		try{value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			browser_wait(1000);
 			click_javascript("awardpoints_redeem_button");
 			value1 = driver.findElement(By.xpath(OR_reader("utilities_redeem_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			browser_back();
 			System.out.println("Utilities positive");
-			browser_close();
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("utilities_positive_tc_006");
 		}
+	browser_close();
 		}
 
 }
