@@ -14,7 +14,6 @@ public class Signup_positive_scenarios extends Generic_function {
 	public static boolean value1,value2;
 	WebElement otp;
 
-	/*TC_001 Verify that the browser is lauched.Clicks on the Signup button and navigates to Signup page*/
 	@Given("Launch the URL and click on signup")
 	public static void signup_positive_tc_001() throws IOException  {
 		try {
@@ -25,7 +24,7 @@ public class Signup_positive_scenarios extends Generic_function {
 			takeScreenShot("signup_positive_tc_001");
 		}
 	}
-
+	/*TC_001 Verify that the browser is launched.Clicks on the Signup button and navigates to Signup page*/
 	@Then("Navigated to signup page")
 	public static void navigate_signup_page() throws IOException  {
 		try {

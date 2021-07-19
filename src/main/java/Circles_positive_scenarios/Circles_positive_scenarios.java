@@ -24,6 +24,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 		}
 	}
 
+	/*TC 001 - Validate that a user is taken to the Circles page when they click on the Circles tab*/
 	@When("Click on the Circles tab")
 	public void click_circles() throws IOException {
 		click("welcome_login");
@@ -35,7 +36,6 @@ public class Circles_positive_scenarios extends Generic_function  {
 		click("circle_click");
 	}
 
-	/*TC 001 - Validate that a user is taken to the Circles page when they click on the Circles tab*/
 	@Then("Validate Circles page")
 	public void circle_positive_tc_001() throws IOException {
 		try {
@@ -86,7 +86,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 		}
 	}
 
-	@Then("select the My Medicare option finally click on Proceed")
+	@And("select the My Medicare option finally click on Proceed")
 	public void circle_positive_tc_003() throws IOException {
 		try {
 
@@ -195,7 +195,7 @@ public class Circles_positive_scenarios extends Generic_function  {
 		} 
 	}
 
-	/*TC 012 - Validate that the user can able to view 'My Medicare’ icon in the Circles page and also it should be clickable */
+	/*TC 009 - Validate that the user can able to view 'My Medicare’ icon in the Circles page and also it should be clickable */
 	@When("Navigate to Circles page")
 	public void circles() throws IOException {
 		Browser_Launch();
@@ -224,12 +224,11 @@ public class Circles_positive_scenarios extends Generic_function  {
 			value = driver.findElement(By.xpath(OR_reader( "circle_mymedicareassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			click("logout");
-			System.out.println("circles positive");
+			System.out.println("circles positive");driverquit();
 
 		} catch (Exception e) {
 			e.getMessage();
 			takeScreenShot("circle_positive_tc_012");
 		}
-		driverquit();
 	}
 }

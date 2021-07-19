@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -40,7 +41,6 @@ public class Award_points_positive_scenarios extends Generic_function{
 			click("welcome_login");
 			value = driver.findElement(By.xpath(OR_reader( "login_title"))).isDisplayed();
 			Assert.assertEquals(true,value);
-			// changed index to 9 from 10 in phone num and index changed 10 to 5 in password
 			driver.findElement(By.xpath(OR_reader("login_phone_number"))).sendKeys(td_reader("login_phone_number", 11));
 			driver.findElement(By.xpath(OR_reader("login_password"))).sendKeys(td_reader("login_password", 11));
 			click("login");
@@ -94,18 +94,21 @@ public class Award_points_positive_scenarios extends Generic_function{
 		}catch (Exception e) {
 			takeScreenShot("Award_point_positive_tc_002()");
 		}
-
 	}
+
 	/*TC 002 - Validate that user can click the Tile "Award Points"in the Utilities dashboard*/
 	@When("Click on the Redeem Points button")
 	public void click_redeem_points_button() throws IOException {
 			value = driver.findElement(By.xpath(OR_reader( "awardpoints_redeem_button"))).isEnabled();
 			Assert.assertEquals(true,value);
-			browser_explicit_wait("awardpoints_redeem_button");
-			click_javascript("awardpoints_redeem_button");
-	//	Actions builder=new Actions(driver);
-		//builder.moveToElement(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))),1399,198).click().build().perform();
-
+		browser_explicit_wait("awardpoints_redeem_button");
+		Actions builder=new Actions(driver);
+		builder.moveToElement(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+		builder.click(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+		Action action= builder.build();
+		action.perform();
+			//browser_explicit_wait("awardpoints_redeem_button");
+		//	click_javascript("awardpoints_redeem_button");
 	}
 
 	@Then("Validate the redeem award points page")
@@ -122,31 +125,31 @@ public class Award_points_positive_scenarios extends Generic_function{
 		}
 	}
 
-
 	/*TC 003 - Validate that the user is able to navigate to the 'redeemed' page */
 	@When("Navigate to the redeem page")
 	public void navigate_redeem_page() throws IOException {
+		browser_wait(2000);
 		browser_back();
 	}
 	@Then("Validate the redeem page")
 	public static void Award_point_positive_tc_004() throws IOException {
 		try {
-			//			value = driver.findElement(By.xpath(OR_reader( "redeemed_title"))).isDisplayed();
-			//			Assert.assertEquals(true,value);
-			//		        browser_wait(20);
-			//			value = driver.findElement(By.xpath(OR_reader( "redeemed_points"))).isDisplayed();
-			//			Assert.assertEquals(true,value);
-			//			value = driver.findElement(By.xpath(OR_reader( "availed_gift"))).isDisplayed();
-			//			Assert.assertEquals(true,value);
-			//			click("goto_dashboard_button");
-			//			value = driver.findElement(By.xpath(OR_reader( "your_award_point_history"))).isDisplayed();
-			//			Assert.assertEquals(true,value);
+						/*value = driver.findElement(By.xpath(OR_reader( "redeemed_title"))).isDisplayed();
+						Assert.assertEquals(true,value);
+					        browser_wait(20);
+						value = driver.findElement(By.xpath(OR_reader( "redeemed_points"))).isDisplayed();
+						Assert.assertEquals(true,value);
+						value = driver.findElement(By.xpath(OR_reader( "availed_gift"))).isDisplayed();
+						Assert.assertEquals(true,value);
+						click("goto_dashboard_button");
+						value = driver.findElement(By.xpath(OR_reader( "your_award_point_history"))).isDisplayed();
+						Assert.assertEquals(true,value);*/
 			//			Thread.sleep(5000);
-			System.out.println("Award points positive");
+			click("logout");
+			System.out.println("Award points positive"); browser_close();
 		}catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("Award_point_positive_tc_004()");
 		}
-		browser_close();
 	}
 }

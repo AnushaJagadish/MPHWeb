@@ -34,8 +34,8 @@ public class Login_positive_scenarios extends Generic_function {
 		}
 
 	}
-	@Then("check  the  'Phone number' field is prefixed with country code")
 	/*TC 001 - Validate that the'Phone number' field is prefixed with '+1' country code*/
+	@Then("check  the  'Phone number' field is prefixed with country code")
 	public static void login_positive_tc_001() throws IOException   {
 		try {
 
@@ -69,8 +69,8 @@ public class Login_positive_scenarios extends Generic_function {
 		//}
 
 	}
-	@When("clicks on 'Sign up'")
 	/*TC 003 - Validate that the user is able click on the 'Sign up' link*/
+	@When("clicks on 'Sign up'")
 	public static void login_positive_tc_003() throws IOException  {
 		//       try {
 		//			driver.navigate().back();
@@ -93,8 +93,8 @@ public class Login_positive_scenarios extends Generic_function {
 		//		}
 
 	}
-	@Then("enter the Password")
 	/*TC 004 -  Validate that the user is able to enter  the Password in the Password field*/
+	@When("enter the Password")
 	public static void login_positive_tc_004() throws IOException {
 		try {
 			//			driver.navigate().back();
@@ -106,8 +106,8 @@ public class Login_positive_scenarios extends Generic_function {
 		}
 	}
 
-	@When("enters valid phonenumber and password")
 	/*TC 005 - Validate that the user is able to Login with valid data*/
+	@When("enters valid phonenumber and password")
 	public static void login_positive_tc_005() throws IOException  {
 		try {
 			browser_refresh();
@@ -133,14 +133,12 @@ public class Login_positive_scenarios extends Generic_function {
 
 	}
 
-	@When("clicks on Logout")
 	/*TC 006 - Validate that the user is navigated to 'Landing page' on clicking the 'Log out' option*/
+	@When("clicks on Logout")
 	public static void login_positive_tc_006() throws IOException {
 		try {
 			browser_wait(2000);
 			click("logout");
-			
-
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("login_positive_tc_006");	

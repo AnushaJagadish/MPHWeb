@@ -1,6 +1,6 @@
-Feature: Validation Services Pages
-
   #User should click on the Services tab and  navigates to Services page
+  Feature: Validation Services Pages
+
   Scenario: Verify the scenario when login with valid credentials
     Given Open the Browser
     When clicks on the 'Login' button

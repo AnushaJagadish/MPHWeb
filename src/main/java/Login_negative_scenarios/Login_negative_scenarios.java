@@ -135,4 +135,13 @@ public class Login_negative_scenarios extends Generic_function {
 			takeScreenShot("login_negative_tc_008");
 		}
 	}
+
+	@When("Enter non registered phone number in the phone number field")
+	public void enterNonRegisteredPhoneNumberInThePhoneNumberField() {
+
+	}
+
+	@Then("Validate message on entering non registered number")
+	public void validateMessageOnEnteringNonRegisteredNumber() {
+	}
 }

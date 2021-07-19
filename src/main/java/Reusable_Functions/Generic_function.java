@@ -273,13 +273,19 @@ public class Generic_function {
 		else throw new RuntimeException (" Report path is not specified in the Config.properties");
 	}
 	
-	/* Reading Pofile picture file path  from config.properties   */
+	/* Reading Profile picture file path  from config.properties   */
 	public static String getprofilepic() {
 		path= prop.getProperty("Profile_pic");
 		if(path!=null) return path ;
 		else throw new RuntimeException ("Profile pic is not specified in the Config.properties");
 	}
 
+	/* Reading Profile picture file path  from config.properties   */
+	public static String getprofilepic_exceedsize() {
+		path= prop.getProperty("Pic_exceed_size");
+		if(path!=null) return path ;
+		else throw new RuntimeException ("Profile pic is not specified in the Config.properties");
+	}
 
 	/*  Taking Screenshot of failed test cases  */
 	public static  void takeScreenShot(String fileName) throws IOException {

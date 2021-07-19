@@ -12,34 +12,39 @@ Feature: Validation on Your profile page positive test cases
     Then Verify the dialogue box
 
   Scenario: Verify the scenario when edit  the profile details
-    Then Edit  the profile details
+    When Edit  the profile details
 
   Scenario: Verify the scenario when adding Email ID in contact details
-    Then Add Email ID in contact details
+    When Add Email ID in contact details
 
   Scenario: Verify the scenario when Activate , Edit and  Deactivate the Email ID
     When Activate , Edit and  Deactivate the Email ID
 
   Scenario: Verify the scenario when add Phone Number in contact details.
-    Then Add Phone Number in contact details
+    When Add Phone Number in contact details
 
   Scenario: Verify the scenario when Activate , Edit and  Deactivate the Phone Number
-    Then Activate , Edit and  Deactivate the Phone Number
+    When Activate , Edit and  Deactivate the Phone Number
 
   Scenario: Verify the scenario when add Address in contact details.
-    Then Add Address in contact details.
+    When Add Address in contact details.
 
   Scenario: Verify the scenario when Activate , Edit , Primary and  Deactivate the Address
-    Then Activate , Edit , Primary and  Deactivate the Address
+    When Activate , Edit , Primary and  Deactivate the Address
 
   Scenario: Verify the scenario when add Plan coverage
-    Then Add Plan coverage
+    When Add Plan coverage
 
   Scenario: Verify the scenario when Activate , Edit , Make primary and  Deactivate the Plan coverage
-    Then Activate , Edit , Make primary and  Deactivate the Plan coverage
+    When Activate , Edit , Make primary and  Deactivate the Plan coverage
 
   Scenario: Verify the scenario when change the password
-    Then Change the password
+    When Change the password
 
   Scenario: Verify the scenario when password should be displayed on clicking the eye and user can able to save the details
-    Then The password should be displayed on clicking the eye
+    When The password should be displayed on clicking the eye
+
+    Scenario: Verify uploading of profile pic successfully
+      When Click on the profile pic icon
+      Then Select file and upload image
+      Then Verify the successful upload

@@ -65,28 +65,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		} 
 	}
 
-	/*TC 003 -Validate that the user is navigated to the Landing page on clicking 'Log out' icon*/
-	@When("Click on Log out icon")
-	public void click_logout_icon() throws IOException {
-		browser_wait(4000);
-		click("logout");
-	}
-	@Then("Verify navigation to the Landing  page")
-	public static void header_positive_tc_003() throws IOException {
-		try {
-			browser_explicit_wait("welcome_login");
-			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
-			Assert.assertEquals(true,value);
-		} catch (Exception e) {
-			e.getMessage();
-			takeScreenShot("header_positive_tc_003");
-		}
-		driverquit();
-	}
-	
-	/*TC 004 -Validate that the user is navigated to the alerts page on clicking 'Your alerts' icon*/
-
-
+	/*TC 003 -Validate that the user is navigated to the alerts page on clicking 'Your alerts' icon*/
 	@When("Click on Your alerts icon")
 	public void click_alerts_icon() throws IOException {
 		browser_wait(1000);
@@ -104,8 +83,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}
 	}
 
-	/*TC 005 -Validate that user is able to click on the 'Drop down' tab*/
-
+	/*TC 004 -Validate that user is able to click on the 'Drop down' tab*/
 	@When("Click on Drop down tab")
 	public void click_dropDown() throws IOException {
 		browser_explicit_wait("header_menu");
@@ -124,8 +102,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		} 
 	}
 	
-	/*TC 006 -Validate that the user is navigated to the  profile page on clicking 'Your profile' tab*/
-
+	/*TC 005 -Validate that the user is navigated to the  profile page on clicking 'Your profile' tab*/
 	@When("Click on  Your profile")
 	public void click_your_profile() throws IOException {
 		click("header_profile");
@@ -143,7 +120,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}
 	}
 
-	/*TC 007 -Validate that the user is navigated to the ratings dashboard page on clicking 'Your ratings' tab*/
+	/*TC 006 -Validate that the user is navigated to the ratings dashboard page on clicking 'Your ratings' tab*/
 	@Then("Click on  Your ratings")
 	public void clickOnYourRatings() throws IOException {
 //		click("header_menu");
@@ -161,8 +138,8 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}		
 	}
 
-	/*TC 008 -Validate that the user is navigated to the 'Feedback Port'   page  on clicking 'Feedback'*/
-	@Then("Click on  Feedback")
+	/*TC 007 -Validate that the user is navigated to the 'Feedback Port'   page  on clicking 'Feedback'*/
+	@When("Click on  Feedback")
 	public void click_feedback() throws IOException {
 		//click("header_menu");
 		browser_wait(1000);
@@ -183,9 +160,8 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}
 	}
 	
-	/*TC 009 -Validate that the user is navigated to the Contact Us   page  on clicking Contact us */
-
-	@Then("Click on  Contact Us")
+	/*TC 008 -Validate that the user is navigated to the Contact Us   page  on clicking Contact us */
+	@When("Click on  Contact Us")
 	public void click_contactUs() throws IOException {
 	//	click("header_menu");
 		browser_wait(1000);
@@ -206,7 +182,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}  
 	}
 
-	/*TC 010 -Validate that the user is able to see Privacy Policy dialogue box on clicking on the 'Privacy Policy' */
+	/*TC 009 -Validate that the user is able to see Privacy Policy dialogue box on clicking on the 'Privacy Policy' */
 	@When("Click on  Privacy Policy")
 	public void click_privacy_policy() throws IOException {
 		//click("header_menu");
@@ -226,8 +202,7 @@ public class Headerpage_positive_scenarios extends Generic_function {
 		}		 
 	}
    
-	/*TC 011 - Validate that the user is able to see Terms & Conditions dialogue box on clicking on the 'Terms & Conditions' */
-
+	/*TC 010 - Validate that the user is able to see Terms & Conditions dialogue box on clicking on the 'Terms & Conditions' */
 	@When("click on  Terms & Conditions")
 	public void click_terms_conditions() throws IOException {
 		//click_dropDown();
@@ -246,5 +221,23 @@ public class Headerpage_positive_scenarios extends Generic_function {
 			e.getMessage();
 			takeScreenShot("header_positive_tc_011");
 		}   
+	}
+	/*TC 011 -Validate that the user is navigated to the Landing page on clicking 'Log out' icon*/
+	@When("Click on Log out icon")
+	public void click_logout_icon() throws IOException {
+		browser_wait(4000);
+		click("logout");
+	}
+	@Then("Verify navigation to the Landing  page")
+	public static void header_positive_tc_003() throws IOException {
+		try {
+			browser_explicit_wait("welcome_login");
+			value = driver.findElement(By.xpath(OR_reader( "welcome_login"))).isDisplayed();
+			Assert.assertEquals(true,value);
+			driverquit();
+		} catch (Exception e) {
+			e.getMessage();
+			takeScreenShot("header_positive_tc_003");
+		}
 	}
 }

@@ -34,7 +34,6 @@ public class Bills_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 001 -Validate navigation to bills page*/
 	@When("Click on 'Bills'")
 	public void bills_positive_tc_001() throws Exception {
 		try {
@@ -58,8 +57,8 @@ public class Bills_positive_scenarios extends Generic_function{
 			takeScreenShot("navigate_to_bills");
 		}
 	}
-	
-	/*TC 002 - Verify the scenario to view Total bills due*/
+
+	/*TC 001 - Verify the scenario to view Total bills due*/
 	@When("'Total bills due' visible on the page")
 	public void bills_positive_tc_002() throws Exception {
 		try {
@@ -83,7 +82,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}	
 	}
 
-	/*TC 003 - Validate by selecting Newest option from the dropdown*/
+	/*TC 002 - Validate by selecting Newest option from the dropdown*/
 	@When("Click on dropdown")
 	public void bills_positive_tc_003() throws Exception {
 		try {
@@ -106,7 +105,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}	
 	}
 	
-	/*TC 004 - Validate view bills as two sections*/
+	/*TC 003 - Validate view bills as two sections*/
 	@When("Click on 'Due' section")
 	public void bills_positive_tc_004() throws Exception {
 		try {
@@ -134,7 +133,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}	
 	}
 	
-	/*TC 005 - Validate slide the grid below the Bills page title.*/
+	/*TC 004 - Validate slide the grid below the Bills page title.*/
 	@When("Slide through 'Total bills due'")
 	public void bills_positive_tc_005() throws Exception {
 		try {
@@ -166,7 +165,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 006 - Validate'Pay a Bill' button*/
+	/*TC 005 - Validate 'Pay a Bill' button*/
 	@When("Click on 'Pay a Bill' button")
 	public void bills_positive_tc_006() throws Exception {
 		try {
@@ -188,7 +187,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}	
 	}
 
-	/*TC 007 - Validate Explore Services button*/
+	/*TC 006 - Validate Explore Services button*/
 	@When("Click on 'Explore Services' button")
 	public void bills_positive_tc_007() throws Exception {
 		try {
@@ -220,7 +219,7 @@ public class Bills_positive_scenarios extends Generic_function{
 		}	
 	}
 
-	/*TC 008 - Validate that the user will get validation message when expense is $0*/
+	/*TC 007 - Validate that the user will get validation message when expense is $0*/
 	@When("Shows validation message 'you have no expenditures yet'")
 	public void bills_positive_tc_008() throws Exception {
 		try {

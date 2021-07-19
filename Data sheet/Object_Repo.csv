@@ -75,6 +75,7 @@ forgot_password_page_title,xpath,"//h2[contains(text(),'Forgot password?')]"
 forgot_password_signup_link,xpath,//a[@id='signup']
 signup_page_title,xpath,//span[@id='signup-title']
 utilities,xpath,"//span[contains(text(),'Utilities')]"
+utilities_award_points,xpath,//img[@alt='Award Points']
 home_page_title,xpath,"//p[contains(text(),'Let’s get started')]"
 services_page_title,xpath,"//p[contains(text(),'Healthcare Records')]"
 circles_page_title,xpath,"//h1[contains(text(),'Partners in your care')]"
@@ -332,8 +333,9 @@ profile_save,xpath,"//span[contains(text(),'Save')]  "
 profile_contact_assert,xpath,"//h3[contains(text(),'Contact details')]"
 profile_email_assert,xpath,"//h3[contains(text(),'Add email ID')]"
 profile_submit,xpath,"//span[contains(text(),'Submit')]"
-profile_activate,xpath,"//*[@id=""full-width-tabpanel-0""]/ul/li[4]/p"
+profile_activate,xpath,//li[2]/p
 profile_yes,xpath,"//span[contains(text(),'Yes')]"
+profile_no,xpath,"xpath=//span[contains(.,'No')]"
 profile_email_edit,xpath,"//span[contains(text(),'Hari98@gmail.com')]"
 profile_dot,xpath,"//*[@id=""full-width-tabpanel-0""]/ul/li[4]/button/span[1]/img"
 profile_mail_list,xpath,"//*[@id=""email-3-menu""]/div[3]/ul/li"
@@ -379,6 +381,7 @@ profile_confirmpassword,xpath,"//*[@id=""root""]/div/div[3]/div[2]/div/div[2]/di
 profile_passwordsave,xpath,"//*[@id=""root""]/div/div[3]/div[2]/div/div[2]/div/div[6]"
 profile_oldeye,xpath,//body/div[@id='root']/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/img[1]
 profile_neweye,xpath,/html/body/div[1]/div/div[3]/div[2]/div/div[2]/div/div[3]/div/div/div/img
+profile_pic_save,xpath,"//p[contains(.,'Saving data . . .')]"
 profile_confirmeye,xpath,/html/body/div[1]/div/div[3]/div[2]/div/div[2]/div/div[4]/div/div/div/img
 help_secondassert,xpath,"//*[@id=""panel0a-header""]/div[1]/p"
 help_secondabout,xpath,"//p[contains(text(),'What is a second opinion?')]"
@@ -404,4 +407,4 @@ amount_exceed_valid_msg,xpath,//p[@id='amount-gift-card-text-field-helper-text']
 bills_page_title,xpath,"//h3[contains(text(),'Bills')]"
 alerts_header,xpath,"//h3[contains(text(),'Your alerts')]"
 profile_blank_password,xpath,//input[@id='password']
-profile_click_outside,xpath,//div[6]/div
+profile_out_of_popup,xpath,//div[6]/div

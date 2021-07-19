@@ -64,6 +64,8 @@ public class Homepage_positive_scenarios extends Generic_function {
 		try {
 			grid_tiles(OR_reader("grid_path"));
 			browser_wait(7000);
+			value=driver.findElement(By.xpath(OR_reader("bills_title"))).isDisplayed();
+			Assert.assertEquals(true,value);
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_003");
@@ -73,12 +75,13 @@ public class Homepage_positive_scenarios extends Generic_function {
 	@When("clicks on the 'Request for second opinion' button")
 	public void home_positive_tc_004() throws InterruptedException, Exception {
 		try {
-			//click("request_second_opinion_button");
-			/*browser_wait(9000);
-			driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/div/div[1]/div[2]/label/span[1]/span/input")).click();
-			driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/div/div[1]/div[3]/button")).click();
+			browser_back();
+			//request_second_opinion_button
+			click("request_second_opinion_button");
+			browser_wait(9000);
+			/*driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/div/div[1]/div[2]/label/span[1]/span/input")).click();
+			driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[2]/div/div[1]/div[3]/button")).click();*/
 			//click("create_new_case");
-			browser_wait(7000);*/
 		}catch(Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_004");
@@ -90,17 +93,16 @@ public class Homepage_positive_scenarios extends Generic_function {
 	@Then("navigated to the Second opinion page")
 	public void navigate_sec_opinion() throws Exception {
 
-		/*try {
+		try {
 			browser_wait(2000);
 			value1=driver.findElement(By.xpath(OR_reader( "request_second_opinion_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
-			//Thread.sleep(2000);
 			browser_wait(1500);
 			browser_back();
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("home_positive_tc_004");
-		}*/
+		}
 
 	}
 

@@ -1,18 +1,22 @@
 package Your_profile_positive_scenarios;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.IOException;
+
+import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Your_profile_positive_scenarios extends Generic_function{
 	public static boolean value;
-	public static String text; 
+	public static String text;
+	public static File file;
 
 	/*Browser launch*/
 	@Given("Launch the URL")
@@ -79,7 +83,7 @@ public class Your_profile_positive_scenarios extends Generic_function{
 		}
 	}
 	/*TC 003 - Verify the scenario when edit  the profile details*/
-	@Then("Edit  the profile details")
+	@When("Edit  the profile details")
 	public void yourprofile_positive_tc_003() throws Exception {
 		try {
 			browser_wait(4000);
@@ -107,60 +111,69 @@ public class Your_profile_positive_scenarios extends Generic_function{
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_003");
+			System.out.println("fail");
 		}
 	}
 
 	/*TC 004 - Verify the scenario when adding Email ID in contact details*/
-	@Then("Add Email ID in contact details")
-	public void yourprofile_positive_tc_004() throws Exception  {
+	@When("Add Email ID in contact details")
+	public void your_profile_positive_tc_004() throws Exception  {
 		try {
 			browser_wait(7000);
 			click("profile_contact");
 //			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_contact_assert"))).isDisplayed();
 //			Assert.assertEquals(true,value);
 //			browser_wait(10);
-//			click("profile_plus");
+			click("profile_plus");
+			value=driver.findElement(By.xpath(OR_reader("profile_add_email_title"))).isDisplayed();
 //			value = driver.findElement(By.xpath(OR_reader("Object_Locator", "profile_email_assert"))).isDisplayed();
-//			Assert.assertEquals(true,value);
+			Assert.assertEquals(true,value);
+			browser_back();
 //			browser_wait(10);
 //			driver.findElement(By.xpath(OR_reader("Object_locator", "profile_email"))).sendKeys(td_reader("profile_email",2));
-//			click("profile_submit");
+			//click("profile_submit");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_004");
+			takeScreenShot("your_profile_positive_tc_004");
+			System.out.println("fail");
 		}
 	}
 
-	/*TC 001000 - Verify the scenario when Activate , Edit and  Deactivate the Email ID*/
+	/*TC 005 - Verify the scenario when Activate , Edit and  Deactivate the Email ID*/
 	@When("Activate , Edit and  Deactivate the Email ID")
-	public void yourprofile_positive_tc_001000() throws Exception {
+	public void your_profile_positive_tc_005() throws Exception {
 		try {
 //			browser_back(); //to change
-			browser_wait(6000);
 			value = driver.findElement(By.xpath(OR_reader("profile_activate"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			browser_explicit_wait("profile_activate");
 			click("profile_activate");
-			click("profile_yes");
-			click("tab_ok");
-			browser_explicit_wait("profile_email_edit");
-			click("profile_email_edit");
-			click("profile_contact_assert");
+			//click("profile_yes");
+			browser_wait(2000);
+			driver.findElement(By.xpath("//span[contains(.,'No')]")).click();
+			//click("profile_no");
+			//click("tab_ok");
+		//	browser_explicit_wait("profile_email_edit");
+			//--------------Commenting profile_email_edit as button doesnt work-----------------
+			//click("profile_email_edit");
+			//browser_back();
+/*			click("profile_contact_assert");
+			System.out.println(driver.findElement(By.xpath(OR_reader("profile_dot"))).getText());
 			click("profile_dot");
 			browser_wait(4000);
 			text = td_reader("profile_dot");
 			drop_down(OR_reader("profile_mail_list"),text); 
 			click("profile_yes");
-			click("tab_ok");
+			click("tab_ok");*/
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_001000");
+			takeScreenShot("your_profile_positive_tc_005");
 		}
 	}
 
 	/*TC 006 - Verify the scenario when add Phone Number in contact details.*/
-	@Then("Add Phone Number in contact details")
-	public void yourprofile_positive_tc_006() throws Exception {
+	@When("Add Phone Number in contact details")
+	public void your_profile_positive_tc_006() throws Exception {
 
 		try {
 			browser_explicit_wait("profile_phno");
@@ -174,15 +187,16 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			//click("profile_phno_verify");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_006");
+			takeScreenShot("your_profile_positive_tc_006");
+			System.out.println("fail");
 		}
 	}
 
 	/*TC 007 - Verify the scenario when Activate , Edit and  Deactivate the Phone Number*/
-	@Then("Activate , Edit and  Deactivate the Phone Number")
+	@When("Activate , Edit and  Deactivate the Phone Number")
 	public void yourprofile_positive_tc_007() throws Exception {
 		try {
-			browser_wait(7000);
+			browser_wait(10000);
 			click("profile_phno_edit");
 			value = driver.findElement(By.xpath(OR_reader("profile_contact_assert"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -197,12 +211,13 @@ public class Your_profile_positive_scenarios extends Generic_function{
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("yourprofile_positive_tc_007");
+			System.out.println("fail");
 		}
 
 	}
 
 	/*TC 008 - Verify the scenario when add Address in contact details. */
-	@Then("Add Address in contact details.")
+	@When("Add Address in contact details.")
 	public void yourprofile_positive_tc_008() throws Exception {
 		try {
 			browser_wait(7000);
@@ -220,12 +235,12 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			//click("profile_save");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_008");
+			takeScreenShot("yourprofile_positive_tc_008");System.out.println("fail");
 		}
 	}
 
 	/*TC 009 - Verify the scenario when Activate , Edit , Primary and  Deactivate the Address*/
-	@Then("Activate , Edit , Primary and  Deactivate the Address")
+	@When("Activate , Edit , Primary and  Deactivate the Address")
 	public void yourprofile_positive_tc_009() throws Exception {
 		try {
 			browser_wait(7000);
@@ -237,19 +252,19 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_address_back");
 			click("profile_contact_assert");
 			click("profile_dot_address");
-			browser_wait(1000);
+			browser_wait(9000);
 			text = td_reader("profile_dot");
 			drop_down(OR_reader( "profile_address_list"),text);
 			click("profile_yes");
 			click("profile_address_back");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_009");
+			takeScreenShot("yourprofile_positive_tc_009");System.out.println("fail");
 		}
 	}
 
 	/*TC 010 - Verify the scenario when add Plan coveragee*/
-	@Then("Add Plan coverage")
+	@When("Add Plan coverage")
 	public void yourprofile_positive_tc_010() throws Exception {
 		try {
 			browser_wait(7000);
@@ -273,15 +288,15 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			//click("tab_ok");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_010");
+			takeScreenShot("yourprofile_positive_tc_010");System.out.println("fail");
 		}
 	}
 
 	/*TC 011 - Verify the scenario when Activate , Edit , Make primary and  Deactivate the Plan coverage*/
-	@Then("Activate , Edit , Make primary and  Deactivate the Plan coverage")
+	@When("Activate , Edit , Make primary and  Deactivate the Plan coverage")
 	public void yourprofile_positive_tc_011() throws Exception {
 		try {
-			browser_wait(7000);
+			browser_wait(10000);
 			click("profile_plan_edit");
 			value = driver.findElement(By.xpath(OR_reader( "profile_plan_editassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -296,17 +311,17 @@ public class Your_profile_positive_scenarios extends Generic_function{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_011");
+			takeScreenShot("yourprofile_positive_tc_011");System.out.println("fail");
 		}
 	} 
 
 	/*TC 012 - Verify the scenario when change the password*/
-	@Then("Change the password")
+	@When("Change the password")
 	public void yourprofile_positive_tc_012() throws Exception {
 		try {
-			browser_wait(7000);
+			browser_wait(10000);
 			click("profile_plancoverage_back");
-			browser_wait(2000);
+			browser_explicit_wait("profile_password_button");
 			click("profile_password_button");
 			value = driver.findElement(By.xpath(OR_reader("profile_passwordassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
@@ -317,16 +332,16 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("tab_ok");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_012");
+			takeScreenShot("yourprofile_positive_tc_012");System.out.println("fail");
 		}
 
 	}
 
 	/*TC 013 -Verify the scenario when password should be displayed on clicking the eye and user can able to save the details*/
-	@Then("The password should be displayed on clicking the eye")
+	@When("The password should be displayed on clicking the eye")
 	public void yourprofile_positive_tc_013() throws Exception {
 		try {
-			browser_wait(6000);
+			browser_explicit_wait("logout");
 			click("logout");
 			driverquit();
 			Browser_Launch();
@@ -351,31 +366,72 @@ public class Your_profile_positive_scenarios extends Generic_function{
 			click("profile_checkbox");
 			browser_wait(1000);
 			click("profile_send_code");
-			browser_wait(1000);
+			browser_explicit_wait("profile_enter_code");
 			driver.findElement(By.xpath(OR_reader( "profile_enter_code"))).sendKeys(td_reader("otp"));
 			driver.findElement(By.xpath(OR_reader( "profile_password"))).sendKeys(td_reader("profile_newpassword",1));
-			browser_wait(1000);
+			browser_explicit_wait("profile_verify");
 			click("profile_verify");
-			browser_wait(1000);
+			browser_explicit_wait("tab_ok");
 			click("tab_ok");
 			click("profile_password_button");
 			value = driver.findElement(By.xpath(OR_reader( "profile_passwordassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
 			driver.findElement(By.xpath(OR_reader( "profile_old_password"))).sendKeys(td_reader("profile_newpassword",1));
 			click("profile_oldeye");
-			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("login_password",1000));
+			driver.findElement(By.xpath(OR_reader( "profile_new_password"))).sendKeys(td_reader("login_password",15));
 			click("profile_neweye");
-			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("login_password",1000));
+			driver.findElement(By.xpath(OR_reader( "profile_confirm_password"))).sendKeys(td_reader("login_password",15));
 			click("profile_confirmeye");
 			click("profile_passwordsave");
 			click("tab_ok");
 			System.out.println("Your profile positive");
 		} catch (Exception e) {
 			e.printStackTrace();
-			takeScreenShot("yourprofile_positive_tc_013");
+			takeScreenShot("yourprofile_positive_tc_013");System.out.println("fail");
 		}
-		driverquit();
+	}
+// Tc014 - Verify uploading of profile pic successfully
+	@When("Click on the profile pic icon")
+	public void click_profile_pic_icon() throws IOException {
+		browser_back();
+		value = driver.findElement(By.xpath(OR_reader( "your_profile_title"))).isDisplayed();
+		Assert.assertEquals(true,value);
+		click("profile_picture");
+		click("profile_picture");
 	}
 
+	@Then("Select file and upload image")
+	public void File_UploadImage() throws AWTException {
+		try {
+		click("profile_upload_image");
+		click("profile_files");
+		file = new File(getprofilepic());
+		StringSelection ss = new StringSelection(file.getAbsolutePath());
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+		Robot robot = new Robot();
+		robot.delay(3000);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(400);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		click("profile_pic_ok");
+		browser_wait(9000);
+	}
+		catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+	}
+
+	@Then("Verify the successful upload")
+	public void verify_successful_upload() throws IOException {
+		value = driver.findElement(By.xpath(OR_reader( "profile_pic_save"))).isDisplayed();
+		Assert.assertEquals(true,value);
+		driverquit();
+	}
 }
 

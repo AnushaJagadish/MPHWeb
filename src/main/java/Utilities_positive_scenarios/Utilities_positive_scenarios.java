@@ -9,6 +9,8 @@ import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import Reusable_Functions.Generic_function;
 import io.cucumber.java.en.Given;
@@ -197,15 +199,20 @@ public void utilities_positive_tc_002() throws IOException {
 	@When("Click redeem points")
 	public static void click_redeem_points() throws Exception{
 			click_javascript("utilities");
-			browser_wait(4000);
-			click_javascript("award_points");
-			browser_wait(4000);
+			click("utilities_award_points");
+		value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
+		Assert.assertEquals(true,value1);
+		browser_explicit_wait("awardpoints_redeem_button");
+		Actions builder=new Actions(driver);
+		builder.moveToElement(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+		builder.click(driver.findElement(By.xpath(OR_reader("awardpoints_redeem_button"))));
+		Action action= builder.build();
+		action.perform();
 	}
 @Then("Verify the award points")
 	public void utilities_positive_tc_006()throws IOException {
-		try{value1 = driver.findElement(By.xpath(OR_reader("award_point_title"))).isDisplayed();
-			Assert.assertEquals(true,value1);
-			click_javascript("awardpoints_redeem_button");
+		try{
+			browser_explicit_wait("utilities");
 			value1 = driver.findElement(By.xpath(OR_reader("utilities_redeem_points_title"))).isDisplayed();
 			Assert.assertEquals(true,value1);
 			browser_back();

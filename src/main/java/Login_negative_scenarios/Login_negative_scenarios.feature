@@ -28,3 +28,7 @@ Feature: Validate login negative functionality
   Scenario: User is not able to login on leaving 'Password' field blank and only giving valid 'Phone number'
     When enters password as  blank field
     Then validation message is displayed
+
+  Scenario: Validate the  message on entering non registered phone number in the phone number field
+    When  Enter non registered phone number in the phone number field
+    Then Validate message on entering non registered number

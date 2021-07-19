@@ -77,7 +77,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 
 	}
-	/*TC 003 - Validate that user must be able to view the referral code text*/
+	/*Validate that user must be able to view the referral code text*/
 	@And("verify referral code text is displayed")
 	public static void login_positive_tc_003() throws Exception   {
 		try {
@@ -90,7 +90,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 004 - Validate that the user should able to see a Pop Up box when clicking on Share a link */
+	/*TC 003 - Validate that the user should able to see a Pop Up box when clicking on Share a link */
 	@When("clicks on 'Share Link' button")
 	public static void login_positive_tc_004() throws Exception{
 		try {
@@ -117,7 +117,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 006 - Validate that user can view How its works*/
+	/*Validate that user can view How its works*/
 	@And("verify How it work text is displayed")
 	public static void login_positive_tc_006() throws Exception   {
 		try {
@@ -129,7 +129,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 007 -Validate that user can view the text Invite your friends to Mpowered Health by sharing your unique invitation code*/
+	/*TC 004 -Validate that user can view the text Invite your friends to Mpowered Health by sharing your unique invitation code*/
 	@When("verify Invite your friends to Mpowered Health is displayed")
 	public static void first_grid_text_checker() throws Exception   {
 		try {
@@ -141,7 +141,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 008 -Validate that user can able to slide the two grids visible under How its works*/
+	/*TC 005 -Validate that user can able to slide the two grids visible under How its works*/
 	@When("clicks to slide the gird")
 	public static void grid_slideer() throws Exception   {
 		try {
@@ -166,7 +166,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 009 -  Validate that user can able to click on the link More information & FAQ and it will navigated to Frequently asked questions page*/
+	/*TC 006 -  Validate that user can able to click on the link More information & FAQ and it will navigated to Frequently asked questions page*/
 	@When("clicks on the link More information & FAQ")
 	public static void login_positive_tc_007() throws Exception   {
 		try {
@@ -177,7 +177,7 @@ public class Refer_a_friend_positive_scenarios extends Generic_function{
 		}
 	}
 	
-	/*TC 010 - Validate that the user should able to view list of frequently asked questions inside Frequently asked questions page*/
+	/*Validate that the user should able to view list of frequently asked questions inside Frequently asked questions page*/
 	@Then("verify list of Frequently asked questions")
 	public static void login_positive_tc_008() throws Exception   {
 		try {

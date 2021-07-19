@@ -155,7 +155,6 @@ public class Your_profile_negative_scenarios extends Generic_function {
 			//backspace("profile_password");
 			browser_wait(5000);
 			driver.findElement(By.xpath(OR_reader( "profile_enter_code"))).sendKeys(td_reader("profile_enter_code",1));
-			browser_wait(4000);
 			click("profile_verify");
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -167,8 +166,7 @@ public class Your_profile_negative_scenarios extends Generic_function {
 
 	@When("Click on edit contact details")
 	public void clickOnEditContactDetails() throws IOException {
-		browser_refresh();
-		browser_wait(2000);
+		browser_wait(8000);
 		click("profile_contact");
 	}
 	@Then("Not able to edit primary and deactivate email")
@@ -602,7 +600,7 @@ try{
 			click("profile_picture");
 			click("profile_upload_image");
 			click("profile_files");
-			file = new File(getprofilepic());
+			file = new File(getprofilepic_exceedsize());
 			StringSelection ss = new StringSelection(file.getAbsolutePath());
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 			Robot robot = new Robot();
@@ -616,7 +614,7 @@ try{
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.delay(400);
 			robot.keyRelease(KeyEvent.VK_ENTER);
-			click("profile_pic_save");
+			//click("profile_pic_ok");
 			browser_wait(9000);
 	}
 

@@ -88,7 +88,6 @@ public class Forgot_password_negative_scenarios extends Generic_function {
 		}		
 	}
 
-	/* TC_005 Validate that the user should able to get a validation message on entering non registered phone number in the phone number field */
 	@Then("validate Phone number field is blank")
 	public void forgot_password_negative_tc_005() throws IOException {
 		try {
@@ -103,7 +102,6 @@ public class Forgot_password_negative_scenarios extends Generic_function {
 			takeScreenShot("forgot_password_negative_tc_005");
 		}
 	}
-
 
 }
 

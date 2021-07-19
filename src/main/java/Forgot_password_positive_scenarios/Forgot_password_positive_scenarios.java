@@ -25,13 +25,12 @@ public class Forgot_password_positive_scenarios extends Generic_function {
 	public void clickOnLoginButton() throws IOException {
 		driver.findElement(By.xpath(OR_reader("welcome_login"))).click();
 	}
-
+	/* TC_001 -Validate that the  user should  able to enter 10 digit number in "Phone Number" field*/
 	@Then("click on Forgot Password link")
 	public void click_forgotpassword() throws IOException {
 		driver.findElement(By.xpath(OR_reader("forgot_password_link"))).click();
 	}
 
-	/* TC_001 -Validate that the  user should  able to enter 10 digit number in "Phone Number" field*/
 	@And("enter phone number in Phone number field")
 	public static void forgot_positive_tc_001() throws Exception{
 		try {

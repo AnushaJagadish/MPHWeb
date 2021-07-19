@@ -23,13 +23,6 @@ public class Signup_negative_scenarios extends Generic_function{
 				takeScreenShot("signup_negative_tc_002");
 		}
 	}
-    
-	/* To refresh the page that is currently in use */
-	@Then("Verify the validation message")
-	public static void signup_negative_validation_msg() throws IOException {
-		browser_refresh();
-	}
-	
 	@When("Enter invalid 'Firstname' and 'Lastname' details")
 	public static void invalid_details() throws Exception {
 		try {
@@ -40,12 +33,18 @@ public class Signup_negative_scenarios extends Generic_function{
 			driver.findElement(By.xpath(OR_reader("signup_last_name"))).sendKeys(td_reader("signup_last_name",0));
 			click("signup_email_id");
 			str= driver.findElement(By.xpath(OR_reader("lastname_valid_msg"))).getText();
-			Assert.assertEquals(str,td_reader("signup_lastname_valid_msg"));   
+			Assert.assertEquals(str,td_reader("signup_lastname_valid_msg"));
 		} catch (Exception e) {
-				e.printStackTrace();
-				takeScreenShot("invalid_details");
+			e.printStackTrace();
+			takeScreenShot("invalid_details");
 		}
 	}
+	/* To refresh the page that is currently in use */
+	@Then("Verify the validation message")
+	public static void signup_negative_validation_msg() throws IOException {
+		browser_refresh();
+	}
+
 
 	/* TC_002 -Verify the scenario when entered invalid 'Email ID'*/
 	@When("Enter invalid 'Email ID'")
@@ -172,13 +171,11 @@ public class Signup_negative_scenarios extends Generic_function{
 		try {
 			Assert.assertEquals(driver.findElement(By.xpath(OR_reader("signup_terms_and_conditions"))).isSelected(),false);
 			Assert.assertEquals(driver.findElement(By.xpath(OR_reader("signup"))).isEnabled(),true);
-			System.out.println("signup negative");
+			System.out.println("signup negative");browser_close();
 			} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("signup_negative_tc_010");
 		}
-
-		browser_close();
 	}
 
 }

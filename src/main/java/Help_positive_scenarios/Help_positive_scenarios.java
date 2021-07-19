@@ -21,7 +21,7 @@ public class Help_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 001 - Validate that the  'Frequently asked questions’ title  should be present in  Help page*/
+	/* Validate that the  'Frequently asked questions’ title  should be present in  Help page*/
 	@When("Click on 'Help' tab")
 	public void click_help() throws IOException {
 		click("welcome_login");
@@ -48,7 +48,7 @@ public class Help_positive_scenarios extends Generic_function{
 		}		
 	}
 
-	/*TC 002 - Validate that the 'Second Opinions' title  should be present  and able to see description , when user click on Second Opinions title */
+	/*TC 001 - Validate that the 'Second Opinions' title  should be present  and able to see description , when user click on Second Opinions title */
 	@When("Click on Second Opinions title")
 	public void click_second_opinion() throws Exception {
 		try {
@@ -74,7 +74,7 @@ public class Help_positive_scenarios extends Generic_function{
 			takeScreenShot("help_positive_tc_002");
 		}
 	}
-	/*TC 003 - Validate that the 'Award Points' title  should be present  and able to see description , when user click on Award Points title  */
+	/*TC 002 - Validate that the 'Award Points' title  should be present  and able to see description , when user click on Award Points title  */
 	@When("Click on Award Points title")
 	public void click_award_points() throws Exception {
 		try {
@@ -101,7 +101,7 @@ public class Help_positive_scenarios extends Generic_function{
 	}
 
 
-	/*TC 004 - Validate that the 'Referral' title  should be present  and able to see description , when user click on Referral title   */
+	/*TC 003 - Validate that the 'Referral' title  should be present  and able to see description , when user click on Referral title   */
 	@When("Click on Referral title")
 	public void click_referral_title() throws Exception {
 		try {
@@ -128,7 +128,7 @@ public class Help_positive_scenarios extends Generic_function{
 			takeScreenShot("help_positive_tc_004");
 		}
 	}
-	/*TC 005 - Validate that the 'Profile' title  should be present  and able to see description , when user click on Profile title  */
+	/*TC 004 - Validate that the 'Profile' title  should be present  and able to see description , when user click on Profile title  */
 	@When("Click on Profile title")
 	public void click_profile_title() throws Exception {
 		try {
@@ -156,7 +156,7 @@ public class Help_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 006 - Validate that the 'Payments' title  should be present  and able to see description , when user click on Payments title  */
+	/*TC 005 - Validate that the 'Payments' title  should be present  and able to see description , when user click on Payments title  */
 	@When("Click on Payments title")
 	public void click_payments_title() throws Exception {
 		try {
@@ -186,7 +186,7 @@ public class Help_positive_scenarios extends Generic_function{
 		}
 	}
 
-	/*TC 007 - Validate that the 'Add coverage' title  should be present  and able to see description , when user click on Add coverage title   */
+	/*TC 006 - Validate that the 'Add coverage' title  should be present  and able to see description , when user click on Add coverage title   */
 	@When("Click on Add coverage  title")
 	public void click_addcoverage_title() throws Exception {
 		try {
@@ -207,12 +207,12 @@ public class Help_positive_scenarios extends Generic_function{
 			browser_wait(2000);
 			value = driver.findElement(By.xpath(OR_reader( "help_coverageassert"))).isDisplayed();
 			Assert.assertEquals(true,value);
+			click("logout");
+			System.out.println("Help positive");
+			driverquit();
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("help_positive_tc_007");
 		}
-		click("logout");
-		System.out.println("Help positive");
-		driverquit();
 	}
 }

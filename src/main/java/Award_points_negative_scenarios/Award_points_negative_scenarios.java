@@ -69,8 +69,8 @@ public class Award_points_negative_scenarios extends Generic_function{
 				e.printStackTrace();
 			}
 		}
-// TC 001 - Verify the validation message on entering amount more than the available amount in "Redeem Award Points" page
 
+// TC 001 - Verify the validation message on entering amount more than the available amount in "Redeem Award Points" page
 	@When("Click on 'redeem' points")
 	public void click_redeem_points() throws IOException {
 		try {
@@ -115,6 +115,8 @@ public class Award_points_negative_scenarios extends Generic_function{
 		takeScreenShot("Award_point_negative_tc_001");
 	}
 }
+
+
 //TC 002 - Validate the validation message on entering amount less than the available amount in "Redeem Award Points" page
 	@When("Enter the amount less than the available amount")
 	public void lesser_Amount() throws IOException {
@@ -148,6 +150,8 @@ public class Award_points_negative_scenarios extends Generic_function{
 			takeScreenShot("Award_point_negative_tc_002)");
 		}
 	}
+
+
 	/*TC 003 -  Validate that user is not able to click on the 'Redeem' button on leaving the field 'Select a gift card' blank" */
 	@When("Click the Redeem button on leaving the field Select a gift card blank")
 	public void redeemButton_giftcardblank() throws IOException {
@@ -159,8 +163,6 @@ public class Award_points_negative_scenarios extends Generic_function{
 			e.printStackTrace();
 		}
 	}
-
-
 	@Then("Validate the error message displayed")
 	public static void Award_point_negative_tc_003() throws IOException, InterruptedException {
 		try {
